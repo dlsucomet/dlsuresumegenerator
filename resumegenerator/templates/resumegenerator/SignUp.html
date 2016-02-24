@@ -1,0 +1,165 @@
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ {% load staticfiles %}
+<link href="{% static 'resumegenerator/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+<style>
+body {
+    background-color: #252525;
+}
+
+.logIn
+{
+  font-family: "Proxima Nova";
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: auto;
+  width: 100%;
+}
+
+.icon
+{
+    text-align: center;
+    margin-top: 90px;
+}
+
+.icon h1
+{
+    font-family: "Montserrat";
+    text-align: center; 
+    color: #55b953;
+}
+
+.logInLabels
+{
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+.logIn input
+{
+    width: 30px;
+}
+
+.btn {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: #55b953;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: absolute;    
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+
+.btn-1 {
+    color: #fff;
+}
+
+.btn-1a:hover,
+.btn-1a:active {
+    color:  #55b953;
+    background: #fff;
+}
+
+.logIn a
+{
+  color: white;
+  cursor: pointer;
+}
+.logIn a:hover
+{
+    color: #55b953;
+}
+
+.signUp a
+{
+    color: #55b953;
+}
+
+
+
+</style>
+
+
+<script>
+    function register() {
+            if (user.value=='' || pass.value=='')
+            {
+                window.alert('Username or Password is empty');
+                return false;
+            }
+            
+            else
+            { 
+                return true;
+            }
+    }
+</script>
+
+</head>
+
+<body>
+
+<div class = "icon">
+    <img src = "{% static 'resumegenerator/resources/icon.png' %}"  width = "77px" height= "107px">
+    <br>
+    <h1>Account Sign Up</h1>
+    <br>
+</div>
+
+<!-- <div class = "logIn">
+    <form class="form-inline">
+        <span class = "logInLabels"> E-mail: </span>
+        <input type="text" class="form-control">
+    </form>
+
+    <div>
+        <h3>Password: </h3>
+    </div>
+    
+</div> -->
+<div class = "logIn">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="input-group col-md-4">
+            <span class="input-group-addon" id="basic-addon1">E-mail: </span>
+            <input type="text" class="form-control" id = "user" aria-describedby="basic-addon1">
+        </div>
+    <div class="col-md-4"></div>
+    <br>
+    	<div class="row">
+        <div class="col-md-4"></div>
+        <div class="input-group col-md-4">
+            <span class="input-group-addon" id="basic-addon1">Password: </span>
+            <input type="password" class="form-control" id = "pass" aria-describedby="basic-addon1">
+        </div>
+        <br>
+        <div class="col-md-3"></div>
+        <div class="col-md-2">
+            <a href = "{% url 'resumegenerator:index' %}" id = "login" class="btn btn-1 btn-1a"><span class="glyphicon glyphicon-arrow-left"aria-hidden="true"></span> Back</a>
+        </div>
+
+        <div class="col-md-3">
+            <a href = "{% url 'resumegenerator:welcome' %}" id = "login" class="btn btn-1 btn-1a" onClick = "return check();">Register Account</a>
+        </div>
+</div>
+
+
+ 
+
+
+<script src="{% static 'resumegenerator/js/jquery.min.js' %}"></script>
+<script src="{% static 'resumegenerator/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'resumegenerator/js/classie.js' %}"></script>
+
+</body>
+</html>
