@@ -2,12 +2,7 @@
 This project aims to simplify the process in making resumes in the DLSU format and provide a way for students to track the seminars that they have taken.
 
 # Pre-requisites
-The following dependencies are needed:
-1. Python 2.7
-2. virtualenvwrapper
-3. Pip
-4. Django
-5. Database Dependencies (not yet ready)
+The following dependencies are needed: Python 2.7, virtualenvwrapper, Pip, Django, Database Dependencies (not yet ready)
 
 # Setup
 For in-depth instructions, refer to the official Django documentation:
