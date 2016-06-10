@@ -1,3 +1,5 @@
+
+
 html {
   font-family: Arial;
   font-size: 11pt;
@@ -16,16 +18,15 @@ p {
 }
 
 
-
 #section-header {
   font-weight: bold;
 }
 
 #section-content-left {
-	display: inline;
+	float: left;
 }
 
 #section-content-right {
-	display: inline;
+	text-align: justify;
 	margin-left: 3.81cm;
 }
