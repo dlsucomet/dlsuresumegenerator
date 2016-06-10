@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'dlsuresumegenerator.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'resumegeneratordatabase',
+        'NAME': 'dlsurg_db',
         'USER': 'root',
         'PASSWORD': '12345',
         'HOST': 'localhost',
