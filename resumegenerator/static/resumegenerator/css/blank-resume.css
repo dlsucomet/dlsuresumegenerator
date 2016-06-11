@@ -14,12 +14,12 @@ img {
 	padding-left: 5px;
 	padding-right: 5px;
 	margin-top: -50px;
-	margin-bottom: -30px;
+	margin-bottom: -40px;
 
 	height: auto;
 	width: auto;
-	max-width: 2in;
-	max-height: 2in;
+	max-width: 5.08cm;
+	max-height: 5.08cm;
 }
 
 
@@ -34,4 +34,8 @@ img {
 #section-content-right {
 	text-align: justify;
 	margin-left: 3.81cm;
+}
+
+@page {
+	margin: 1in;
 }
