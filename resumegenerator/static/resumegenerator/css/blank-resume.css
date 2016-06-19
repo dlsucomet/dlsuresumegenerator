@@ -22,6 +22,20 @@ img {
 	max-height: 5.08cm;
 }
 
+#photo {
+	display: block;
+	float: right;
+}
+
+#address-header-left {
+	float: left;
+}
+
+#address-header-right {
+	margin-left: 3.81cm;
+}
+
+
 
 #section-header {
   font-weight: bold;
@@ -35,6 +49,7 @@ img {
 	text-align: justify;
 	margin-left: 3.81cm;
 }
+
 
 @page {
 	margin: 1in;
