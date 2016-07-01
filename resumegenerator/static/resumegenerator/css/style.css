@@ -1,0 +1,187 @@
+
+
+.logIn
+{
+  font-family: montserrat, sans-serif; 
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: auto;
+  width: 100%;
+}
+
+.icon
+{
+    text-align: center;
+    margin-top: 90px;
+}
+
+.icon h1
+{
+    font-family: montserrat, sans-serif;
+    text-align: center; 
+    color: #55b953;
+}
+
+.logInLabels
+{
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+#but{
+    padding-right: 5%;
+}
+
+.logIn input
+{
+    width: 30px;
+}
+
+.btn {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: #55b953;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    outline: none;
+    position: absolute;    
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.textinput{
+
+    width: 100%;
+}
+
+
+.btn-1 {
+
+    color: #fff;
+}
+
+.btn-1a:hover,
+.btn-1a:active {
+    color:  #55b953;
+    background: #fff;
+}
+
+.logIn a
+{
+  color: white;
+  cursor: pointer;
+}
+.logIn a:hover
+{
+    color: #55b953;
+}
+
+.signUp a
+{
+    font-weight: 400;
+    color: #55b953;
+}
+
+
+
+.welcome
+{
+  font-family: "Proxima Nova";
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: auto;
+  width: 100%;
+}
+
+.icon
+{
+    text-align: center;
+    margin-top: 90px;
+}
+
+h2
+{
+    font-family: montserrat, sans-serif;
+    text-align: center; 
+    color: white;
+}
+
+h1
+{
+    font-family: montserrat, sans-serif;
+    text-align: center; 
+    color: #55b953;
+}
+
+
+.welcome
+{
+  font-family: montserrat, sans-serif;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: auto;
+  width: 100%;
+}
+
+.icon
+{
+    text-align: center;
+    margin-top: 90px;
+}
+
+.center
+{
+  text-align: center;
+}
+
+h2
+{
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    text-align: center; 
+    color: white;
+}
+
+h3
+{
+    font-family: montserrat, sans-serif;
+    font-weight: 250;
+    text-align: center; 
+    color: white;
+}
+
+h1
+{ 
+    font-family: montserrat, sans-serif;
+    text-align: center; 
+    color: #55b953;
+}
+
+.small{
+  line-height: 20;
+}
+
+textarea{ 
+  width: 200px; 
+  min-width:200px; 
+  max-width:200px; 
+
+  height:200px; 
+  min-height:200px;  
+  max-height:200px;
+}
+
+.startbtn
+{
+	width: 600px;
+	margin: 0 auto;
+}
+
+.floated {
+   float:left;
+}

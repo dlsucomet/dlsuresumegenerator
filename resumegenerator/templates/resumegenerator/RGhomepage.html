@@ -1,18 +1,38 @@
 <html>
 <head>
  <meta charset="utf-8">
- {% load staticfiles %}
- <link rel="stylesheet" type="text/css" href="{% static 'resumegenerator/css/bootstrap.min.css' %}" >
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+ <link href="css/scrolling-nav.css" rel="stylesheet">	
+ <script src="js/jquery.js"></script>
+
+	<script>
+	var counter = 1;
+	var limit = 3;
+	function addInput(divName){
+		 if (counter == limit)  {
+			  alert("You have reached the limit of adding " + counter + " inputs");
+		 }
+		 else {
+			  var newdiv = document.createElement('div');
+			  newdiv.innerHTML =  "<br><input type='text' class='form-control'><span class='input-group-btn'><input id = 'addAddress' type='image' src='images/add.png' onClick='addInput('dynamicInput');' alt='Submit' width='28' height='28'>";
+				
+				
+			  document.getElementById(divName).appendChild(newdiv);
+			  counter++;
+		 }
+	}
+		</script>
 <style>
+	
 body {
     background-color: #252525;
 }
 
 .welcome
 {
-  font-family: "Proxima Nova";
+  font-family: montserrat, sans-serif;
   color: rgb(255, 255, 255);
   text-align: center;
   margin: auto;
@@ -25,39 +45,183 @@ body {
     margin-top: 90px;
 }
 
+.center
+{
+  text-align: center;
+}
+
 h2
 {
-    font-family: "Montserrat";
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    text-align: center; 
+    color: white;
+}
+
+h3
+{
+    font-family: montserrat, sans-serif;
+    font-weight: 250;
     text-align: center; 
     color: white;
 }
 
 h1
-{
-    font-family: "Proxima Nova";
+{ 
+    font-family: montserrat, sans-serif;
     text-align: center; 
     color: #55b953;
 }
+
+.btn {
+    width: 15%;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: #55b953;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    outline: none;    
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+
+.btn-1 {
+    color: #fff;
+}
+
+.btn-1a:hover,
+.btn-1a:active {
+    color:  #55b953;
+    background: #fff;
+}
+
+.small{
+  line-height: 20;
+}
+
+textarea{ 
+  width: 200px; 
+  min-width:200px; 
+  max-width:200px; 
+
+  height:200px; 
+  min-height:200px;  
+  max-height:200px;
+}
+
 
 </style>
 
 </head>
 
-<body>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+	
 
-<div class = "icon">
-    <img src = "{% static 'resumegenerator/resources/icon.png' %}"  width = "77px" height= "107px">
-        <h2>Welcome to</h2>
+<div class = "icon up">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2>Welcome to the</h2>
         <h1>DLSU Resume Generator!</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+	  	<br>
+        <a id="up" class= "page-scroll center btn btn-1 btn-1a">START</a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 </div>
 
+<section id="basicinfo" class = "form-section">
+<form>
+  <br><br>
+	<br>
+<br>
+<h1>Personal Information</h1>
+      <br>
+      <h3>Name</h3>
+      <div class="col-md-4"></div>
+        <div class="input-group col-md-4">
+            <span class="input-group-addon" id="basic-addon1">First Name: </span>
+            <input type="text" class="form-control" id = "fName" aria-describedby="basic-addon1">
+        </div>
+      <br>
+      <div class="col-md-4"></div>
+        <div class="input-group col-md-4">
+            <span class="input-group-addon" id="basic-addon1">Middle Name: </span>
+            <input type="text" class="form-control" id = "mName" aria-describedby="basic-addon1">
+        </div>
+      <br>
+      <div class="col-md-4"></div>
+        <div class="input-group col-md-4">
+            <span class="input-group-addon" id="basic-addon1">Last Name: </span>
+            <input type="text" class="form-control" id = "lName" aria-describedby="basic-addon1">
+        </div>
 
- 
+   
+	 	<h3>Address</h3>
+		<div class="col-md-4"></div>
+		<div id = "dynamicInput" class="col-md-4 input-group">
+		  <input type="text" class="form-control" placeholder="12 Gold Street, Silver Subdivision, Bronze City">
+		  <span class="input-group-btn">
+			<input id = "addAddress"  type="image" src="images/add.png" onClick="addInput('dynamicInput');" alt="Submit" width="28" height="28">
+		  </span>
+		</div>
+	
+        <br><br>
+        <h3>Contact Numbers</h3>
+        <div class="col-md-4"></div>
+        <div class="input-group col-md-4">
+            <span class="input-group-addon" id="basic-addon1">Home Phone: </span>
+            <input type="text" class="form-control" id = "user" aria-describedby="basic-addon1" placeholder="(02)XXX-XXXX">
+        </div>
+        <br>
+        <div class="col-md-4"></div>
+        <div class="input-group col-md-4">
+            <span class="input-group-addon" id="basic-addon1">Mobile Phone: </span>
+            <input type="text" class="form-control" id = "user" aria-describedby="basic-addon1" placeholder="+63XXX-XXX-XXXX">
+        </div>
+        <br><br>
+        <h3>Email</h3>
+        <div class="col-md-4"></div>
+        <div class="input-group col-md-4">
+            <span class="input-group-addon" id="basic-addon1">DLSU Email: </span>
+            <input type="text" class="form-control" id = "user" aria-describedby="basic-addon1" value="your_name@dlsu.edu.ph" readonly>
+        </div>
+        
+       
+<br>
+<h2>Initial Background</h2>
+<br>
+<span class="input-group-addon" id="basic-addon1">Objective: </span>
+  <textarea class="form-control" class="center" rows="5" id="comment"></textarea>
 
 
-<script src="{% static 'resumegenerator/js/jquery.min.js' %}"></script>
-<script src="{% static 'resumegenerator/js/bootstrap.min.js' %}"></script>
-<script src="{% static 'resumegenerator/js/classie.js' %}"></script>
+</form> 
+</section>	
+	
+
+<script src="js/scrolling-nav.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/classie.js"></script>
 
 </body>
 </html>
