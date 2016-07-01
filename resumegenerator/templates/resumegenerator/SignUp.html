@@ -4,7 +4,8 @@
  <meta charset="utf-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="css/bootstrap.min.css" rel="stylesheet">
+ {% load staticfiles %}
+ <link href="{% static 'resumegenerator/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
 <style>
 body {
     background-color: #252525;
@@ -29,7 +30,7 @@ body {
 .icon h1
 {
     font-family: montserrat, sans-serif;
-    text-align: center; 
+    text-align: center;
     color: #55b953;
 }
 
@@ -54,7 +55,7 @@ body {
     letter-spacing: 1px;
     font-weight: 500;
     outline: none;
-    position: absolute;    
+    position: absolute;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
@@ -89,7 +90,7 @@ body {
 
 
 </style>
-<script src="//use.edgefonts.net/anonymous-pro:n4,i4,n7,i7.js"></script> 
+<script src="//use.edgefonts.net/anonymous-pro:n4,i4,n7,i7.js"></script>
 
 <script>
     function register() {
@@ -98,9 +99,9 @@ body {
                 window.alert('Username or Password is empty');
                 return false;
             }
-            
+
             else
-            { 
+            {
                 return true;
             }
     }
@@ -111,7 +112,7 @@ body {
 <body>
 
 <div class = "icon">
-    <img src = "icon.png"  width = "77px" height= "107px">
+    <img src = "{% static 'resumegenerator/resources/icon.png' %}"  width = "77px" height= "107px">
     <br>
     <h1>Account Sign Up</h1>
     <br>
@@ -126,7 +127,7 @@ body {
     <div>
         <h3>Password: </h3>
     </div>
-    
+
 </div> -->
 <div class = "logIn">
     <div class="row">
@@ -146,21 +147,21 @@ body {
         <br>
         <div class="col-md-3"></div>
         <div class="col-md-2">
-            <a href = "DLSURGLogIn.html" id = "login" class="btn btn-1 btn-1a"><span class="glyphicon glyphicon-arrow-left"aria-hidden="true"></span> Back</a>
+            <a href = "{% url 'resumegenerator:index' %}" id = "login" class="btn btn-1 btn-1a"><span class="glyphicon glyphicon-arrow-left"aria-hidden="true"></span> Back</a>
         </div>
 
         <div class="col-md-3">
-            <a href = "RGhomepage.html" id = "login" class="btn btn-1 btn-1a" onClick = "return check();">Register Account</a>
+            <a href = "{% url 'resumegenerator:welcome' %}" id = "login" class="btn btn-1 btn-1a" onClick = "return check();">Register Account</a>
         </div>
 </div>
 
 
- 
 
 
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/classie.js"></script>
+
+<script src="{% static 'resumegenerator/js/jquery.min.js' %}"></script>
+<script src="{% static 'resumegenerator/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'resumegenerator/js/classie.js' %}"></script>
 
 </body>
 </html>
