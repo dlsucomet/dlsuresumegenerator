@@ -1,0 +1,255 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/scrolling-nav.css" rel="stylesheet">	
+    <link rel="stylesheet" href="css/animate.css">
+    <style>
+
+        body {
+            background-color: #252525;
+        }
+
+        .welcome
+        {
+          font-family: montserrat, sans-serif;
+          color: rgb(255, 255, 255);
+          text-align: center;
+          margin: auto;
+          width: 100%;
+        }
+
+        .icon
+        {
+            text-align: center;
+            margin-top: 90px;
+        }
+
+        .center
+        {
+          text-align: center;
+        }
+
+        h2
+        {
+            font-family: montserrat, sans-serif;
+            font-weight: 400;
+            text-align: center; 
+            color: white;
+        }
+
+        h3
+        {
+            font-family: montserrat, sans-serif;
+            font-weight: 250;
+            text-align: center; 
+            color: white;
+        }
+
+        h1
+        { 
+            font-family: montserrat, sans-serif;
+            text-align: center; 
+            color: #55b953;
+        }
+
+        .btn {
+            width: 15%;
+            font-family: inherit;
+            font-size: inherit;
+            color: inherit;
+            background: #55b953;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 400;
+            outline: none;    
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+
+        .btn-1 {
+            color: #fff;
+        }
+
+        .btn-1a:hover,
+        .btn-1a:active {
+            color:  #55b953;
+            background: #fff;
+        }
+
+        .small{
+          line-height: 20;
+        }
+
+        textarea{ 
+          width: 200px; 
+          min-width:200px; 
+          max-width:200px; 
+
+          height:200px; 
+          min-height:200px;  
+          max-height:200px;
+        }
+
+        .round
+        {
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+        
+        .plustimes:hover, .plustimes:after {
+             -webkit-transform: rotate(45deg);
+             -moz-transform: rotate(45deg);
+             -o-transform: rotate(45deg);
+              transform: rotate(45deg);
+             -webkit-transition-duration: 0.2s;
+             -moz-transition-duration: 0.2s;
+             -o-transition-duration: 0.2s;
+              transition-duration: 0.2s;
+         }
+
+    </style>
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+	
+
+    <div class = "icon up">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="fadeInUp animated">        
+                <h2>Welcome to the</h2>
+                <h1>DLSU Resume Generator!</h1>
+            </div>
+            <br>
+            <br>
+            <a href="#myAnchor" rel="" id="anchor1" class="anchorLink page-scroll center btn btn-1 btn-1a">CREATE A RESUME</a>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+    </div>
+
+    <section id="basicinfo" class = "form-section">
+        <form>
+          <br><br>
+            <a name="myAnchor" id="myAnchor"><br></a>
+            <br>
+            <h1><img src = "images/1.png"  width = "30px" height= "30px">
+                Personal Information</h1>
+              <br>
+              <h3>Name</h3>
+              <div class="col-md-4"></div>
+                <div class="input-group col-md-4">
+                    <span class="input-group-addon" id="basic-addon1">First Name </span>
+                    <input type="text" class="form-control" id = "fName" aria-describedby="basic-addon1">
+                </div>
+              <br>
+              <div class="col-md-4"></div>
+                <div class="input-group col-md-4">
+                    <span class="input-group-addon" id="basic-addon1">Middle Initial</span>
+                    <input type="text" class="form-control" id = "mName" aria-describedby="basic-addon1">
+                </div>
+              <br>
+              <div class="col-md-4"></div>
+                <div class="input-group col-md-4">
+                    <span class="input-group-addon" id="basic-addon1">Last Name </span>
+                    <input type="text" class="form-control" id = "lName" aria-describedby="basic-addon1">
+                </div>
+<!--
+
+
+            
+            <div class="three">
+                <h2>Your Dynamic Form!</h2>
+                <form action="#" method="get" id="mainform">
+                <span id="myForm">
+                </span>
+                <p></p>
+                <input type="submit" value="Submit"></input>
+            </form>
+            </div>
+-->
+        
+                <h3>Address</h3>
+                <div class="col-md-4"></div>
+                <div class="col-md-4 input-group">
+                    <form action="#" method="get" id="address">
+                        <span id="myForm">
+                            <input class="form-control" type="text" placeholder="12 Gold Street, Silver Subdivision, Bronze City">
+                        </span>
+                    </form>
+                    <div class="input-group-btn plustimes">
+                        <img src="images/add.png" width="28" height="28">
+                    </div>
+                </div>
+
+                <br><br>
+                <h3>Contact Information</h3>
+                <div class="col-md-4"></div>
+                <div class="input-group col-md-4">
+                    <span class="input-group-addon" id="basic-addon1">Home Phone </span>
+                    <input type="text" class="form-control" id = "user" aria-describedby="basic-addon1" placeholder="(02)XXX-XXXX">
+                </div>
+                <br>
+                <div class="col-md-4"></div>
+                <div class="input-group col-md-4">
+                    <span class="input-group-addon" id="basic-addon1">Mobile Phone </span>
+                    <input type="text" class="form-control" id = "user" aria-describedby="basic-addon1" placeholder="+63XXX-XXX-XXXX">
+                </div>
+                <br><br>
+                <h3>Email</h3>
+                <div class="col-md-4"></div>
+                <div class="input-group col-md-4">
+                    <span class="input-group-addon" id="basic-addon1">DLSU Email </span>
+                    <input type="text" class="form-control" id = "user" aria-describedby="basic-addon1" value="your_name@dlsu.edu.ph" readonly>
+                </div>
+
+
+        <br>
+        <h2>Initial Background</h2>
+        <br>
+        <span class="input-group-addon" id="basic-addon1">Objective: </span>
+          <textarea class="form-control" class="center" rows="5" id="comment"></textarea>
+
+
+        </form> 
+    </section>	
+    <script src="js/jquery.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script>
+            $('a').click(function(){
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $( $(this).attr('href') ).offset().top
+                }, 'slow');
+                return false;
+            });
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/form.js"></script>
+    
+</body>
+</html>
