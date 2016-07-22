@@ -8,12 +8,23 @@
 
 		<div class='header'>
 			<p style='font-weight: bold;'>RICHARD LANCE G. PARAYNO</p>
+<!--        <p style='font-weight: bold;'>{{user.firstname}} {{user.middleinitial}}. {{user.lastname}}</p>-->
+          
 			<p>
 				#28 Gallego Street, Camp Aguinaldo <br>
 				Quezon City 1110 <br>
 				913-3277 ; +639151725420 <br>
 				richard_parayno@dlsu.edu.ph <br>
 			</p>
+<!--
+            <p>
+				{{address.addressLine1}} <br>
+				{{address.addressLine2}} <br>
+				{{telephone.telnum}} <br>
+                {{cellphone.cellnum}} <br>
+				{{user.email}} <br>
+			</p>
+-->
 		</div>
 
 
@@ -26,6 +37,11 @@
 			<p id='section-content-right'>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
+<!--
+            <p id='section-content-right'>
+				{{user.objective}}
+			</p>
+-->
 		</div>
 
 		<br>
@@ -38,7 +54,7 @@
 			<p id='section-content-left'>
 				2014 - Present
 			</p>
-			<!-- School -->
+            <!-- School -->
 			<p id='section-content-right'>
 				DE LA SALLE UNIVERSITY
 				<br>
@@ -55,6 +71,31 @@
 				<br>
 				High School Diploma, March 2014
 			</p>
+            
+            
+            <!--
+            {% for education in educations %}
+                <p id='section-content-left'>
+                    {{education.yrstart}} - {{education.yrfin}}
+                </p>
+
+                <p id='section-content-right'>
+                    {{education.school}}
+                    <br>
+                    {{education.educattained}}, {{education.monthattained}} {{education.yearattained}}. 
+        
+                    {% for achievement in achievements %}
+                        {{achievements.achievement}}.
+                    {% endfor %}
+                
+                    {% for award in awards %}
+                        {{awards.achievement}}, {{awards.yearaward}}.
+                    {% endfor %}
+                </p>
+                <br>
+            {% endfor %}
+            -->
+            
 		</div>
 
 		<br>
@@ -67,9 +108,22 @@
 			<p id='section-content-left'>
 				May - August 2016
 			</p>
+            
 			<p id='section-content-right'>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
+            
+<!--
+            {% for workexp in workexps}
+                <p id='section-content-left'>
+                    {{workexp.monthstart}} {{workexp.yearstart}} - {{workexp.monthfin}} {{workexp.yearfin}}
+                </p>
+                <p id='section-content-right'>
+                    {{workexp.position}} in {{workexp.company}}. {{workexp.workdone}}
+                </p>
+                <br>
+            {% endfor %}
+-->
 		</div>
 
 		<br>
@@ -97,6 +151,22 @@
 				<br>
 				Creatives Executive, AY 2014 - 2015. Marketing Executive, AY 2015 - 2016.
 			</p>
+            
+            
+<!--
+            {% for curricular in curriculars %}
+                <p id='section-content-left'>
+                    {{curricular.yrstart}} - {{curricular.yrfin}}
+                </p>
+                <p id='section-content-right'>
+                    <b>{{curricular.position}}, {{curricular.organization}}</b>
+                    <br>
+                    {{curricular.workdone}}
+                </p>
+                <br>
+            {% endfor %}
+-->
+            
 		</div>
 
 		<br>
@@ -112,6 +182,22 @@
 			<p id='section-content-right'>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
+            
+            
+<!--
+            {% for seminarattend in seminarsattend}
+                <p id='section-content-left'>
+                    {{seminarattend.month}} {{seminarattend.year}}
+                </p>
+    
+                <p id='section-content-right'>
+                    <b>{{seminarattend.title}}</b>
+                    <br>
+                    {{seminarattend.seminarhead}}, {{seminarattend.venue}}.
+                </p>
+                <br>
+            {% endfor %}
+-->
 		</div>
 
 		<br>
@@ -127,6 +213,20 @@
 			<p id='section-content-right'>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
+
+<!--
+            {% for seminarconduct in seminarsconduct}
+            <p id='section-content-left'>
+				{{seminarconduct.month}} {{seminarconduct.year}}
+			</p>
+			<p id='section-content-right'>
+				{{seminarconduct.position}}, {{seminarconduct.title}}
+                <br>
+                {{seminarconduct.organization}}, {{seminarconduct.venue}}.
+            </p>        
+            <br>
+-->
+            
 		</div>
 
 		<br>
@@ -142,6 +242,22 @@
 			<p id='section-content-right'>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
+            
+<!--
+            {% for researchpaper in researchpapers}
+            <p id='section-content-left'>
+				{{researchpaper.month}} {{researchpaper.year}}
+            </p>
+			<p id='section-content-right'>
+                <b>{{researchpaper.title}}</b>
+                <br>
+                {{researchpaper.summary}}
+			</p>
+            <br>
+            {% endfor %}
+-->
+            
+            
 		</div>
 
 		<br>
@@ -153,17 +269,33 @@
 			<p id='section-content-right'>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
+            
+            
+<!--
+            <p id='section-header'>PERSONAL BACKGROUND</p>
+			<br>
+			<p id='section-content-right'>
+				{{user.background}}
+			</p>
+-->
 		</div>
 
 		<br>
 		<br>
 
-		<div class'references'>
+		<div class='references'>
 			<p id='section-header'>REFERENCES</p>
 			<br>
 			<p id='section-content-right'>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
+            
+            
+<!--
+            <p id='section-content-right'>
+				Available upon request.
+			</p>
+-->
 		</div>
 
 		<br>
