@@ -1,0 +1,194 @@
+<html>
+  <head>
+		{% load staticfiles %}
+		<!-- replace when moving to django -->
+  	<link href="{% static 'resumegeneratormain/css/blank-resume.css' %}" rel="stylesheet" type="text/css">
+
+  </head>
+  <body>
+		<img src='DSC_6641.jpg' id='photo'>
+
+		<div class='header'>
+ 			<p style='font-weight: bold;'>{{user.userprofile_set.first.first_name}} {{user.userprofile_set.first.middle_initial}}. {{user.userprofile_set.first.last_name}}</p>
+			<p>
+				{{user.address_set.first.address}} <br>
+				Quezon City 1110 <br>
+				{{user.telephonenumber_set.first.number}} <br>
+				{{user.userprofile_set.first.email}} <br>
+			</p>
+
+		</div>
+
+
+		<br>
+		<br>
+
+		<div class='objective'>
+			<p id='section-header'>OBJECTIVE</p>
+			<br>
+			<p id='section-content-right'>
+				{{user.userprofile_set.first.objective}}
+			</p>
+<!--
+            <p id='section-content-right'>
+				{{user.objective}}
+			</p>
+-->
+		</div>
+
+		<br>
+		<br>
+
+		<div class='education'>
+			<p id='section-header'>EDUCATION</p>
+			<br>
+			{% for education in user.education_set.all %}
+      	<p id='section-content-left'>
+        	{{education.year_start}} - {{education.year_finish}}
+        </p>
+
+        <p id='section-content-right'>
+            {{education.school}}
+            <br>
+            {{education.education_attained}}, {{education.month_attained}} {{education.year_attained}}.
+
+            {% for achievement in user.achievements_set.all %}
+                {{achievement.name}}.
+            {% endfor %}
+
+            {% for award in user.award_set.all %}
+                {{award.name}}, {{award.year}}.
+            {% endfor %}
+        </p>
+        <br>
+      {% endfor %}
+
+		</div>
+
+		<br>
+		<br>
+
+		<div class='workexperience'>
+			<p id="section-header">WORK EXPERIENCE</p>
+			<br>
+			{% for workexp in user.workexperience_set.all %}
+      	<p id='section-content-left'>
+        	{{workexp.month_start}} {{workexp.year_start}} - {{workexp.month_finish}} {{workexp.year_finish}}
+        </p>
+        <p id='section-content-right'>
+          {{workexp.position}} in {{workexp.company}}. {{workexp.workdone}}
+        </p>
+        <br>
+    	{% endfor %}
+
+		</div>
+
+		<br>
+		<br>
+
+		<div class='cocurricular'>
+			<p id='section-header'>CO-CURRICULAR ACTIVITIES</p>
+			<br>
+			{% for curricular in user.extracurricular_set.all %}
+      	<p id='section-content-left'>
+        	{{curricular.year_start}} - {{curricular.year_finish}}
+        </p>
+        <p id='section-content-right'>
+          <b>{{curricular.position}}, {{curricular.organization}}</b>
+          <br>
+          {{curricular.work_done}}
+        </p>
+          <br>
+      {% endfor %}
+
+
+		</div>
+
+		<br>
+		<br>
+
+		<div class='seminarsattended'>
+			<p id='section-header'>SEMINARS ATTENDED</p>
+			<br>
+			<!-- Month, Year -->
+			{% for seminarattend in user.seminarattended_set.all %}
+      	<p id='section-content-left'>
+          {{seminarattend.month}} {{seminarattend.year}}
+        </p>
+        <p id='section-content-right'>
+          <b>{{seminarattend.title}}</b>
+          <br>
+          {{seminarattend.seminar_head}}, {{seminarattend.venue}}.
+        </p>
+        <br>
+      {% endfor %}
+		</div>
+
+		<br>
+		<br>
+
+		<div class='seminarsconducted'>
+			<p id="section-header">SEMINARS CONDUCTED</p>
+			<br>
+      {% for seminarconduct in user.seminarconducted_set.all %}
+      	<p id='section-content-left'>
+					{{seminarconduct.month}} {{seminarconduct.year}}
+				</p>
+				<p id='section-content-right'>
+					{{seminarconduct.position}}, {{seminarconduct.title}}
+          <br>
+          {{seminarconduct.organization}}, {{seminarconduct.venue}}.
+        </p>
+        <br>
+			{% endfor %}
+		</div>
+
+		<br>
+		<br>
+
+		<div class='researchprepared'>
+			<p id="section-header">RESEARCH PAPERS PREPARED</p>
+			<br>
+			{% for researchpaper in researchpapers %}
+      	<p id='section-content-left'>
+				{{researchpaper.month}} {{researchpaper.year}}
+        </p>
+				<p id='section-content-right'>
+        	<b>{{researchpaper.title}}</b>
+          <br>
+          {{researchpaper.summary}}
+				</p>
+        <br>
+      {% endfor %}
+		</div>
+
+		<br>
+		<br>
+
+		<div class='personalbackground'>
+      <p id='section-header'>PERSONAL BACKGROUND</p>
+			<br>
+			<p id='section-content-right'>
+				{{user.userprofile_set.first.background}}
+			</p>
+
+		</div>
+
+		<br>
+		<br>
+
+		<div class='references'>
+			<p id='section-header'>REFERENCES</p>
+			<br>
+			<p id='section-content-right'>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+
+		</div>
+
+		<br>
+		<br>
+	</body>
+
+
+</html>

@@ -16,6 +16,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+import resumegeneratormain.views as views
+
 urlpatterns = [
+    url(r'^resume/$', views.resume),
     url(r'^admin/', admin.site.urls),
 ]
