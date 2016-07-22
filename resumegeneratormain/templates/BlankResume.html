@@ -134,7 +134,7 @@
 				<p id='section-content-right'>
 					{{seminarconduct.position}}, {{seminarconduct.title}}
           <br>
-          {{seminarconduct.organization}}, {{seminarconduct.venue}}.
+          {{seminarconduct.seminar_head}}, {{seminarconduct.venue}}.
         </p>
         <br>
 			{% endfor %}
@@ -146,7 +146,7 @@
 		<div class='researchprepared'>
 			<p id="section-header">RESEARCH PAPERS PREPARED</p>
 			<br>
-			{% for researchpaper in researchpapers %}
+			{% for researchpaper in user.researchpaper_set.all %}
       	<p id='section-content-left'>
 				{{researchpaper.month}} {{researchpaper.year}}
         </p>
