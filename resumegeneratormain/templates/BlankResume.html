@@ -29,11 +29,7 @@
 			<p id='section-content-right'>
 				{{user.userprofile_set.first.objective}}
 			</p>
-<!--
-            <p id='section-content-right'>
-				{{user.objective}}
-			</p>
--->
+
 		</div>
 
 		<br>
@@ -110,7 +106,7 @@
 		<div class='seminarsattended'>
 			<p id='section-header'>SEMINARS ATTENDED</p>
 			<br>
-			<!-- Month, Year -->
+
 			{% for seminarattend in user.seminarattended_set.all %}
       	<p id='section-content-left'>
           {{seminarattend.month}} {{seminarattend.year}}
