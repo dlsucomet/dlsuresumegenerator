@@ -15,6 +15,10 @@ from models import Seminarconduct
 from models import Telephone
 from models import User
 from models import Workexp
+#IMPORT Email
+#IMPORT Objective
+#IMPORT SchoolDescription
+#IMPORT Background
 
 # Create your views here.
 def index(request):

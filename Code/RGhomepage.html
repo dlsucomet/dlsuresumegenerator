@@ -172,20 +172,8 @@
               <h3>Name</h3>
               <div class="col-md-4"></div>
                 <div class="input-group col-md-4">
-                    <span class="input-group-addon" id="basic-addon1">First Name </span>
-                    <input type="text" class="form-control" id = "fName" aria-describedby="basic-addon1" name="firstName">
-                </div>
-              <br>
-              <div class="col-md-4"></div>
-                <div class="input-group col-md-4">
-                    <span class="input-group-addon" id="basic-addon1">Middle Initial</span>
-                    <input type="text" class="form-control" id = "mName" aria-describedby="basic-addon1" name="middleInitial">
-                </div>
-              <br>
-              <div class="col-md-4"></div>
-                <div class="input-group col-md-4">
-                    <span class="input-group-addon" id="basic-addon1">Last Name </span>
-                    <input type="text" class="form-control" id = "lName" aria-describedby="basic-addon1" name="lastName">
+                    <span class="input-group-addon" id="basic-addon1">Full Name </span>
+                    <input type="text" class="form-control" id = "fName" aria-describedby="basic-addon1" name="User" placeholder="Johnny D. Appleseed">
                 </div>
 <!--
 
@@ -220,7 +208,7 @@
                 <div class="col-md-4"></div>
                 <div class="input-group col-md-4">
                     <span class="input-group-addon" id="basic-addon1">Home Phone </span>
-                    <input type="text" class="form-control" id = "user" aria-describedby="basic-addon1" placeholder="(02)XXX-XXXX" name="HomePhone">
+                    <input type="text" class="form-control" id = "user" aria-describedby="basic-addon1" placeholder="(02)XXX-XXXX" name="Telephone">
                 </div>
                 <br>
                 <div class="col-md-4"></div>
@@ -238,7 +226,7 @@
                 <br><br>
                 <h3>Objective</h3>
                 <div class="col-md-4"></div>
-                  <textarea class="form-control" placeholder="To apply...." name="objective"></textarea>
+                  <textarea class="form-control" placeholder="To apply...." name="Objective"></textarea>
                 </div>
 
 
@@ -268,7 +256,7 @@
                 <div class="col-md-4 input-group">
                     <form action="#" method="get" id="address">
                         <span id="myForm">
-                            <input class="form-control" type="text" placeholder="School Name" name="School">
+                            <input class="form-control" type="text" placeholder="School Name" name="Education">
                         </span>
                     </form>
                     <div class="input-group-btn plustimes">
@@ -277,7 +265,7 @@
                 </div>
                 <br>
              <div class="col-md-4"></div>
-                  <textarea class="form-control" placeholder="School and Awards" name="SchoolDescription"></textarea>
+                  <textarea class="form-control" placeholder="School and Awards..." name="Achievements"></textarea>
 
 
 
@@ -307,7 +295,7 @@
                 <div class="col-md-4 input-group">
                     <form action="#" method="get" id="address">
                         <span id="myForm">
-                            <input class="form-control" type="text" placeholder="Sample work experience" name="WorkEx">
+                            <input class="form-control" type="text" placeholder="Sample work experience" name="Workexp">
                         </span>
                     </form>
                     <div class="input-group-btn plustimes">
@@ -318,7 +306,7 @@
 
         <br><h1></br>
             <h1><img src = "images/4.png"  width = "30px" height= "30px">
-                Co-Curricular Activities</h1>
+                Extracurricular Activities</h1>
               <br>
                 <br>
             <div class="col-md-4"></div>
@@ -342,7 +330,7 @@
                 <div class="col-md-4 input-group">
                     <form action="#" method="get" id="address">
                         <span id="myForm">
-                            <input class="form-control" type="text" placeholder="Sample work experience" name="CoCurricular">
+                            <input class="form-control" type="text" placeholder="Sample experience" name="Curricular">
                         </span>
                     </form>
                     <div class="input-group-btn plustimes">
@@ -357,28 +345,23 @@
               <br>
         <h3>Seminars Attended</h3>
                 <br>
-            <div class="col-md-4"></div>
-                    <div class='col-sm-2'>
-                        <div class="form-group">
-                            <div class='input-group date datetimepicker9'>
-                                <input type='text' class="form-control" placeholder="From Date:" name="FromSemAt">
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </span> </div> </div> </div>
-             <div class="container">
-                    <div class='col-sm-2'>
-                        <div class="form-group">
-                            <div class='input-group date datetimepicker9'>
-                                <input type='text' class="form-control" placeholder="To Date:" name="ToSemAt">
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </span> </div> </div> </div></div>
+
+            <div class="col-md-5"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class='col-sm-2'>
+                            <div class="form-group">
+                                <div class='input-group date datetimepicker9'>
+                                    <input type='text' class="form-control" placeholder="Date of Seminar" name="SeminarDate">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div></div></div></div>
 
             <div class="col-md-4"></div>
                 <div class="col-md-4 input-group">
                     <form action="#" method="get" id="address">
                         <span id="myForm">
-                            <input class="form-control" type="text" placeholder="Sample work experience" name="SeminarAt">
+                            <input class="form-control" type="text" placeholder="Sample Seminar" name="Seminarattend">
                         </span>
                     </form>
                     <div class="input-group-btn plustimes">
@@ -388,28 +371,22 @@
                 <br>
             <h3>Seminars Conducted</h3>
                 <br>
-            <div class="col-md-4"></div>
-                    <div class='col-sm-2'>
-                        <div class="form-group">
-                            <div class='input-group date datetimepicker9'>
-                                <input type='text' class="form-control" placeholder="From Date:" name="FromSemCon">
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </span> </div> </div> </div>
-             <div class="container">
-                    <div class='col-sm-2'>
-                        <div class="form-group">
-                            <div class='input-group date datetimepicker9'>
-                                <input type='text' class="form-control" placeholder="To Date:" name="ToSemCon">
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </span> </div> </div> </div></div>
+            <div class="col-md-5"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class='col-sm-2'>
+                            <div class="form-group">
+                                <div class='input-group date datetimepicker9'>
+                                    <input type='text' class="form-control" placeholder="Date of Seminar" name="SeminarConductedDate">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div></div></div></div>
 
             <div class="col-md-4"></div>
                 <div class="col-md-4 input-group">
                     <form action="#" method="get" id="address">
                         <span id="myForm">
-                            <input class="form-control" type="text" placeholder="Sample work experience" name="SeminarCon">
+                            <input class="form-control" type="text" placeholder="Sample Seminar" name="Seminarconduct">
                         </span>
                     </form>
                     <div class="input-group-btn plustimes">
@@ -423,28 +400,22 @@
                 Research Papers Prepared</h1>
               <br>
                 <br>
-            <div class="col-md-4"></div>
-                    <div class='col-sm-2'>
-                        <div class="form-group">
-                            <div class='input-group date datetimepicker9'>
-                                <input type='text' class="form-control" placeholder="From Date:" name="FromResearchPaper">
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </span> </div> </div> </div>
-             <div class="container">
-                    <div class='col-sm-2'>
-                        <div class="form-group">
-                            <div class='input-group date datetimepicker9'>
-                                <input type='text' class="form-control" placeholder="To Date:" name="ToResearchPaper">
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </span> </div> </div> </div></div>
+            <div class="col-md-5"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class='col-sm-2'>
+                            <div class="form-group">
+                                <div class='input-group date datetimepicker9'>
+                                    <input type='text' class="form-control" placeholder="Date of Paper" name="ResearchPaperDate">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div></div></div></div>
 
             <div class="col-md-4"></div>
                 <div class="col-md-4 input-group">
                     <form action="#" method="get" id="address">
                         <span id="myForm">
-                            <input class="form-control" type="text" placeholder="Sample work experience" name="ResearchPaper">
+                            <input class="form-control" type="text" placeholder="Sample Paper Title on the Reasearch On This" name="Researchpaper">
                         </span>
                     </form>
                     <div class="input-group-btn plustimes">
@@ -459,7 +430,7 @@
                 Personal Background</h1>
               <br>
                <div class="col-md-4"></div>
-                  <textarea class="form-control" placeholder="12 Gold Street, Silver Subdivision, Bronze City" name="PersonalBackground"></textarea>
+                  <textarea class="form-control" placeholder="Enthusiastic, Friendly, Courteus, Knowledgable in 5 Languages: English, Filipino, Spanish, C, Java" name="PersonalBackground"></textarea>
                 </div>
                 <br>
 
@@ -474,7 +445,7 @@
 
         <br><h1></br>
 
-         <input type = "submit" class = "btn">
+         <input type = "submit" class = "btn btn-1 btn-1a">
 
         <br><h1></br>
 
