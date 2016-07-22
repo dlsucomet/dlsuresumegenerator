@@ -29,7 +29,3 @@ def signUp(request):
 
 def mainPage(request):
 	return render(request, 'resumegenerator/RGhomepage.html')
-
-def SubmitAllData(self, request, *args, **kwargs):
-	achieveSend = Achievements()
-	return HttpResponse()
