@@ -20,5 +20,6 @@ import resumegeneratormain.views as views
 
 urlpatterns = [
     url(r'^resume/$', views.resume),
+	url(r'^pdf/$', views.resumePdf),
     url(r'^admin/', admin.site.urls),
 ]
