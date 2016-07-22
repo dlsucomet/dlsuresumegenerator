@@ -1,290 +1,500 @@
 <html>
 <head>
- <meta charset="utf-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- {% load staticfiles %}
- <link href="{% static 'resumegenerator/css/bootstrap.min.css' %}" rel="stylesheet">
- <link href="{% static 'resumegenerator/css/scrolling-nav.css' %}" rel="stylesheet">
- <script src="{% static 'resumegenerator/js/jquery.js' %}"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link href="css/scrolling-nav.css" rel="stylesheet">	
+    <link rel="stylesheet" href="css/animate.css">
+    <style>
 
-	<script>
-	var counter = 1;
-	var limit = 3;
-	function addInput(divName){
-		 if (counter == limit)  {
-			  alert("You have reached the limit of adding " + counter + " inputs");
-		 }
-		 else {
-			  var newdiv = document.createElement('div');
-			  newdiv.innerHTML =  "<br><input type='text' class='form-control'><span class='input-group-btn'><input id = 'addAddress' type='image' src='images/add.png' onClick='addInput('dynamicInput');' alt='Submit' width='28' height='28'>";
+        body {
+            background-color: #252525;
+        }
 
+        .welcome
+        {
+          font-family: montserrat, sans-serif;
+          color: rgb(255, 255, 255);
+          text-align: center;
+          margin: auto;
+          width: 100%;
+        }
 
-			  document.getElementById(divName).appendChild(newdiv);
-			  counter++;
-		 }
-	}
-		</script>
-<style>
+        .icon
+        {
+            text-align: center;
+            margin-top: 90px;
+        }
 
-body {
-    background-color: #252525;
-}
+        .center
+        {
+          text-align: center;
+        }
 
-.welcome
-{
-  font-family: montserrat, sans-serif;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  margin: auto;
-  width: 100%;
-}
+        h2
+        {
+            font-family: montserrat, sans-serif;
+            font-weight: 400;
+            text-align: center; 
+            color: white;
+        }
 
-.icon
-{
-    text-align: center;
-    margin-top: 90px;
-}
+        h3
+        {
+            font-family: montserrat, sans-serif;
+            font-weight: 250;
+            text-align: center; 
+            color: white;
+        }
 
-.center
-{
-  text-align: center;
-}
+        h1
+        { 
+            font-family: montserrat, sans-serif;
+            text-align: center; 
+            color: #55b953;
+        }
 
-h2
-{
-    font-family: montserrat, sans-serif;
-    font-weight: 400;
-    text-align: center;
-    color: white;
-}
-
-h3
-{
-    font-family: montserrat, sans-serif;
-    font-weight: 250;
-    text-align: center;
-    color: white;
-}
-
-h1
-{
-    font-family: montserrat, sans-serif;
-    text-align: center;
-    color: #55b953;
-}
-
-.btn {
-    width: 15%;
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
-    background: #55b953;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 400;
-    outline: none;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-}
+        .btn {
+            width: 15%;
+            font-family: inherit;
+            font-size: inherit;
+            color: inherit;
+            background: #55b953;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 400;
+            outline: none;    
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            transition: all 0.3s;
+        }
 
 
-.btn-1 {
-    color: #fff;
-}
+        .btn-1 {
+            color: #fff;
+        }
 
-.btn-1a:hover,
-.btn-1a:active {
-    color:  #55b953;
-    background: #fff;
-}
+        .btn-1a:hover,
+        .btn-1a:active {
+            color:  #55b953;
+            background: #fff;
+        }
 
-.small{
-  line-height: 20;
-}
+        .small{
+          line-height: 20;
+        }
 
-textarea{
-  width: 200px;
-  min-width:200px;
-  max-width:200px;
+        textarea{ 
+          width: 425px; 
+          min-width:200px; 
+          max-width:425px; 
 
-  height:200px;
-  min-height:200px;
-  max-height:200px;
-}
+          height:250px; 
+          min-height:100px;  
+          max-height:500px;
+        }
+
+        .round
+        {
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+        
+        .plustimes:hover, .plustimes:after {
+             -webkit-transform: rotate(45deg);
+             -moz-transform: rotate(45deg);
+             -o-transform: rotate(45deg);
+              transform: rotate(45deg);
+             -webkit-transition-duration: 0.2s;
+             -moz-transition-duration: 0.2s;
+             -o-transition-duration: 0.2s;
+              transition-duration: 0.2s;
+         }
 
 
-</style>
+
+    </style>
+    <script src="js/jquery.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/bootstrap-datetimepicker.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/form.js"></script>
 
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+	
+
+    <div class = "icon up">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="fadeInUp animated">        
+                <h2>Welcome to the</h2>
+                <h1>DLSU Resume Generator!</h1>
+            </div>
+            <br>
+            <br>
+            <a href="#myAnchor" rel="" id="anchor1" class="anchorLink page-scroll center btn btn-1 btn-1a">CREATE A RESUME</a>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+    </div>
+
+    <section id="basicinfo" class = "form-section">
+        <form method = "POST" action = "/new/">
+        {% csrf_token %}
+          <br><br>
+            <a name="myAnchor" id="myAnchor"><br></a>
+            <br>
+            <h1><img src = "images/1.png"  width = "30px" height= "30px">
+                Personal Information</h1>
+              <br>
+              <h3>Name</h3>
+              <div class="col-md-4"></div>
+                <div class="input-group col-md-4">
+                    <span class="input-group-addon" id="basic-addon1">First Name </span>
+                    <input type="text" class="form-control" id = "fName" aria-describedby="basic-addon1" name="firstName">
+                </div>
+              <br>
+              <div class="col-md-4"></div>
+                <div class="input-group col-md-4">
+                    <span class="input-group-addon" id="basic-addon1">Middle Initial</span>
+                    <input type="text" class="form-control" id = "mName" aria-describedby="basic-addon1" name="middleInitial">
+                </div>
+              <br>
+              <div class="col-md-4"></div>
+                <div class="input-group col-md-4">
+                    <span class="input-group-addon" id="basic-addon1">Last Name </span>
+                    <input type="text" class="form-control" id = "lName" aria-describedby="basic-addon1" name="lastName">
+                </div>
+<!--
 
 
-<div class = "icon up">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h2>Welcome to the</h2>
-        <h1>DLSU Resume Generator!</h1>
-        <br>
-        <br>
-        <br>
-        <br>
-	  	<br>
-        <a id="up" class= "page-scroll center btn btn-1 btn-1a">START</a>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-</div>
+            
+            <div class="three">
+                <h2>Your Dynamic Form!</h2>
+                <form action="#" method="get" id="mainform">
+                <span id="myForm">
+                </span>
+                <p></p>
+                <input type="submit" value="Submit"></input>
+            </form>
+            </div>
+-->
+        
+                <h3>Address</h3>
+                <div class="col-md-4"></div>
+                <div class="col-md-4 input-group">
+                    <form action="#" method="get" id="address">
+                        <span id="myForm">
+                            <input class="form-control" type="text" placeholder="12 Gold Street, Silver Subdivision, Bronze City" name="Address">
+                        </span>
+                    </form>
+                    <div class="input-group-btn plustimes">
+                        <img src="images/add.png" width="28" height="28">
+                    </div>
+                </div>
 
-<section id="basicinfo" class = "form-section">
-<form>
-  <br><br>
-	<br>
-<br>
-<h1>Personal Information</h1>
-      <br>
-      <h3>Name</h3>
-      <div class="col-md-4"></div>
-        <div class="input-group col-md-4">
-            <span class="input-group-addon" id="basic-addon1">First Name: </span>
-            <input type="text" class="form-control" id = "fName" aria-describedby="basic-addon1">
-        </div>
-      <br>
-      <div class="col-md-4"></div>
-        <div class="input-group col-md-4">
-            <span class="input-group-addon" id="basic-addon1">Middle Name: </span>
-            <input type="text" class="form-control" id = "mName" aria-describedby="basic-addon1">
-        </div>
-      <br>
-      <div class="col-md-4"></div>
-        <div class="input-group col-md-4">
-            <span class="input-group-addon" id="basic-addon1">Last Name: </span>
-            <input type="text" class="form-control" id = "lName" aria-describedby="basic-addon1">
-        </div>
-
-
-	 	<h3>Address</h3>
-		<div class="col-md-4"></div>
-		<div id = "dynamicInput" class="col-md-4 input-group">
-		  <input type="text" class="form-control" placeholder="12 Gold Street, Silver Subdivision, Bronze City">
-		  <span class="input-group-btn">
-			<input id = "addAddress"  type="image" src="{% static 'resumegenerator/images/add.png' %}" onClick="addInput('dynamicInput');" alt="Submit" width="28" height="28">
-		  </span>
-		</div>
-
-        <br><br>
-        <h3>Contact Numbers</h3>
-        <div class="col-md-4"></div>
-        <div class="input-group col-md-4">
-            <span class="input-group-addon" id="basic-addon1">Home Phone: </span>
-            <input type="text" class="form-control" id = "user" aria-describedby="basic-addon1" placeholder="(02)XXX-XXXX">
-        </div>
-        <br>
-        <div class="col-md-4"></div>
-        <div class="input-group col-md-4">
-            <span class="input-group-addon" id="basic-addon1">Mobile Phone: </span>
-            <input type="text" class="form-control" id = "user" aria-describedby="basic-addon1" placeholder="+63XXX-XXX-XXXX">
-        </div>
-        <br><br>
-        <h3>Email</h3>
-        <div class="col-md-4"></div>
-        <div class="input-group col-md-4">
-            <span class="input-group-addon" id="basic-addon1">DLSU Email: </span>
-            <input type="text" class="form-control" id = "user" aria-describedby="basic-addon1" value="your_name@dlsu.edu.ph" readonly>
-        </div>
+                <br><br>
+                <h3>Contact Information</h3>
+                <div class="col-md-4"></div>
+                <div class="input-group col-md-4">
+                    <span class="input-group-addon" id="basic-addon1">Home Phone </span>
+                    <input type="text" class="form-control" id = "user" aria-describedby="basic-addon1" placeholder="(02)XXX-XXXX" name="HomePhone">
+                </div>
+                <br>
+                <div class="col-md-4"></div>
+                <div class="input-group col-md-4">
+                    <span class="input-group-addon" id="basic-addon1">Mobile Phone </span>
+                    <input type="text" class="form-control" id = "user" aria-describedby="basic-addon1" placeholder="+63XXX-XXX-XXXX" name="Cellphone">
+                </div>
+                <br><br>
+                <h3>Email</h3>
+                <div class="col-md-4"></div>
+                <div class="input-group col-md-4">
+                    <span class="input-group-addon" id="basic-addon1">DLSU Email </span>
+                    <input type="text" class="form-control" aria-describedby="basic-addon1" placeholder="your_name@dlsu.edu.ph" name="Email">
+                </div>
+                <br><br>
+                <h3>Objective</h3>
+                <div class="col-md-4"></div>
+                  <textarea class="form-control" placeholder="To apply...." name="objective"></textarea>
+                </div>
 
 
-<br>
-<h2>Initial Background</h2>
-		<br>
-		<div class="col-md-4"></div>
-		<div class="input-group col-md-4">
-			<span class="input-group-addon" id="basic-addon1">Objective: </span>
-		  <textarea class="form-control" class="center" rows="5" id="comment"></textarea>
-		</div>
+        <br><h1></br>
+            <h1><img src = "images/2.png"  width = "30px" height= "30px">
+                Education</h1>
+              <br>
+            <br>
+            <div class="col-md-4"></div>
+                    <div class='col-sm-2'>
+                        <div class="form-group">
+                            <div class='input-group date datetimepicker9'>
+                                <input type='text' class="form-control" placeholder="From Date:" name="FromEd">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div>
+             <div class="container">
+                    <div class='col-sm-2'>
+                        <div class="form-group">
+                            <div class='input-group date datetimepicker9'>
+                                <input type='text' class="form-control" placeholder="To Date:" name="ToEd">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div></div>
 
-		<br>
-		<div class="col-md-4"></div>
-		<div class="input-group col-md-4">
-			<span class="input-group-addon" id="basic-addon1">Education: </span>
-			<!--<input type="text" class="form-control" id = "user" aria-describedby="basic-addon1" -->
-			<textarea class="form-control" placeholder="12 Gold Street, Silver Subdivision, Bronze City"></textarea>
-		</div>
-
-		<br>
-		<div class="col-md-4"></div>
-		<div class="input-group col-md-4">
-			<span class="input-group-addon" id="basic-addon1">Work Experience: </span>
-			<textarea class="form-control" placeholder="12 Gold Street, Silver Subdivision, Bronze City"></textarea>
-		</div>
-
-		<br>
-		<div class="col-md-4"></div>
-		<div class="input-group col-md-4">
-			<span class="input-group-addon" id="basic-addon1">Co-Curricular Activites: </span>
-			<textarea class="form-control" placeholder="12 Gold Street, Silver Subdivision, Bronze City"></textarea>
-		</div>
-
-		<br>
-		<div class="col-md-4"></div>
-		<div class="input-group col-md-4">
-			<span class="input-group-addon" id="basic-addon1">Seminars Attended: </span>
-			<textarea class="form-control" placeholder="12 Gold Street, Silver Subdivision, Bronze City"></textarea>
-		</div>
-
-		<br>
-		<div class="col-md-4"></div>
-		<div class="input-group col-md-4">
-			<span class="input-group-addon" id="basic-addon1">Seminars Conducted: </span>
-			<textarea class="form-control" placeholder="12 Gold Street, Silver Subdivision, Bronze City"></textarea>
-		</div>
-
-		<br>
-		<div class="col-md-4"></div>
-		<div class="input-group col-md-4">
-			<span class="input-group-addon" id="basic-addon1">Research Papers Prepared: </span>
-			<textarea class="form-control" placeholder="12 Gold Street, Silver Subdivision, Bronze City"></textarea>
-		</div>
-
-		<br>
-		<div class="col-md-4"></div>
-		<div class="input-group col-md-4">
-			<span class="input-group-addon" id="basic-addon1">Personal Background: </span>
-			<textarea class="form-control" placeholder="12 Gold Street, Silver Subdivision, Bronze City"></textarea>
-		</div>
-
-		<br>
-		<div class="col-md-4"></div>
-		<div class="input-group col-md-4">
-			<span class="input-group-addon" id="basic-addon1">References: </span>
-			<textarea class="form-control" placeholder="12 Gold Street, Silver Subdivision, Bronze City"></textarea>
-		</div>
+            <div class="col-md-4"></div>
+                <div class="col-md-4 input-group">
+                    <form action="#" method="get" id="address">
+                        <span id="myForm">
+                            <input class="form-control" type="text" placeholder="School Name" name="School">
+                        </span>
+                    </form>
+                    <div class="input-group-btn plustimes">
+                        <img src="images/add.png" width="28" height="28">
+                    </div>
+                </div>
 
 
 
+        <br><h1></br>
+            <h1><img src = "images/3.png"  width = "30px" height= "30px">
+                Work Experience</h1>
+              <br>
+                <br>
+            <div class="col-md-4"></div>
+                    <div class='col-sm-2'>
+                        <div class="form-group">
+                            <div class='input-group date datetimepicker9'>
+                                <input type='text' class="form-control" placeholder="From Date:" name="FromWork">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div>
+             <div class="container">
+                    <div class='col-sm-2'>
+                        <div class="form-group">
+                            <div class='input-group date datetimepicker9'>
+                                <input type='text' class="form-control" placeholder="To Date:" name="ToWork">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div></div>
 
-</form>
-</section>
+            <div class="col-md-4"></div>
+                <div class="col-md-4 input-group">
+                    <form action="#" method="get" id="address">
+                        <span id="myForm">
+                            <input class="form-control" type="text" placeholder="Sample work experience" name="WorkEx">
+                        </span>
+                    </form>
+                    <div class="input-group-btn plustimes">
+                        <img src="images/add.png" width="28" height="28">
+                    </div>
+                </div>
 
 
-<script src="{% static 'resumegenerator/js/scrolling-nav.js' %}"></script>
-<script src="{% static 'resumegenerator/js/jquery.easing.min.js' %}"></script>
-<script src="{% static 'resumegenerator/js/jquery.min.js' %}"></script>
-<script src="{% static 'resumegenerator/js/bootstrap.min.js' %}"></script>
-<script src="{% static 'resumegenerator/js/classie.js' %}"></script>
+        <br><h1></br>
+            <h1><img src = "images/4.png"  width = "30px" height= "30px">
+                Co-Curricular Activities</h1>
+              <br>
+                <br>
+            <div class="col-md-4"></div>
+                    <div class='col-sm-2'>
+                        <div class="form-group">
+                            <div class='input-group date datetimepicker9'>
+                                <input type='text' class="form-control" placeholder="From Date:" name="FromCoCur">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div>
+             <div class="container">
+                    <div class='col-sm-2'>
+                        <div class="form-group">
+                            <div class='input-group date datetimepicker9'>
+                                <input type='text' class="form-control" placeholder="To Date:" name="ToCoCur">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div></div>
 
+            <div class="col-md-4"></div>
+                <div class="col-md-4 input-group">
+                    <form action="#" method="get" id="address">
+                        <span id="myForm">
+                            <input class="form-control" type="text" placeholder="Sample work experience" name="CoCurricular">
+                        </span>
+                    </form>
+                    <div class="input-group-btn plustimes">
+                        <img src="images/add.png" width="28" height="28">
+                    </div>
+                </div>
+
+
+        <br><h1></br>
+            <h1><img src = "images/5.png"  width = "30px" height= "30px">
+                Seminars</h1>
+              <br>
+        <h3>Seminars Attended</h3>
+                <br>
+            <div class="col-md-4"></div>
+                    <div class='col-sm-2'>
+                        <div class="form-group">
+                            <div class='input-group date datetimepicker9'>
+                                <input type='text' class="form-control" placeholder="From Date:" name="FromSemAt">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div>
+             <div class="container">
+                    <div class='col-sm-2'>
+                        <div class="form-group">
+                            <div class='input-group date datetimepicker9'>
+                                <input type='text' class="form-control" placeholder="To Date:" name="ToSemAt">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div></div>
+
+            <div class="col-md-4"></div>
+                <div class="col-md-4 input-group">
+                    <form action="#" method="get" id="address">
+                        <span id="myForm">
+                            <input class="form-control" type="text" placeholder="Sample work experience" name="SeminarAt">
+                        </span>
+                    </form>
+                    <div class="input-group-btn plustimes">
+                        <img src="images/add.png" width="28" height="28">
+                    </div>
+                </div>
+                <br>
+            <h3>Seminars Conducted</h3>
+                <br>
+            <div class="col-md-4"></div>
+                    <div class='col-sm-2'>
+                        <div class="form-group">
+                            <div class='input-group date datetimepicker9'>
+                                <input type='text' class="form-control" placeholder="From Date:" name="FromSemCon">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div>
+             <div class="container">
+                    <div class='col-sm-2'>
+                        <div class="form-group">
+                            <div class='input-group date datetimepicker9'>
+                                <input type='text' class="form-control" placeholder="To Date:" name="ToSemCon">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div></div>
+
+            <div class="col-md-4"></div>
+                <div class="col-md-4 input-group">
+                    <form action="#" method="get" id="address">
+                        <span id="myForm">
+                            <input class="form-control" type="text" placeholder="Sample work experience" name="SeminarCon">
+                        </span>
+                    </form>
+                    <div class="input-group-btn plustimes">
+                        <img src="images/add.png" width="28" height="28">
+                    </div>
+                </div>
+
+
+        <br><h1></br>
+            <h1><img src = "images/6.png"  width = "30px" height= "30px">
+                Research Papers Prepared</h1>
+              <br>
+                <br>
+            <div class="col-md-4"></div>
+                    <div class='col-sm-2'>
+                        <div class="form-group">
+                            <div class='input-group date datetimepicker9'>
+                                <input type='text' class="form-control" placeholder="From Date:" name="FromResearchPaper">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div>
+             <div class="container">
+                    <div class='col-sm-2'>
+                        <div class="form-group">
+                            <div class='input-group date datetimepicker9'>
+                                <input type='text' class="form-control" placeholder="To Date:" name="ToResearchPaper">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div></div>
+
+            <div class="col-md-4"></div>
+                <div class="col-md-4 input-group">
+                    <form action="#" method="get" id="address">
+                        <span id="myForm">
+                            <input class="form-control" type="text" placeholder="Sample work experience" name="ResearchPaper">
+                        </span>
+                    </form>
+                    <div class="input-group-btn plustimes">
+                        <img src="images/add.png" width="28" height="28">
+                    </div>
+                </div>
+
+
+
+        <br><h1></br>
+            <h1><img src = "images/7.png"  width = "30px" height= "30px">
+                Personal Background</h1>
+              <br>
+               <div class="col-md-4"></div>
+                  <textarea class="form-control" placeholder="12 Gold Street, Silver Subdivision, Bronze City" name="PersonalBackground"></textarea>
+                </div>
+                <br>
+
+        <br><h1></br>
+            <h1><img src = "images/8.png"  width = "30px" height= "30px">
+                References</h1>
+              <br>
+               <div class="col-md-4"></div>
+                  <textarea class="form-control" placeholder="Name and Email" name="PersonalBackground"></textarea>
+                </div>
+                <br>
+
+        <br><h1></br>
+
+         <input type = "submit" class = "btn">
+
+        <br><h1></br>
+
+        </form> 
+    </section>	
+    <script>
+        $(document).ready(function(){
+            $('.datetimepicker9').datetimepicker( {
+                     viewMode: 'years',
+                    format: 'MM/YYYY'  
+                }); 
+
+
+            $('a').click(function(){
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $( $(this).attr('href') ).offset().top
+                }, 'slow');
+                return false;
+            });
+        });
+            
+    </script>
+    
 </body>
 </html>
