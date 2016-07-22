@@ -116,6 +116,7 @@
          }
 
 
+
     </style>
     <script src="js/jquery.js"></script>
     <script src="js/moment.js"></script>
@@ -160,7 +161,7 @@
     </div>
 
     <section id="basicinfo" class = "form-section">
-        <form>
+        <form method = "POST" action = "/new/">
           <br><br>
             <a name="myAnchor" id="myAnchor"><br></a>
             <br>
@@ -248,7 +249,7 @@
             <div class="col-md-4"></div>
                     <div class='col-sm-2'>
                         <div class="form-group">
-                            <div class='input-group date' id='datetimepicker9'>
+                            <div class='input-group date datetimepicker9'>
                                 <input type='text' class="form-control" placeholder="From Date:" id="FromEd">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
@@ -256,7 +257,7 @@
              <div class="container">
                     <div class='col-sm-2'>
                         <div class="form-group">
-                            <div class='input-group date' id='datetimepicker9'>
+                            <div class='input-group date datetimepicker9'>
                                 <input type='text' class="form-control" placeholder="To Date:" id="ToEd">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
@@ -284,7 +285,7 @@
             <div class="col-md-4"></div>
                     <div class='col-sm-2'>
                         <div class="form-group">
-                            <div class='input-group date' id='datetimepicker9'>
+                            <div class='input-group date datetimepicker9'>
                                 <input type='text' class="form-control" placeholder="From Date:" id="FromWork">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
@@ -292,7 +293,7 @@
              <div class="container">
                     <div class='col-sm-2'>
                         <div class="form-group">
-                            <div class='input-group date' id='datetimepicker9'>
+                            <div class='input-group date datetimepicker9'>
                                 <input type='text' class="form-control" placeholder="To Date:" id="ToWork">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
@@ -319,7 +320,7 @@
             <div class="col-md-4"></div>
                     <div class='col-sm-2'>
                         <div class="form-group">
-                            <div class='input-group date' id='datetimepicker9'>
+                            <div class='input-group date datetimepicker9'>
                                 <input type='text' class="form-control" placeholder="From Date:" id="FromCoCur">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
@@ -327,7 +328,7 @@
              <div class="container">
                     <div class='col-sm-2'>
                         <div class="form-group">
-                            <div class='input-group date' id='datetimepicker9'>
+                            <div class='input-group date datetimepicker9'>
                                 <input type='text' class="form-control" placeholder="To Date:" id="ToCoCur">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
@@ -355,7 +356,7 @@
             <div class="col-md-4"></div>
                     <div class='col-sm-2'>
                         <div class="form-group">
-                            <div class='input-group date' id='datetimepicker9'>
+                            <div class='input-group date datetimepicker9'>
                                 <input type='text' class="form-control" placeholder="From Date:" id="FromSemAt">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
@@ -363,7 +364,7 @@
              <div class="container">
                     <div class='col-sm-2'>
                         <div class="form-group">
-                            <div class='input-group date' id='datetimepicker9'>
+                            <div class='input-group date datetimepicker9'>
                                 <input type='text' class="form-control" placeholder="To Date:" id="ToSemAt">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
@@ -386,7 +387,7 @@
             <div class="col-md-4"></div>
                     <div class='col-sm-2'>
                         <div class="form-group">
-                            <div class='input-group date' id='datetimepicker9'>
+                            <div class='input-group date datetimepicker9'>
                                 <input type='text' class="form-control" placeholder="From Date:" id="FromSemCon">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
@@ -394,7 +395,7 @@
              <div class="container">
                     <div class='col-sm-2'>
                         <div class="form-group">
-                            <div class='input-group date' id='datetimepicker9'>
+                            <div class='input-group date datetimepicker9'>
                                 <input type='text' class="form-control" placeholder="To Date:" id="ToSemCon">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
@@ -421,7 +422,7 @@
             <div class="col-md-4"></div>
                     <div class='col-sm-2'>
                         <div class="form-group">
-                            <div class='input-group date' id='datetimepicker9'>
+                            <div class='input-group date datetimepicker9'>
                                 <input type='text' class="form-control" placeholder="From Date:" id="FromResearchPaper">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
@@ -429,7 +430,7 @@
              <div class="container">
                     <div class='col-sm-2'>
                         <div class="form-group">
-                            <div class='input-group date' id='datetimepicker9'>
+                            <div class='input-group date datetimepicker9'>
                                 <input type='text' class="form-control" placeholder="To Date:" id="ToResearchPaper">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
@@ -468,8 +469,8 @@
                 <br>
 
         <br><h1></br>
-        
-        <a href="#myAnchor" class="anchorLink page-scroll center btn btn-1 btn-1a">SUBMIT</a>
+
+         <input type = "submit" class = "btn">
 
         <br><h1></br>
 
@@ -477,10 +478,12 @@
     </section>	
     <script>
         $(document).ready(function(){
-            $('#datetimepicker9').datetimepicker( {
+            $('.datetimepicker9').datetimepicker( {
                      viewMode: 'years',
                     format: 'MM/YYYY'  
                 }); 
+
+
             $('a').click(function(){
                 event.preventDefault();
                 $('html, body').animate({
