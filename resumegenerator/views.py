@@ -30,8 +30,8 @@ def signUp(request):
 def mainPage(request):
 	return render(request, 'resumegenerator/RGhomepage.html')
 
-def submitData(request):
-	if request.method == "POST":
+# def submitData(request):
+	# if request.method == "POST":
 		# userid = request.POST.get('userid')
 
 		## achievements
@@ -146,4 +146,4 @@ def submitData(request):
 		# telephone.save()
 		# user.save()
 		# workexp.save()
-	return render(request, 'resumegenerator/index.html')
+	# return render(request, 'resumegenerator/index.html')
