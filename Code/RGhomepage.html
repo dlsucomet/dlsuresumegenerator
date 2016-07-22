@@ -4,6 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
     <link href="css/scrolling-nav.css" rel="stylesheet">	
     <link rel="stylesheet" href="css/animate.css">
     <style>
@@ -87,13 +88,13 @@
         }
 
         textarea{ 
-          width: 200px; 
+          width: 425px; 
           min-width:200px; 
-          max-width:200px; 
+          max-width:425px; 
 
-          height:200px; 
-          min-height:200px;  
-          max-height:200px;
+          height:250px; 
+          min-height:100px;  
+          max-height:500px;
         }
 
         .round
@@ -114,7 +115,17 @@
               transition-duration: 0.2s;
          }
 
+
+
     </style>
+    <script src="js/jquery.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/bootstrap-datetimepicker.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/form.js"></script>
 
 </head>
 
@@ -150,7 +161,7 @@
     </div>
 
     <section id="basicinfo" class = "form-section">
-        <form>
+        <form method = "POST" action = "/new/">
           <br><br>
             <a name="myAnchor" id="myAnchor"><br></a>
             <br>
@@ -221,24 +232,258 @@
                 <div class="col-md-4"></div>
                 <div class="input-group col-md-4">
                     <span class="input-group-addon" id="basic-addon1">DLSU Email </span>
-                    <input type="text" class="form-control" id = "user" aria-describedby="basic-addon1" value="your_name@dlsu.edu.ph" readonly>
+                    <input type="text" class="form-control" id = "user" aria-describedby="basic-addon1" placeholder="your_name@dlsu.edu.ph">
+                </div>
+                <br><br>
+                <h3>Objective</h3>
+                <div class="col-md-4"></div>
+                  <textarea class="form-control" placeholder="12 Gold Street, Silver Subdivision, Bronze City"></textarea>
                 </div>
 
 
-        <br>
-        <h2>Initial Background</h2>
-        <br>
-        <span class="input-group-addon" id="basic-addon1">Objective: </span>
-          <textarea class="form-control" class="center" rows="5" id="comment"></textarea>
+        <br><h1></br>
+            <h1><img src = "images/2.png"  width = "30px" height= "30px">
+                Education</h1>
+              <br>
+            <br>
+            <div class="col-md-4"></div>
+                    <div class='col-sm-2'>
+                        <div class="form-group">
+                            <div class='input-group date datetimepicker9'>
+                                <input type='text' class="form-control" placeholder="From Date:" id="FromEd">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div>
+             <div class="container">
+                    <div class='col-sm-2'>
+                        <div class="form-group">
+                            <div class='input-group date datetimepicker9'>
+                                <input type='text' class="form-control" placeholder="To Date:" id="ToEd">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div></div>
 
+            <div class="col-md-4"></div>
+                <div class="col-md-4 input-group">
+                    <form action="#" method="get" id="address">
+                        <span id="myForm">
+                            <input class="form-control" type="text" placeholder="School Name" id="School">
+                        </span>
+                    </form>
+                    <div class="input-group-btn plustimes">
+                        <img src="images/add.png" width="28" height="28">
+                    </div>
+                </div>
+
+
+
+        <br><h1></br>
+            <h1><img src = "images/3.png"  width = "30px" height= "30px">
+                Work Experience</h1>
+              <br>
+                <br>
+            <div class="col-md-4"></div>
+                    <div class='col-sm-2'>
+                        <div class="form-group">
+                            <div class='input-group date datetimepicker9'>
+                                <input type='text' class="form-control" placeholder="From Date:" id="FromWork">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div>
+             <div class="container">
+                    <div class='col-sm-2'>
+                        <div class="form-group">
+                            <div class='input-group date datetimepicker9'>
+                                <input type='text' class="form-control" placeholder="To Date:" id="ToWork">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div></div>
+
+            <div class="col-md-4"></div>
+                <div class="col-md-4 input-group">
+                    <form action="#" method="get" id="address">
+                        <span id="myForm">
+                            <input class="form-control" type="text" placeholder="Sample work experience" id="WorkEx">
+                        </span>
+                    </form>
+                    <div class="input-group-btn plustimes">
+                        <img src="images/add.png" width="28" height="28">
+                    </div>
+                </div>
+
+
+        <br><h1></br>
+            <h1><img src = "images/4.png"  width = "30px" height= "30px">
+                Co-Curricular Activities</h1>
+              <br>
+                <br>
+            <div class="col-md-4"></div>
+                    <div class='col-sm-2'>
+                        <div class="form-group">
+                            <div class='input-group date datetimepicker9'>
+                                <input type='text' class="form-control" placeholder="From Date:" id="FromCoCur">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div>
+             <div class="container">
+                    <div class='col-sm-2'>
+                        <div class="form-group">
+                            <div class='input-group date datetimepicker9'>
+                                <input type='text' class="form-control" placeholder="To Date:" id="ToCoCur">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div></div>
+
+            <div class="col-md-4"></div>
+                <div class="col-md-4 input-group">
+                    <form action="#" method="get" id="address">
+                        <span id="myForm">
+                            <input class="form-control" type="text" placeholder="Sample work experience" id="CoCurricular">
+                        </span>
+                    </form>
+                    <div class="input-group-btn plustimes">
+                        <img src="images/add.png" width="28" height="28">
+                    </div>
+                </div>
+
+
+        <br><h1></br>
+            <h1><img src = "images/5.png"  width = "30px" height= "30px">
+                Seminars</h1>
+              <br>
+        <h3>Seminars Attended</h3>
+                <br>
+            <div class="col-md-4"></div>
+                    <div class='col-sm-2'>
+                        <div class="form-group">
+                            <div class='input-group date datetimepicker9'>
+                                <input type='text' class="form-control" placeholder="From Date:" id="FromSemAt">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div>
+             <div class="container">
+                    <div class='col-sm-2'>
+                        <div class="form-group">
+                            <div class='input-group date datetimepicker9'>
+                                <input type='text' class="form-control" placeholder="To Date:" id="ToSemAt">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div></div>
+
+            <div class="col-md-4"></div>
+                <div class="col-md-4 input-group">
+                    <form action="#" method="get" id="address">
+                        <span id="myForm">
+                            <input class="form-control" type="text" placeholder="Sample work experience" id="SeminarAt">
+                        </span>
+                    </form>
+                    <div class="input-group-btn plustimes">
+                        <img src="images/add.png" width="28" height="28">
+                    </div>
+                </div>
+                <br>
+            <h3>Seminars Conducted</h3>
+                <br>
+            <div class="col-md-4"></div>
+                    <div class='col-sm-2'>
+                        <div class="form-group">
+                            <div class='input-group date datetimepicker9'>
+                                <input type='text' class="form-control" placeholder="From Date:" id="FromSemCon">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div>
+             <div class="container">
+                    <div class='col-sm-2'>
+                        <div class="form-group">
+                            <div class='input-group date datetimepicker9'>
+                                <input type='text' class="form-control" placeholder="To Date:" id="ToSemCon">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div></div>
+
+            <div class="col-md-4"></div>
+                <div class="col-md-4 input-group">
+                    <form action="#" method="get" id="address">
+                        <span id="myForm">
+                            <input class="form-control" type="text" placeholder="Sample work experience" id="SeminarCon">
+                        </span>
+                    </form>
+                    <div class="input-group-btn plustimes">
+                        <img src="images/add.png" width="28" height="28">
+                    </div>
+                </div>
+
+
+        <br><h1></br>
+            <h1><img src = "images/6.png"  width = "30px" height= "30px">
+                Research Papers Prepared</h1>
+              <br>
+                <br>
+            <div class="col-md-4"></div>
+                    <div class='col-sm-2'>
+                        <div class="form-group">
+                            <div class='input-group date datetimepicker9'>
+                                <input type='text' class="form-control" placeholder="From Date:" id="FromResearchPaper">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div>
+             <div class="container">
+                    <div class='col-sm-2'>
+                        <div class="form-group">
+                            <div class='input-group date datetimepicker9'>
+                                <input type='text' class="form-control" placeholder="To Date:" id="ToResearchPaper">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span> </div> </div> </div></div>
+
+            <div class="col-md-4"></div>
+                <div class="col-md-4 input-group">
+                    <form action="#" method="get" id="address">
+                        <span id="myForm">
+                            <input class="form-control" type="text" placeholder="Sample work experience" id="ResearchPaper">
+                        </span>
+                    </form>
+                    <div class="input-group-btn plustimes">
+                        <img src="images/add.png" width="28" height="28">
+                    </div>
+                </div>
+
+
+
+        <br><h1></br>
+            <h1><img src = "images/7.png"  width = "30px" height= "30px">
+                Personal Background</h1>
+              <br>
+               <div class="col-md-4"></div>
+                  <textarea class="form-control" placeholder="12 Gold Street, Silver Subdivision, Bronze City" id="PersonalBackground"></textarea>
+                </div>
+                <br>
+
+        <br><h1></br>
+            <h1><img src = "images/8.png"  width = "30px" height= "30px">
+                References</h1>
+              <br>
+               <div class="col-md-4"></div>
+                  <textarea class="form-control" placeholder="Name and Email" id="PersonalBackground"></textarea>
+                </div>
+                <br>
+
+        <br><h1></br>
+
+         <input type = "submit" class = "btn">
+
+        <br><h1></br>
 
         </form> 
     </section>	
-    <script src="js/jquery.js"></script>
-    <script src="js/scrolling-nav.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/jquery.min.js"></script>
     <script>
+        $(document).ready(function(){
+            $('.datetimepicker9').datetimepicker( {
+                     viewMode: 'years',
+                    format: 'MM/YYYY'  
+                }); 
+
+
             $('a').click(function(){
                 event.preventDefault();
                 $('html, body').animate({
@@ -246,10 +491,9 @@
                 }, 'slow');
                 return false;
             });
+        });
+            
     </script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/form.js"></script>
     
 </body>
 </html>
