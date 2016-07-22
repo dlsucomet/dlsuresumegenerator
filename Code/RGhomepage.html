@@ -162,6 +162,7 @@
 
     <section id="basicinfo" class = "form-section">
         <form method = "POST" action = "/new/">
+        {% csrf_token %}
           <br><br>
             <a name="myAnchor" id="myAnchor"><br></a>
             <br>
@@ -172,19 +173,19 @@
               <div class="col-md-4"></div>
                 <div class="input-group col-md-4">
                     <span class="input-group-addon" id="basic-addon1">First Name </span>
-                    <input type="text" class="form-control" id = "fName" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" id = "fName" aria-describedby="basic-addon1" name="firstName">
                 </div>
               <br>
               <div class="col-md-4"></div>
                 <div class="input-group col-md-4">
                     <span class="input-group-addon" id="basic-addon1">Middle Initial</span>
-                    <input type="text" class="form-control" id = "mName" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" id = "mName" aria-describedby="basic-addon1" name="middleInitial">
                 </div>
               <br>
               <div class="col-md-4"></div>
                 <div class="input-group col-md-4">
                     <span class="input-group-addon" id="basic-addon1">Last Name </span>
-                    <input type="text" class="form-control" id = "lName" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" id = "lName" aria-describedby="basic-addon1" name="lastName">
                 </div>
 <!--
 
@@ -206,7 +207,7 @@
                 <div class="col-md-4 input-group">
                     <form action="#" method="get" id="address">
                         <span id="myForm">
-                            <input class="form-control" type="text" placeholder="12 Gold Street, Silver Subdivision, Bronze City">
+                            <input class="form-control" type="text" placeholder="12 Gold Street, Silver Subdivision, Bronze City" name="Address">
                         </span>
                     </form>
                     <div class="input-group-btn plustimes">
@@ -219,25 +220,25 @@
                 <div class="col-md-4"></div>
                 <div class="input-group col-md-4">
                     <span class="input-group-addon" id="basic-addon1">Home Phone </span>
-                    <input type="text" class="form-control" id = "user" aria-describedby="basic-addon1" placeholder="(02)XXX-XXXX">
+                    <input type="text" class="form-control" id = "user" aria-describedby="basic-addon1" placeholder="(02)XXX-XXXX" name="HomePhone">
                 </div>
                 <br>
                 <div class="col-md-4"></div>
                 <div class="input-group col-md-4">
                     <span class="input-group-addon" id="basic-addon1">Mobile Phone </span>
-                    <input type="text" class="form-control" id = "user" aria-describedby="basic-addon1" placeholder="+63XXX-XXX-XXXX">
+                    <input type="text" class="form-control" id = "user" aria-describedby="basic-addon1" placeholder="+63XXX-XXX-XXXX" name="Cellphone">
                 </div>
                 <br><br>
                 <h3>Email</h3>
                 <div class="col-md-4"></div>
                 <div class="input-group col-md-4">
                     <span class="input-group-addon" id="basic-addon1">DLSU Email </span>
-                    <input type="text" class="form-control" id = "user" aria-describedby="basic-addon1" placeholder="your_name@dlsu.edu.ph">
+                    <input type="text" class="form-control" id = "user" aria-describedby="basic-addon1" placeholder="your_name@dlsu.edu.ph" name="Email">
                 </div>
                 <br><br>
                 <h3>Objective</h3>
                 <div class="col-md-4"></div>
-                  <textarea class="form-control" placeholder="12 Gold Street, Silver Subdivision, Bronze City"></textarea>
+                  <textarea class="form-control" placeholder="To apply...." name="objective"></textarea>
                 </div>
 
 
@@ -250,7 +251,7 @@
                     <div class='col-sm-2'>
                         <div class="form-group">
                             <div class='input-group date datetimepicker9'>
-                                <input type='text' class="form-control" placeholder="From Date:" id="FromEd">
+                                <input type='text' class="form-control" placeholder="From Date:" name="FromEd">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span> </div> </div> </div>
@@ -258,7 +259,7 @@
                     <div class='col-sm-2'>
                         <div class="form-group">
                             <div class='input-group date datetimepicker9'>
-                                <input type='text' class="form-control" placeholder="To Date:" id="ToEd">
+                                <input type='text' class="form-control" placeholder="To Date:" name="ToEd">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span> </div> </div> </div></div>
@@ -267,7 +268,7 @@
                 <div class="col-md-4 input-group">
                     <form action="#" method="get" id="address">
                         <span id="myForm">
-                            <input class="form-control" type="text" placeholder="School Name" id="School">
+                            <input class="form-control" type="text" placeholder="School Name" name="School">
                         </span>
                     </form>
                     <div class="input-group-btn plustimes">
@@ -286,7 +287,7 @@
                     <div class='col-sm-2'>
                         <div class="form-group">
                             <div class='input-group date datetimepicker9'>
-                                <input type='text' class="form-control" placeholder="From Date:" id="FromWork">
+                                <input type='text' class="form-control" placeholder="From Date:" name="FromWork">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span> </div> </div> </div>
@@ -294,7 +295,7 @@
                     <div class='col-sm-2'>
                         <div class="form-group">
                             <div class='input-group date datetimepicker9'>
-                                <input type='text' class="form-control" placeholder="To Date:" id="ToWork">
+                                <input type='text' class="form-control" placeholder="To Date:" name="ToWork">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span> </div> </div> </div></div>
@@ -303,7 +304,7 @@
                 <div class="col-md-4 input-group">
                     <form action="#" method="get" id="address">
                         <span id="myForm">
-                            <input class="form-control" type="text" placeholder="Sample work experience" id="WorkEx">
+                            <input class="form-control" type="text" placeholder="Sample work experience" name="WorkEx">
                         </span>
                     </form>
                     <div class="input-group-btn plustimes">
@@ -321,7 +322,7 @@
                     <div class='col-sm-2'>
                         <div class="form-group">
                             <div class='input-group date datetimepicker9'>
-                                <input type='text' class="form-control" placeholder="From Date:" id="FromCoCur">
+                                <input type='text' class="form-control" placeholder="From Date:" name="FromCoCur">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span> </div> </div> </div>
@@ -329,7 +330,7 @@
                     <div class='col-sm-2'>
                         <div class="form-group">
                             <div class='input-group date datetimepicker9'>
-                                <input type='text' class="form-control" placeholder="To Date:" id="ToCoCur">
+                                <input type='text' class="form-control" placeholder="To Date:" name="ToCoCur">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span> </div> </div> </div></div>
@@ -338,7 +339,7 @@
                 <div class="col-md-4 input-group">
                     <form action="#" method="get" id="address">
                         <span id="myForm">
-                            <input class="form-control" type="text" placeholder="Sample work experience" id="CoCurricular">
+                            <input class="form-control" type="text" placeholder="Sample work experience" name="CoCurricular">
                         </span>
                     </form>
                     <div class="input-group-btn plustimes">
@@ -357,7 +358,7 @@
                     <div class='col-sm-2'>
                         <div class="form-group">
                             <div class='input-group date datetimepicker9'>
-                                <input type='text' class="form-control" placeholder="From Date:" id="FromSemAt">
+                                <input type='text' class="form-control" placeholder="From Date:" name="FromSemAt">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span> </div> </div> </div>
@@ -365,7 +366,7 @@
                     <div class='col-sm-2'>
                         <div class="form-group">
                             <div class='input-group date datetimepicker9'>
-                                <input type='text' class="form-control" placeholder="To Date:" id="ToSemAt">
+                                <input type='text' class="form-control" placeholder="To Date:" name="ToSemAt">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span> </div> </div> </div></div>
@@ -374,7 +375,7 @@
                 <div class="col-md-4 input-group">
                     <form action="#" method="get" id="address">
                         <span id="myForm">
-                            <input class="form-control" type="text" placeholder="Sample work experience" id="SeminarAt">
+                            <input class="form-control" type="text" placeholder="Sample work experience" name="SeminarAt">
                         </span>
                     </form>
                     <div class="input-group-btn plustimes">
@@ -388,7 +389,7 @@
                     <div class='col-sm-2'>
                         <div class="form-group">
                             <div class='input-group date datetimepicker9'>
-                                <input type='text' class="form-control" placeholder="From Date:" id="FromSemCon">
+                                <input type='text' class="form-control" placeholder="From Date:" name="FromSemCon">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span> </div> </div> </div>
@@ -396,7 +397,7 @@
                     <div class='col-sm-2'>
                         <div class="form-group">
                             <div class='input-group date datetimepicker9'>
-                                <input type='text' class="form-control" placeholder="To Date:" id="ToSemCon">
+                                <input type='text' class="form-control" placeholder="To Date:" name="ToSemCon">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span> </div> </div> </div></div>
@@ -405,7 +406,7 @@
                 <div class="col-md-4 input-group">
                     <form action="#" method="get" id="address">
                         <span id="myForm">
-                            <input class="form-control" type="text" placeholder="Sample work experience" id="SeminarCon">
+                            <input class="form-control" type="text" placeholder="Sample work experience" name="SeminarCon">
                         </span>
                     </form>
                     <div class="input-group-btn plustimes">
@@ -423,7 +424,7 @@
                     <div class='col-sm-2'>
                         <div class="form-group">
                             <div class='input-group date datetimepicker9'>
-                                <input type='text' class="form-control" placeholder="From Date:" id="FromResearchPaper">
+                                <input type='text' class="form-control" placeholder="From Date:" name="FromResearchPaper">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span> </div> </div> </div>
@@ -431,7 +432,7 @@
                     <div class='col-sm-2'>
                         <div class="form-group">
                             <div class='input-group date datetimepicker9'>
-                                <input type='text' class="form-control" placeholder="To Date:" id="ToResearchPaper">
+                                <input type='text' class="form-control" placeholder="To Date:" name="ToResearchPaper">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span> </div> </div> </div></div>
@@ -440,7 +441,7 @@
                 <div class="col-md-4 input-group">
                     <form action="#" method="get" id="address">
                         <span id="myForm">
-                            <input class="form-control" type="text" placeholder="Sample work experience" id="ResearchPaper">
+                            <input class="form-control" type="text" placeholder="Sample work experience" name="ResearchPaper">
                         </span>
                     </form>
                     <div class="input-group-btn plustimes">
@@ -455,7 +456,7 @@
                 Personal Background</h1>
               <br>
                <div class="col-md-4"></div>
-                  <textarea class="form-control" placeholder="12 Gold Street, Silver Subdivision, Bronze City" id="PersonalBackground"></textarea>
+                  <textarea class="form-control" placeholder="12 Gold Street, Silver Subdivision, Bronze City" name="PersonalBackground"></textarea>
                 </div>
                 <br>
 
@@ -464,7 +465,7 @@
                 References</h1>
               <br>
                <div class="col-md-4"></div>
-                  <textarea class="form-control" placeholder="Name and Email" id="PersonalBackground"></textarea>
+                  <textarea class="form-control" placeholder="Name and Email" name="PersonalBackground"></textarea>
                 </div>
                 <br>
 
