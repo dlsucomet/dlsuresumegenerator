@@ -47,7 +47,7 @@ class Education(models.Model):
 		return self.school
 
 class EducationAward(models.Model):
-	user = models.ForeignKey(User, on_delete=models.CASCADE)
+	school = models.ForeignKey(Education, on_delete=models.CASCADE, null=True)
 	award_description = models.CharField(max_length=45, blank=True, null=True)
 	award_date = models.CharField(max_length=45, blank=True, null=True)
 

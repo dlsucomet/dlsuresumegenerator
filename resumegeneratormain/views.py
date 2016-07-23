@@ -16,5 +16,5 @@ def resumePdf(request):
 	data = {"user": User.objects.get(username="11438029_richardlancegparayno")}
 	html = template.render(data)
 	css = CSS(filename='resumegeneratormain/static/resumegeneratormain/css/blank-resume.css')
-	pdf = HTML(string=html).write_pdf(stylesheets=[css])
+	pdf = HTML(string=html,base_url='/Users/Admin/dlsuresumegenerator').write_pdf(stylesheets=[css])
 	return HttpResponse(pdf, content_type='application/pdf')
