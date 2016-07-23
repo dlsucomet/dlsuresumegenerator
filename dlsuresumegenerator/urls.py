@@ -22,4 +22,7 @@ urlpatterns = [
     url(r'^resume/$', views.resume),
 	url(r'^pdf/$', views.resumePdf),
     url(r'^admin/', admin.site.urls),
+    #url(r'^login/$',views.login_view),
+    #url(r'^logout/$', views.logout_view),
+
 ]
