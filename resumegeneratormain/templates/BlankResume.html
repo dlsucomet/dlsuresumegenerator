@@ -12,8 +12,8 @@
 		<div class='header'>
  			<p style='font-weight: bold;'>{{user.userprofile_set.first.first_name}} {{user.userprofile_set.first.middle_initial}}. {{user.userprofile_set.first.last_name}}</p>
 			<p>
-				{{user.address_set.first.address}} <br>
-				Quezon City 1110 <br>
+				{{user.address_set.first.address_line_one}} <br>
+				{{user.address_set.first.address_line_two}} <br>
 				{{user.telephonenumber_set.first.number}} <br>
 				{{user.userprofile_set.first.email}} <br>
 			</p>
@@ -49,12 +49,8 @@
             <br>
             {{education.education_attained}}, {{education.month_attained}} {{education.year_attained}}.
 
-            {% for achievement in user.achievements_set.all %}
-                {{achievement.name}}.
-            {% endfor %}
-
-            {% for award in user.award_set.all %}
-                {{award.name}}, {{award.year}}.
+            {% for educationaward in user.educationaward_set.all %}
+                {{educationaward.award_description}}, {{educationaward.award_date}}.
             {% endfor %}
         </p>
         <br>
@@ -70,10 +66,12 @@
 			<br>
 			{% for workexp in user.workexperience_set.all %}
       	<p id='section-content-left'>
-        	{{workexp.month_start}} {{workexp.year_start}} - {{workexp.month_finish}} {{workexp.year_finish}}
+        	{{workexp.month_start}} - {{workexp.month_finish}} {{workexp.year_finish}}
         </p>
         <p id='section-content-right'>
-          {{workexp.position}} in {{workexp.company}}. {{workexp.workdone}}
+          {{workexp.position}}, {{workexp.company}}.
+					<br>
+					{{workexp.workdone}}
         </p>
         <br>
     	{% endfor %}
@@ -178,7 +176,7 @@
 			<p id='section-header'>REFERENCES</p>
 			<br>
 			<p id='section-content-right'>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Available upon request.
 			</p>
 
 		</div>

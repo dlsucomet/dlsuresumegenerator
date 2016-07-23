@@ -10,19 +10,11 @@ class Achievement(models.Model):
 
 class Address(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
-	address = models.TextField()
+	address_line_one = models.TextField()
+	address_line_two = models.TextField()
 
 	def __str__(self):
-		return self.address
-
-
-class Award(models.Model):
-	user = models.ForeignKey(User, on_delete=models.CASCADE)
-	name = models.TextField()
-	year = models.CharField(max_length=4)
-
-	def __str__(self):
-		return self.name
+		return self.address_line_one
 
 class CellphoneNumber(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -53,6 +45,14 @@ class Education(models.Model):
 
 	def __str__(self):
 		return self.school
+
+class EducationAward(models.Model):
+	user = models.ForeignKey(User, on_delete=models.CASCADE)
+	award_description = models.CharField(max_length=45, blank=True, null=True)
+	award_date = models.CharField(max_length=45, blank=True, null=True)
+
+	def __str__(self):
+		return self.award_description
 
 class ResearchPaper(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -109,7 +109,7 @@ class UserProfile(models.Model):
 class WorkExperience(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 	month_start = models.CharField(max_length=45)
-	year_start = models.CharField(max_length=4)
+	#year_start = models.CharField(max_length=4)
 	month_finish= models.CharField(max_length=45)
 	year_finish= models.CharField(max_length=4)
 	position = models.CharField(max_length=45)
