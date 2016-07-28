@@ -1,12 +1,13 @@
 <html>
 <head>
+  {% load staticfiles %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
-    <link href="css/scrolling-nav.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/animate.css">
+    <link href="{% static "resumegeneratormain/css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "resumegeneratormain/css/bootstrap-datetimepicker.css" %}" rel="stylesheet">
+    <link href="{% static "resumegeneratormain/css/scrolling-nav.css" %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "resumegeneratormain/css/animate.css" %}">
     <style>
         body {
             background-color: #252525;
@@ -100,14 +101,14 @@
               transition-duration: 0.2s;
          }
     </style>
-    <script src="js/jquery.js"></script>
-    <script src="js/moment.js"></script>
-    <script src="js/bootstrap-datetimepicker.js"></script>
-    <script src="js/scrolling-nav.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/form.js"></script>
+    <script src="{% static "resumegeneratormain/js/jquery.js" %}"></script>
+    <script src="{% static "resumegeneratormain/js/moment.js" %}"></script>
+    <script src="{% static "resumegeneratormain/js/bootstrap-datetimepicker.js" %}"></script>
+    <script src="{% static "resumegeneratormain/js/scrolling-nav.js" %}"></script>
+    <script src="{% static "resumegeneratormain/js/jquery.easing.min.js" %}"></script>
+    <script src="{% static "resumegeneratormain/js/bootstrap.min.js" %}"></script>
+    <script src="{% static "resumegeneratormain/js/classie.js" %}"></script>
+    <script src="{% static "resumegeneratormain/js/form.js" %}"></script>
 
 </head>
 
@@ -148,7 +149,7 @@
           <br><br>
             <a name="myAnchor" id="myAnchor"><br></a>
             <br>
-            <h1><img src = "images/1.png"  width = "30px" height= "30px">
+            <h1><img src = "{% static "resumegeneratormain/images/1.png" %}"  width = "30px" height= "30px">
                 Personal Information</h1>
               <br>
               <h3>Name</h3>
@@ -179,7 +180,7 @@
                         </span>
                     </form>
                     <div class="input-group-btn plustimes">
-                        <img src="images/add.png" width="28" height="28">
+                        <img src="{% static "resumegeneratormain/images/add.png" %}" width="28" height="28">
                     </div>
                 </div>
 
@@ -211,7 +212,7 @@
 
 
         <br><h1></br>
-            <h1><img src = "images/2.png"  width = "30px" height= "30px">
+            <h1><img src = "{% static "resumegeneratormain/images/2.png" %}"  width = "30px" height= "30px">
                 Education</h1>
               <br>
             <br>
@@ -240,7 +241,7 @@
                         </span>
                     </form>
                     <div class="input-group-btn plustimes">
-                        <img src="images/add.png" width="28" height="28">
+                        <img src="{% static "resumegeneratormain/images/add.png" %}" width="28" height="28">
                     </div>
                 </div>
                 <br>
@@ -250,7 +251,7 @@
 
 
         <br><h1></br>
-            <h1><img src = "images/3.png"  width = "30px" height= "30px">
+            <h1><img src = "{% static "resumegeneratormain/images/3.png" %}"  width = "30px" height= "30px">
                 Work Experience</h1>
               <br>
                 <br>
@@ -279,13 +280,13 @@
                         </span>
                     </form>
                     <div class="input-group-btn plustimes">
-                        <img src="images/add.png" width="28" height="28">
+                        <img src="{% static "resumegeneratormain/images/add.png" %}" width="28" height="28">
                     </div>
                 </div>
 
 
         <br><h1></br>
-            <h1><img src = "images/4.png"  width = "30px" height= "30px">
+            <h1><img src = "{% static "resumegeneratormain/images/4.png" %}"  width = "30px" height= "30px">
                 Extracurricular Activities</h1>
               <br>
                 <br>
@@ -314,13 +315,13 @@
                         </span>
                     </form>
                     <div class="input-group-btn plustimes">
-                        <img src="images/add.png" width="28" height="28">
+                        <img src="{% static "resumegeneratormain/images/add.png" %}" width="28" height="28">
                     </div>
                 </div>
 
 
         <br><h1></br>
-            <h1><img src = "images/5.png"  width = "30px" height= "30px">
+            <h1><img src = "{% static "resumegeneratormain/images/5.png" %}"  width = "30px" height= "30px">
                 Seminars</h1>
               <br>
         <h3>Seminars Attended</h3>
@@ -345,7 +346,7 @@
                         </span>
                     </form>
                     <div class="input-group-btn plustimes">
-                        <img src="images/add.png" width="28" height="28">
+                        <img src="{% static "resumegeneratormain/images/add.png" %}" width="28" height="28">
                     </div>
                 </div>
                 <br>
@@ -370,13 +371,13 @@
                         </span>
                     </form>
                     <div class="input-group-btn plustimes">
-                        <img src="images/add.png" width="28" height="28">
+                        <img src="{% static "resumegeneratormain/images/add.png" %}" width="28" height="28">
                     </div>
                 </div>
 
 
         <br><h1></br>
-            <h1><img src = "images/6.png"  width = "30px" height= "30px">
+            <h1><img src = "{% static "resumegeneratormain/images/6.png" %}"  width = "30px" height= "30px">
                 Research Papers Prepared</h1>
               <br>
                 <br>
@@ -399,14 +400,14 @@
                         </span>
                     </form>
                     <div class="input-group-btn plustimes">
-                        <img src="images/add.png" width="28" height="28">
+                        <img src="{% static "resumegeneratormain/images/add.png" %}" width="28" height="28">
                     </div>
                 </div>
 
 
 
         <br><h1></br>
-            <h1><img src = "images/7.png"  width = "30px" height= "30px">
+            <h1><img src = "{% static "resumegeneratormain/images/7.png" %}"  width = "30px" height= "30px">
                 Personal Background</h1>
               <br>
                <div class="col-md-4"></div>
@@ -415,7 +416,7 @@
                 <br>
 
         <br><h1></br>
-            <h1><img src = "images/8.png"  width = "30px" height= "30px">
+            <h1><img src = "{% static "resumegeneratormain/images/8.png" %}"  width = "30px" height= "30px">
                 References</h1>
               <br>
                <div class="col-md-4"></div>
