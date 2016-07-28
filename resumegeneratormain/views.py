@@ -22,7 +22,7 @@ def resumePdf(request):
 	pdf = HTML(string=html,base_url='/Users/Admin/dlsuresumegenerator').write_pdf(stylesheets=[css])
 	return HttpResponse(pdf, content_type='application/pdf')
 
-
+## TODO: Edit to be in line with models.py
   def submitData(request):
 	if request.method == "POST":
 		user = request.POST.get('user')
