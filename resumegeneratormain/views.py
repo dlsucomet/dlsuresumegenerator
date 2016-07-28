@@ -7,6 +7,9 @@ from django.template import loader
 
 from django.http import HttpResponse
 
+def form(request):
+	return render(request, "RGhomepage.html")
+
 def resume(request):
 	data = {"user": User.objects.get(username="11438029_richardlancegparayno")}
 	return render(request, "BlankResume.html", data)
