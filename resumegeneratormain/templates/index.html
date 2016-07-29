@@ -10,28 +10,6 @@
 
     <script src="//use.edgefonts.net/montserrat.js"></script>
 
-    <script>
-        function check() {
-                if (user.value=='' || pass.value=='')
-                {
-                    window.alert('Username or Password is empty');
-                    return false;
-                }
-
-                else if (user.value=='user' && pass.value=='1234')
-                {
-                    return true;
-                }
-
-                else
-                {
-                     window.alert('User not found');
-                     return false;
-                }
-            // return true or false, depending on whether you want to allow the `href` property to follow through or not
-        }
-    </script>
-
 </head>
 <body>
 
@@ -47,7 +25,7 @@
             <div class="col-md-4"></div>
             <div class="input-group col-md-4">
                 <span class="input-group-addon" id="basic-addon1"> E-mail:</span>
-                <input type="text" class="form-control textinput" id = "user" aria-describedby="basic-addon1">
+                <input type="text" class="form-control textinput" id = "user" aria-describedby="basic-addon1" name="username">
             </div>
             <div class="col-md-4"></div>
             <br>
@@ -55,12 +33,12 @@
                 <div class="col-md-4"></div>
                 <div class="input-group col-md-4">
                     <span class="input-group-addon" id="basic-addon1">Password: </span>
-                    <input type="password" class="form-control textinput" id = "pass" aria-describedby="basic-addon1">
+                    <input type="password" class="form-control textinput" id = "pass" aria-describedby="basic-addon1" name="password">
                 </div>
                 <br>
                 <div class="col-md-4"></div>
                 <div class="col-md-7" id="but">
-                    <a href = "{% url "form" %}" id = "login" class="btn btn-1 btn-1a" onClick = "return check();">LOG IN</a>
+                    <a href = "{% url "login" %}" id = "login" class="btn btn-1 btn-1a">LOG IN</a>
                 </div>
 
                 <div class="col-md-4"></div>

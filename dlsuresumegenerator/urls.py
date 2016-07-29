@@ -20,6 +20,7 @@ import resumegeneratormain.views as views
 
 urlpatterns = [
 	url(r'^$', views.index, name='index'),
+	url(r'^login/$', views.login_view, name='login'),
     url(r'^form/$', views.form, name='form'),
 	url(r'^register/$', views.register, name='register'),
     url(r'^resume/$', views.resume, name='resume'),

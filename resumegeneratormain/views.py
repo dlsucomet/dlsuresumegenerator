@@ -8,6 +8,7 @@ from django.template import loader
 
 from django.http import HttpResponse
 
+
 def index(request):
 	return render(request, "index.html")
 
@@ -24,12 +25,12 @@ def login_view(request):
 		user = authenticate(username = username, password = password)
 		if user is not None and user.is_active:
 			login(request,user)
-			return redirect('/')
+			return redirect('RGhomepage.html')
 		else:
 			failed
 
 	else:
-		return render(request, "loginpage") #loginpage ng resumegen
+		return render(request, "index.html") #loginpage ng resumegen
 
 def logout_view(request):
 	logout(request)
