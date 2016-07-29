@@ -1,20 +1,23 @@
+body 
+{
+    background-color: #252525;
+}    
 
+.center
+{
+ text-align: center;
+}
 
 .logIn
-{
-  font-family: montserrat, sans-serif; 
-  font-weight: 400;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  margin: auto;
-  width: 100%;
+{   
+    font-family: montserrat, sans-serif; 
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: auto;
+    width: 100%;
 }
 
-.icon
-{
-    text-align: center;
-    margin-top: 90px;
-}
 
 .icon h1
 {
@@ -48,11 +51,16 @@
     letter-spacing: 1px;
     font-weight: 400;
     outline: none;
-    position: absolute;    
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
 }
+
+.forcecenter{
+    width: 20%;
+    margin: 0 auto; 
+}
+
 
 .textinput{
 
@@ -134,10 +142,6 @@ h1
     margin-top: 90px;
 }
 
-.center
-{
-  text-align: center;
-}
 
 h2
 {
@@ -166,15 +170,6 @@ h1
   line-height: 20;
 }
 
-textarea{ 
-  width: 200px; 
-  min-width:200px; 
-  max-width:200px; 
-
-  height:200px; 
-  min-height:200px;  
-  max-height:200px;
-}
 
 .startbtn
 {
@@ -185,3 +180,36 @@ textarea{
 .floated {
    float:left;
 }
+
+
+.small{
+  line-height: 20;
+}
+
+textarea{ 
+  width: 425px; 
+  min-width:200px; 
+  max-width:425px; 
+
+  height:250px; 
+  min-height:100px;  
+  max-height:500px;
+}
+
+.round
+{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.plustimes:hover, .plustimes:after {
+     -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+     -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+     -webkit-transition-duration: 0.2s;
+     -moz-transition-duration: 0.2s;
+     -o-transition-duration: 0.2s;
+      transition-duration: 0.2s;
+ }
