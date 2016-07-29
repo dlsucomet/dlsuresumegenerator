@@ -1,23 +1,24 @@
 <html>
     <head>
+			{% load staticfiles %}
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
-        <link href="css/scrolling-nav.css" rel="stylesheet">	
-        <link rel="stylesheet" href="css/animate.css">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="{% static "resumegeneratormain/css/bootstrap.min.css" %}" rel="stylesheet">
+        <link href="{% static "resumegeneratormain/css/bootstrap-datetimepicker.css" %}" rel="stylesheet">
+        <link href="{% static "resumegeneratormain/css/scrolling-nav.css" %}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static "resumegeneratormain/css/animate.css" %}">
+        <link href="{% static "resumegeneratormain/css/style.css" %}" rel="stylesheet">
 
-        <script src="js/jquery.js"></script>
-        <script src="js/moment.js"></script>
-        <script src="js/bootstrap-datetimepicker.js"></script>
-        <script src="js/scrolling-nav.js"></script>
-        <script src="js/jquery.easing.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/classie.js"></script>
-        <script src="js/form.js"></script>
-        
+        <script src="{% static "resumegeneratormain/js/jquery.js" %}"></script>
+        <script src="{% static "resumegeneratormain/js/moment.js" %}"></script>
+        <script src="{% static "resumegeneratormain/js/bootstrap-datetimepicker.js" %}"></script>
+        <script src="{% static "resumegeneratormain/js/scrolling-nav.js" %}"></script>
+        <script src="{% static "resumegeneratormain/js/jquery.easing.min.js" %}"></script>
+        <script src="{% static "resumegeneratormain/js/bootstrap.min.js" %}"></script>
+        <script src="{% static "resumegeneratormain/js/classie.js" %}"></script>
+        <script src="{% static "resumegeneratormain/js/form.js" %}"></script>
+
 
     </head>
 
@@ -29,7 +30,7 @@
             <br>
             <br>
             <br>
-            <div class="fadeInUp animated">        
+            <div class="fadeInUp animated">
                 <h2>Welcome to the</h2>
                 <h1>DLSU Resume Generator!</h1>
             </div>
@@ -57,7 +58,7 @@
                 <a name="myAnchor" id="myAnchor"><br></a>
                 <br>
                 <h1>
-                    <img src = "images/1.png"  width = "30px" height= "30px">
+                    <img src = "{% static "resumegeneratormain/images/1.png" %}"  width = "30px" height= "30px">
                     Personal Information
                 </h1>
                 <br>
@@ -75,7 +76,7 @@
                             <input class="form-control" type="text" placeholder="12 Gold Street, Silver Subdivision, Bronze City" name="Address">
                         </span>
                         <div class="input-group-btn plustimes">
-                            <img src="images/add.png" width="28" height="28">
+                            <img src="{% static "resumegeneratormain/images/add.png" %}" width="28" height="28">
                         </div>
                     </div>
 
@@ -106,7 +107,7 @@
                       <textarea class="form-control" placeholder="To apply...." name="Objective"></textarea>
 
                     <br><h1></h1><br>
-                    <h1><img src = "images/2.png"  width = "30px" height= "30px">
+                    <h1><img src = "{% static "resumegeneratormain/images/2.png" %}"  width = "30px" height= "30px">
                     Education</h1>
                     <br>
                     <h3>Background Information</h3>
@@ -117,7 +118,7 @@
                                 <input type='text' class="form-control" placeholder="Date Started:" name="FromEd">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
-                                </span> 
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -128,9 +129,9 @@
                                     <input type='text' class="form-control" placeholder="Date Ended:" name="ToEd">
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
-                                    </span> 
-                                </div> 
-                            </div> 
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -140,11 +141,11 @@
                             <input class="form-control" type="text" placeholder="School/University Name" name="Education">
                         </span>
                         <div class="input-group-btn plustimes">
-                            <img src="images/add.png" width="28" height="28">
+                            <img src="{% static "resumegeneratormain/images/add.png" %}" width="28" height="28">
                         </div>
                     </div>
                     <br>
-                    <h3>Education Attained</h3> 
+                    <h3>Education Attained</h3>
                     <div class="col-md-5"></div>
                         <div class="container">
                             <div class="row">
@@ -154,19 +155,19 @@
                                             <input type='text' class="form-control" placeholder="Date Attained:" name="EducationAttainedDate">
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-calendar"></span>
-                                            </span> 
-                                        </div> 
-                                    </div> 
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>   
+                        </div>
                         <div class="col-md-4"></div>
                         <div class="col-md-4 input-group">
                             <span id="myForm">
                                 <input class="form-control" type="text" placeholder="Degree or Diploma" name="EducationAttained">
                             </span>
                             <div class="input-group-btn plustimes">
-                                <img src="images/add.png" width="28" height="28">
+                                <img src="{% static "resumegeneratormain/images/add.png" %}" width="28" height="28">
                             </div>
                         </div>
                         <br>
@@ -180,19 +181,19 @@
                                             <input type='text' class="form-control" placeholder="Date Attained:" name="AwardAttainedDate">
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-calendar"></span>
-                                            </span> 
-                                        </div> 
-                                    </div> 
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>   
+                        </div>
                         <div class="col-md-4"></div>
                         <div class="col-md-4 input-group">
                             <span id="myForm">
                                 <input class="form-control" type="text" placeholder="Award Name" name="Award">
                             </span>
                             <div class="input-group-btn plustimes">
-                                <img src="images/add.png" width="28" height="28">
+                                <img src="{% static "resumegeneratormain/images/add.png" %}" width="28" height="28">
                             </div>
                         </div>
                         <br>
@@ -200,7 +201,7 @@
                         <textarea class="form-control" placeholder="Achievements..." name="Achievements"></textarea>
 
                     <br><h1></h1><br>
-                    <h1><img src = "images/3.png"  width = "30px" height= "30px">
+                    <h1><img src = "{% static "resumegeneratormain/images/3.png" %}"  width = "30px" height= "30px">
                         Work Experience</h1>
                     <br>
                     <br>
@@ -212,7 +213,7 @@
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
                                     </span>
-                            </div> 
+                            </div>
                         </div>
                     </div>
                     <div class="container">
@@ -222,9 +223,9 @@
                                     <input type='text' class="form-control" placeholder="To Date:" name="ToWork">
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
-                                    </span> 
-                                </div> 
-                            </div> 
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -245,7 +246,7 @@
 
 
                     <br><h1></h1><br>
-                    <h1><img src = "images/4.png"  width = "30px" height= "30px">
+                    <h1><img src = "{% static "resumegeneratormain/images/4.png" %}"  width = "30px" height= "30px">
                         Co-curricular Activities</h1>
                     <br>
                     <br>
@@ -257,7 +258,7 @@
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
                                     </span>
-                            </div> 
+                            </div>
                         </div>
                     </div>
                     <div class="container">
@@ -267,9 +268,9 @@
                                     <input type='text' class="form-control" placeholder="To Date:" name="ToCoCur">
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
-                                    </span> 
+                                    </span>
                                 </div>
-                            </div> 
+                            </div>
                         </div>
                     </div>
 
@@ -290,7 +291,7 @@
 
 
                 <br><h1></h1><br>
-                <h1><img src = "images/5.png"  width = "30px" height= "30px">
+                <h1><img src = "{% static "resumegeneratormain/images/5.png" %}"  width = "30px" height= "30px">
                     Seminars</h1>
                 <br>
                 <h3>Seminars Attended</h3>
@@ -305,9 +306,9 @@
                                     <input type='text' class="form-control" placeholder="Date of Seminar" name="SeminarAttendedDate">
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
-                                    </span> 
+                                    </span>
                                 </div>
-                            </div> 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -342,9 +343,9 @@
                                     <input type='text' class="form-control" placeholder="Date of Seminar" name="SeminarConductedDate">
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
-                                    </span> 
+                                    </span>
                                 </div>
-                            </div> 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -375,7 +376,7 @@
 
 
                 <br><h1></h1><br>
-                <h1><img src = "images/6.png"  width = "30px" height= "30px">
+                <h1><img src = "{% static "resumegeneratormain/images/6.png" %}"  width = "30px" height= "30px">
                     Research Papers Prepared</h1>
                 <br>
                 <br>
@@ -388,9 +389,9 @@
                                     <input type='text' class="form-control" placeholder="Date of Paper" name="ResearchPaperDate">
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
-                                    </span> 
-                                </div> 
-                            </div> 
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -405,7 +406,7 @@
                       <textarea class="form-control" placeholder="This paper is about...." name="ResearchPaperSummary"></textarea>
 
                 <br><h1></h1><br>
-                <h1><img src = "images/7.png"  width = "30px" height= "30px">
+                <h1><img src = "{% static "resumegeneratormain/images/7.png" %}"  width = "30px" height= "30px">
                     Personal Background</h1>
                 <br>
                 <div class="col-md-4"></div>
@@ -414,7 +415,7 @@
                 <br>
 
                 <br><h1></h1><br>
-                <h1><img src = "images/8.png"  width = "30px" height= "30px">
+                <h1><img src = "{% static "resumegeneratormain/images/8.png" %}"  width = "30px" height= "30px">
                     References</h1>
                 <br>
                 <div class="col-md-4"></div>
@@ -427,14 +428,14 @@
 
                 <br><h1></h1><br>
 
-            </form> 
-        </section>	
+            </form>
+        </section>
         <script>
             $(document).ready(function(){
                 $('.datetimepicker9').datetimepicker( {
                          viewMode: 'years',
-                        format: 'MM/YYYY'  
-                    }); 
+                        format: 'MM/YYYY'
+                    });
 
 
                 $('a').click(function(){

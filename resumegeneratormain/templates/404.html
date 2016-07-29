@@ -3,18 +3,18 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/animate.css">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{% static "resumegeneratormain/css/bootstrap.min.css" %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "resumegeneratormain/css/animate.css" %}">
+    <link href="{% static "resumegeneratormain/css/style.css" %}" rel="stylesheet">
 </head>
 
 <body>
-	        <div class="fadeInUp animated center">      
-	        	<br><br><br><br><br><br><br><br><br> 
+	        <div class="fadeInUp animated center">
+	        	<br><br><br><br><br><br><br><br><br>
                 <h2>404</h2>
                 <h1>Page Not Found!</h1>
                 <br>
-                <center><a href="RGhomepage.html" class="anchorLink center btn btn-1 btn-1a">Back</a></center>
+                <center><a href="{% url "form" %}" class="anchorLink center btn btn-1 btn-1a">Back</a></center>
             </div>
 </body>
 

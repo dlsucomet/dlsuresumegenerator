@@ -8,6 +8,15 @@ from django.template import loader
 
 from django.http import HttpResponse
 
+def index(request):
+	return render(request, "index.html")
+
+def form(request):
+	return render(request, "RGhomepage.html")
+
+def register(request):
+	return render(request, "SignUp.html")
+
 def login_view(request):
 	if request.method == "POST":
 		username = request.POST['username']

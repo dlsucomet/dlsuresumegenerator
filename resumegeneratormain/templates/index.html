@@ -1,14 +1,15 @@
 <html>
 <head>
+	{% load staticfiles %}
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{% static "resumegeneratormain/css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "resumegeneratormain/css/style.css" %}" rel="stylesheet">
 
     <script src="//use.edgefonts.net/montserrat.js"></script>
-    
+
     <script>
         function check() {
                 if (user.value=='' || pass.value=='')
@@ -18,7 +19,7 @@
                 }
 
                 else if (user.value=='user' && pass.value=='1234')
-                { 
+                {
                     return true;
                 }
 
@@ -35,7 +36,7 @@
 <body>
 
     <div class = "icon">
-        <img src = "images/icon.png"  width = "77px" height= "107px">
+        <img src = "{% static "resumegeneratormain/images/icon.png" %}"  width = "77px" height= "107px">
         <br>
         <h1>DLSU Resume Generator</h1>
         <br>
@@ -59,7 +60,7 @@
                 <br>
                 <div class="col-md-4"></div>
                 <div class="col-md-7" id="but">
-                    <a href = "RGhomepage.html" id = "login" class="btn btn-1 btn-1a" onClick = "return check();">LOG IN</a>
+                    <a href = "{% url "form" %}" id = "login" class="btn btn-1 btn-1a" onClick = "return check();">LOG IN</a>
                 </div>
 
                 <div class="col-md-4"></div>
@@ -75,7 +76,7 @@
                 <br>
 
                 <div class = "signUp">
-                    <h5>Not yet registered? <a href="SignUp.html"><u>Sign Up</u></a></h5>
+                    <h5>Not yet registered? <a href="{% url "register" %}"><u>Sign Up</u></a></h5>
 
                 </div>
 
@@ -83,9 +84,8 @@
         </div>
     </div>
 
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="{% static "resumegeneratormain/js/jquery.min.js" %}"></script>
+<script src="{% static "resumegeneratormain/js/bootstrap.min.js" %}"></script>
 
 </body>
 </html>
-

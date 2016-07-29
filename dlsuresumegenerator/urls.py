@@ -19,7 +19,9 @@ from django.contrib import admin
 import resumegeneratormain.views as views
 
 urlpatterns = [
-    url(r'^$', views.form, name='form'),
+	url(r'^$', views.index, name='index'),
+    url(r'^form/$', views.form, name='form'),
+	url(r'^register/$', views.register, name='register'),
     url(r'^resume/$', views.resume, name='resume'),
 	url(r'^pdf/$', views.resumePdf, name='pdfconverted'),
     url(r'^admin/', admin.site.urls, name='admin'),
