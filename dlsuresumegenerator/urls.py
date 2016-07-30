@@ -23,6 +23,7 @@ urlpatterns = [
 	url(r'^login/$', views.login_view, name='login'),
     url(r'^form/$', views.form, name='form'),
 	url(r'^register/$', views.register, name='register'),
+	url(r'^register_account/$', views.register_account, name='register_account'),
     url(r'^resume/$', views.resume, name='resume'),
 	url(r'^pdf/$', views.resumePdf, name='pdfconverted'),
     url(r'^admin/', admin.site.urls, name='admin'),

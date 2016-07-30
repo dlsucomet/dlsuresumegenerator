@@ -18,6 +18,20 @@ def form(request):
 def register(request):
 	return render(request, "SignUp.html")
 
+## TODO: CATCH THE EXCEPTION WHEN AN ACCOUNT WITH THE SAME CREDENTIALS IS MADE
+def register_account(request):
+	if request.method =="POST":
+		username = request.POST['username']
+		first_name = request.POST['first_name']
+		last_name = request.POST['last_name']
+		email = request.POST['email']
+		password = request.POST['email']
+		user = User.objects.create_user(username = username, email = email, password = password)
+		user.first_name = first_name
+		user.last_name = last_name
+		user.save()
+	return redirect('index')
+
 ## TODO: Add a "user does not exist" alert
 def login_view(request):
 	if request.method == "POST":
