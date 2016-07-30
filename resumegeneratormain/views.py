@@ -20,8 +20,8 @@ def register(request):
 
 def login_view(request):
 	if request.method == "POST":
-		username = request.POST['username']
-		password = request.POST['password']
+		username = request.POST.get['username']
+		password = request.POST.get['password']
 		user = authenticate(username = username, password = password)
 		if user is not None and user.is_active:
 			login(request,user)

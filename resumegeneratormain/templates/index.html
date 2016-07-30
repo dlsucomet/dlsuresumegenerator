@@ -20,46 +20,43 @@
         <br>
     </div>
 
-		<!-- TODO: Add form method -->
+
     <div class = "logIn">
         <div class="row">
             <div class="col-md-4"></div>
-            <div class="input-group col-md-4">
-                <span class="input-group-addon" id="basic-addon1"> E-mail:</span>
-                <input type="text" class="form-control textinput" id = "user" aria-describedby="basic-addon1" name="username">
-            </div>
-            <div class="col-md-4"></div>
-            <br>
-            <div class="row">
-                <div class="col-md-4"></div>
-                <div class="input-group col-md-4">
-                    <span class="input-group-addon" id="basic-addon1">Password: </span>
-                    <input type="password" class="form-control textinput" id = "pass" aria-describedby="basic-addon1" name="password">
-                </div>
-                <br>
-                <div class="col-md-4"></div>
-                <div class="col-md-7" id="but">
-                    <a href = "{% url "login" %}" id = "login" class="btn btn-1 btn-1a">LOG IN</a>
-                </div>
-
-                <div class="col-md-4"></div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-
-                <div class = "signUp">
-                    <h5>Not yet registered? <a href="{% url "register" %}"><u>Sign Up</u></a></h5>
-
-                </div>
-
-            </div>
+							<form method = "POST" action = "/login/">
+		            <div class="input-group col-md-4">
+		                <span class="input-group-addon" id="basic-addon1"> E-mail:</span>
+		                <input type="text" class="form-control textinput" id = "user" aria-describedby="basic-addon1" name="username">
+		            </div>
+            		<div class="col-md-4"></div>
+            		<br>
+		            <div class="row">
+		                <div class="col-md-4"></div>
+		                <div class="input-group col-md-4">
+		                    <span class="input-group-addon" id="basic-addon1">Password: </span>
+		                    <input type="password" class="form-control textinput" id = "pass" aria-describedby="basic-addon1" name="password">
+		                </div>
+		                <br>
+		                <div class="col-md-4"></div>
+		                <div class="col-md-7" id="but">
+		                    <a href = "{% url "login" %}" id = "login" class="btn btn-1 btn-1a" type="submit">LOG IN</a>
+		                </div>
+		                <div class="col-md-4"></div>
+		                <br>
+		                <br>
+		                <br>
+		                <br>
+		                <br>
+		                <br>
+		                <br>
+		                <br>
+		                <br>
+		                <br>
+		                <div class = "signUp">
+		                    <h5>Not yet registered? <a href="{% url "register" %}"><u>Sign Up</u></a></h5>
+		                </div>
+		            </div>
         </div>
     </div>
 
