@@ -18,23 +18,24 @@ def form(request):
 def register(request):
 	return render(request, "SignUp.html")
 
+## TODO: Add a "user does not exist" alert
 def login_view(request):
 	if request.method == "POST":
-		username = request.POST.get['username']
-		password = request.POST.get['password']
+		username = request.POST['username']
+		password = request.POST['password']
 		user = authenticate(username = username, password = password)
-		if user is not None and user.is_active:
+		if user is not None:
 			login(request,user)
-			return redirect('RGhomepage.html')
+			return redirect('form')
 		else:
 			failed
 
 	else:
-		return render(request, "index.html") #loginpage ng resumegen
+		return render(request, "index")
 
 def logout_view(request):
 	logout(request)
-	return redirect('/login')
+	return redirect('index')
 
 def resume(request):
 	data = {"user": User.objects.get(username="test_user")}
