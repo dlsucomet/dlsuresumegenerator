@@ -25,7 +25,7 @@ def register_account(request):
 		first_name = request.POST['first_name']
 		last_name = request.POST['last_name']
 		email = request.POST['email']
-		password = request.POST['email']
+		password = request.POST['password']
 		user = User.objects.create_user(username = username, email = email, password = password)
 		user.first_name = first_name
 		user.last_name = last_name
@@ -42,8 +42,7 @@ def login_view(request):
 		if user is not None:
 			login(request,user)
 			return redirect('form')
-		else:
-			failed
+
 
 	else:
 		return render(request, "index")
@@ -53,12 +52,12 @@ def logout_view(request):
 	return redirect('index')
 
 def resume(request):
-	data = {"user": User.objects.get(username="test_user")}
+	data = {"user": User.objects.get(username=request.user.username)}
 	return render(request, "BlankResume.html", data)
 
 def resumePdf(request):
 	template = loader.get_template("BlankResume.html")
-	data = {"user": User.objects.get(username="11438029_richardlancegparayno")}
+	data = {"user": User.objects.get(username=request.user.username)}
 	html = template.render(data)
 	css = CSS(filename='resumegeneratormain/static/resumegeneratormain/css/blank-resume.css')
 	pdf = HTML(string=html,base_url='/Users/Admin/dlsuresumegenerator').write_pdf(stylesheets=[css])
@@ -67,95 +66,94 @@ def resumePdf(request):
 ## TODO: Edit to be in line with models.py
 def submit_data(request):
 	if request.method == "POST":
-		user = request.user()
 
 		## address
-		address_line_one = request.POST['address_line_one']
-		address_line_two = request.POST['address_line_two']
-		address = (user, address_line_one, address_line_two)
+		address_line_one = request.POST.get('address_line_one')
+		address_line_two = request.POST.get('address_line_two')
+		address = Address(user=request.user, address_line_one=address_line_one, address_line_two=address_line_two)
 		address.save()
 
 		## cellphone
-		cellphone_number = request.POST['Cellphone']
-		CellphoneNumber = (user, cellphone_number)
-		CellphoneNumber.save()
+		cellphone_number = request.POST.get('Cellphone')
+		cellphoneNumber = CellphoneNumber(user=request.user, cellphone_number=cellphone_number)
+		cellphoneNumber.save()
 
 		## telephone
-		telephone_number = request.POST['Telephone']
-		TelephoneNumber = (user, telephone_number)
-		TelephoneNumber.save()
+		telephone_number = request.POST.get('Telephone')
+		telephoneNumber = TelephoneNumber(user=request.user, telephone_number=telephone_number)
+		telephoneNumber.save()
 
 		## education
-		school = request.POST['Education']
-		education_attained = request.POST['EducationAttained']
-		year_start = request.POST['FromEd']
-		year_finish = request.POST['ToEd']
-		month_attained = request.POST['EducationAttainedDate']
-		year_attained = request.POST['EducationAttainedDate']
-		Education = (user, school, education_attained, year_start, year_finish, month_attained, year_attained)
-		Education.save()
+		school = request.POST.get('Education')
+		education_attained = request.POST.get('EducationAttained')
+		year_start = request.POST.get('FromEd')
+		year_finish = request.POST.get('ToEd')
+		month_attained = request.POST.get('EducationAttainedDate')
+		year_attained = request.POST.get('EducationAttainedDate')
+		education = Education(user=request.user, school=school, education_attained=education_attained, year_start=year_start, year_finish=year_finish, month_attained=month_attained, year_attained=year_attained)
+		education.save()
 
 		## achievements
-		achievement_name = request.POST['Achievements']
-		Achievement = (user, achievement_name)
-		Achievement.save()
+		achievement_name = request.POST.get('Achievements')
+		achievement = Achievement(user=request.user, achievement_name=achievement_name)
+		achievement.save()
 
 		## education award
-		award_description = request.POST['Award']
-		award_date = request.POST['AwardAttainedDate']
-		EducationAward = (school, award_description, award_date)
-		EducationAward.save()
+		award_description = request.POST.get('Award')
+		award_date = request.POST.get('AwardAttainedDate')
+		educationAward = EducationAward(school=school, award_description=award_description, award_date=award_date)
+		educationAward.save()
 
 		## work experience
-		month_start = request.POST['FromWork']
-		month_finish = request.POST['ToWork']
-		year_finish = request.POST['ToWork']
-		position = request.POST['WorkPosition']
-		company = request.POST['WorkOrganization']
-		workdone = request.POST['WorkDone']
-		WorkExperience = (user, month_start, month_finish, year_finish, position, company, workdone)
-		WorkExperience.save()
+		month_start = request.POST.get('FromWork')
+		month_finish = request.POST.get('ToWork')
+		year_finish = request.POST.get('ToWork')
+		position = request.POST.get('WorkPosition')
+		company = request.POST.get('WorkOrganization')
+		workdone = request.POST.get('WorkDone')
+		workExperience = WorkExperience(user=request.user, month_start=month_start, month_finish=month_finish, year_finish=year_finish, position=position, company=company, workdone=workdone)
+		workExperience.save()
 
 		## extra curricular
-		organization = request.POST['CocurOrganization']
-		position = request.POST['CocurPosition']
-		work_done = request.POST['CocurDone']
-		year_start = request.POST['FromCoCur']
-		year_finish = request.POST['ToCoCur']
-		ExtraCurricular = (user, organization, position, work_done, year_start, year_finish)
-		ExtraCurricular.save()
+		organization = request.POST.get('CocurOrganization')
+		position = request.POST.get('CocurPosition')
+		work_done = request.POST.get('CocurDone')
+		year_start = request.POST.get('FromCoCur')
+		year_finish = request.POST.get('ToCoCur')
+		extraCurricular = ExtraCurricular(user=request.user, organization=organization, position=position, work_done=work_done, year_start=year_start, year_finish=year_finish)
+		extraCurricular.save()
 
 		## seminars attended
-		month = request.POST['SeminarAttendedDate']
-		year = request.POST['SeminarAttendedDated']
-		title = request.POST['SeminarAttendedName']
-		seminar_head = request.POST['SeminarAttendedOrganization']
-		venue = request.POST['SeminarAttendedLocation']
-		SeminarAttended = (user, month, year, title, seminar_head, venue)
-		SeminarAttended.save()
+		month = request.POST.get('SeminarAttendedDate')
+		year = request.POST.get('SeminarAttendedDate')
+		title = request.POST.get('SeminarAttendedName')
+		seminar_head = request.POST.get('SeminarAttendedOrganization')
+		venue = request.POST.get('SeminarAttendedLocation')
+		seminarAttended = SeminarAttended(user=request.user, month=month, year=year, title=title, seminar_head=seminar_head, venue=venue)
+		seminarAttended.save()
 
 		## seminars conducted
-		month = request.POST['SeminarConductedDate']
-		year = request.POST['SeminarConductedDated']
-		position = request.POST['SeminarConductedPosition']
-		title = request.POST['SeminarConductedName']
-		seminar_head = request.POST['SeminarConductedOrganization']
-		venue = request.POST['SeminarConductedLocation']
-		SeminarConducted = (user, month, year, position, title, seminar_head, venue)
-		SeminarConducted.save()
+		month = request.POST.get('SeminarConductedDate')
+		year = request.POST.get('SeminarConductedDate')
+		position = request.POST.get('SeminarConductedPosition')
+		title = request.POST.get('SeminarConductedName')
+		seminar_head = request.POST.get('SeminarConductedOrganization')
+		venue = request.POST.get('SeminarConductedLocation')
+		seminarConducted = SeminarConducted(user=request.user, month=month, year=year, position=position, title=title, seminar_head=seminar_head, venue=venue)
+		seminarConducted.save()
 
 		## research paper
-		month = request.POST['ResearchPaperDate']
-		year = request.POST['ResearchPaperDate']
-		title = request.POST['ResearchPaperTitle']
-		summary = request.POST['ResearchPaperSummary']
-		ResearchPaper = (user, month, year, title, summary)
-		ResearchPaper.save()
+		month = request.POST.get('ResearchPaperDate')
+		year = request.POST.get('ResearchPaperDate')
+		title = request.POST.get('ResearchPaperTitle')
+		summary = request.POST.get('ResearchPaperSummary')
+		researchPaper = ResearchPaper(user=request.user, month=month, year=year, title=title, summary=summary)
+		researchPaper.save()
 
 		## user profile
-		background = request.POST['PersonalBackground']
-		UserProfile.background = background
-		UserProfile.background.save()
-		UserProfile.save()
+		background = request.POST.get('PersonalBackground')
+		objective = request.POST.get('Objective')
+		userProfile = UserProfile(user=request.user, first_name=user.first_name, middle_initial='G', last_name=user.last_name, email=user.email, objective=objective, background=background)
+		userProfile.save()
 
-	return render(request, 'resume')
+	return resume(request)
