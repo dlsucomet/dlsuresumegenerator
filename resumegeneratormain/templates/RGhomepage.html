@@ -52,7 +52,7 @@
         </div>
 
         <section id="basicinfo" class = "form-section">
-            <form method = "POST" action = "/new/">
+            <form method = "POST" action = "/submit_d/">
             {% csrf_token %}
               <br><br>
                 <a name="myAnchor" id="myAnchor"><br></a>
@@ -62,18 +62,20 @@
                     Personal Information
                 </h1>
                 <br>
+                <!--  REMOVED BECAUSE THE USER'S NAME IS ALREADY TAKEN WHEN ACCOUNT IS FIRST MADE
                 <h3>Name</h3>
                 <div class="col-md-4"></div>
                     <div class="input-group col-md-4">
                         <span class="input-group-addon" id="basic-addon1">Full Name </span>
                         <input type="text" class="form-control" id = "FullName" aria-describedby="basic-addon1" name="User" placeholder="Johnny D. Appleseed">
                     </div>
-
+                -->
                     <h3>Address</h3>
                     <div class="col-md-4"></div>
                     <div class="col-md-4 input-group">
                         <span id="myForm">
-                            <input class="form-control" type="text" placeholder="12 Gold Street, Silver Subdivision, Bronze City" name="Address">
+                            <input class="form-control" type="text" placeholder="12 Gold Street, Silver Subdivision, Bronze City" name="address_line_one">
+                            <input class="form-control" type="text" placeholder="12 Gold Street, Silver Subdivision, Bronze City" name="address_line_two">
                         </span>
                         <div class="input-group-btn plustimes">
                             <img src="{% static "resumegeneratormain/images/add.png" %}" width="28" height="28">
@@ -95,12 +97,14 @@
                         <input type="text" class="form-control" id = "user" aria-describedby="basic-addon1" placeholder="+63XXX-XXX-XXXX" name="Cellphone">
                     </div>
                     <br><br>
+                    <!-- REMOVED BECAUSE EMAIL IS TAKEN DURING REGISTRATIONm
                     <h3>Email</h3>
                     <div class="col-md-4"></div>
                     <div class="input-group col-md-4">
                         <span class="input-group-addon" id="basic-addon1">DLSU Email </span>
                         <input type="text" class="form-control" aria-describedby="basic-addon1" placeholder="your_name@dlsu.edu.ph" name="Email">
                     </div>
+                    -->
                     <br><br>
                     <h3>Objective</h3>
                     <div class="col-md-4"></div>

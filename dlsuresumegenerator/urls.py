@@ -26,5 +26,7 @@ urlpatterns = [
 	url(r'^register_account/$', views.register_account, name='register_account'),
     url(r'^resume/$', views.resume, name='resume'),
 	url(r'^pdf/$', views.resumePdf, name='pdfconverted'),
+	url(r'^submit_data/$', views.submit_data, name='submit'),
     url(r'^admin/', admin.site.urls, name='admin'),
+
 ]
