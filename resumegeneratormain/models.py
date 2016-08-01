@@ -6,7 +6,7 @@ class Achievement(models.Model):
 	name = models.CharField(max_length=100)
 
 	def __str__(self):
-		return self.name
+		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)
 
 class Address(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -14,14 +14,14 @@ class Address(models.Model):
 	address_line_two = models.TextField()
 
 	def __str__(self):
-		return self.address_line_one
+		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)
 
 class CellphoneNumber(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 	number = models.CharField(max_length=20)
 
 	def __str__(self):
-		return self.number
+		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)
 
 class ExtraCurricular(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -32,7 +32,7 @@ class ExtraCurricular(models.Model):
 	year_finish = models.CharField(max_length=4)
 
 	def __str__(self):
-		return self.organization
+		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)
 
 class Education(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -44,15 +44,16 @@ class Education(models.Model):
 	year_attained = models.CharField(max_length=4)
 
 	def __str__(self):
-		return self.school
+		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)
 
 class EducationAward(models.Model):
+	user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 	school = models.ForeignKey(Education, on_delete=models.CASCADE, null=True)
 	award_description = models.CharField(max_length=45, blank=True, null=True)
 	award_date = models.CharField(max_length=4, blank=True, null=True)
 
 	def __str__(self):
-		return self.award_description
+		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)
 
 class ResearchPaper(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -62,7 +63,7 @@ class ResearchPaper(models.Model):
 	summary = models.TextField()
 
 	def __str__(self):
-		return self.title
+		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)
 
 class SeminarAttended(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -73,7 +74,7 @@ class SeminarAttended(models.Model):
 	venue = models.CharField(max_length=45)
 
 	def __str__(self):
-		return self.title
+		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)
 
 class SeminarConducted(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -85,14 +86,14 @@ class SeminarConducted(models.Model):
 	venue = models.CharField(max_length=45)
 
 	def __str__(self):
-		return self.title
+		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)
 
 class TelephoneNumber(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 	number = models.CharField(max_length=20)
 
 	def __str__(self):
-		return self.number
+		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)
 
 class UserProfile(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -104,7 +105,7 @@ class UserProfile(models.Model):
 	background = models.TextField()
 
 	def __str__(self):
-		return self.first_name
+		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)
 
 class WorkExperience(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -117,4 +118,4 @@ class WorkExperience(models.Model):
 	workdone = models.TextField()
 
 	def __str__(self):
-		return self.company
+		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)

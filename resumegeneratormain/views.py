@@ -104,7 +104,7 @@ def submit_data(request):
 		school = education
 		award_description = request.POST.get('Award')
 		award_date = request.POST.get('AwardAttainedYear')
-		educationAward = EducationAward(school=school, award_description=award_description, award_date=award_date)
+		educationAward = EducationAward(user=request.user, school=school, award_description=award_description, award_date=award_date)
 		educationAward.save()
 
 		## work experience
