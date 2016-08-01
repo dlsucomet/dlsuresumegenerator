@@ -8,6 +8,8 @@ from django.template import loader
 
 from django.http import HttpResponse
 
+from resumegeneratormain.models import *
+
 
 def index(request):
 	return render(request, "index.html")
@@ -75,12 +77,12 @@ def submit_data(request):
 
 		## cellphone
 		cellphone_number = request.POST.get('Cellphone')
-		cellphoneNumber = CellphoneNumber(user=request.user, cellphone_number=cellphone_number)
+		cellphoneNumber = CellphoneNumber(user=request.user, number=cellphone_number)
 		cellphoneNumber.save()
 
 		## telephone
 		telephone_number = request.POST.get('Telephone')
-		telephoneNumber = TelephoneNumber(user=request.user, telephone_number=telephone_number)
+		telephoneNumber = TelephoneNumber(user=request.user, number=telephone_number)
 		telephoneNumber.save()
 
 		## education
