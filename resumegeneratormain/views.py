@@ -90,26 +90,27 @@ def submit_data(request):
 		education_attained = request.POST.get('EducationAttained')
 		year_start = request.POST.get('FromEd')
 		year_finish = request.POST.get('ToEd')
-		month_attained = request.POST.get('EducationAttainedDate')
-		year_attained = request.POST.get('EducationAttainedDate')
+		month_attained = request.POST.get('EducationAttainedMonth')
+		year_attained = request.POST.get('EducationAttainedYear')
 		education = Education(user=request.user, school=school, education_attained=education_attained, year_start=year_start, year_finish=year_finish, month_attained=month_attained, year_attained=year_attained)
 		education.save()
 
 		## achievements
 		achievement_name = request.POST.get('Achievements')
-		achievement = Achievement(user=request.user, achievement_name=achievement_name)
+		achievement = Achievement(user=request.user, name=achievement_name)
 		achievement.save()
 
 		## education award
+		school = education
 		award_description = request.POST.get('Award')
-		award_date = request.POST.get('AwardAttainedDate')
+		award_date = request.POST.get('AwardAttainedYear')
 		educationAward = EducationAward(school=school, award_description=award_description, award_date=award_date)
 		educationAward.save()
 
 		## work experience
-		month_start = request.POST.get('FromWork')
-		month_finish = request.POST.get('ToWork')
-		year_finish = request.POST.get('ToWork')
+		month_start = request.POST.get('FromWorkMonth')
+		month_finish = request.POST.get('ToWorkMonth')
+		year_finish = request.POST.get('ToWorkYear')
 		position = request.POST.get('WorkPosition')
 		company = request.POST.get('WorkOrganization')
 		workdone = request.POST.get('WorkDone')
@@ -126,8 +127,8 @@ def submit_data(request):
 		extraCurricular.save()
 
 		## seminars attended
-		month = request.POST.get('SeminarAttendedDate')
-		year = request.POST.get('SeminarAttendedDate')
+		month = request.POST.get('SeminarAttendedMonth')
+		year = request.POST.get('SeminarAttendedYear')
 		title = request.POST.get('SeminarAttendedName')
 		seminar_head = request.POST.get('SeminarAttendedOrganization')
 		venue = request.POST.get('SeminarAttendedLocation')
@@ -135,8 +136,8 @@ def submit_data(request):
 		seminarAttended.save()
 
 		## seminars conducted
-		month = request.POST.get('SeminarConductedDate')
-		year = request.POST.get('SeminarConductedDate')
+		month = request.POST.get('SeminarConductedMonth')
+		year = request.POST.get('SeminarConductedYear')
 		position = request.POST.get('SeminarConductedPosition')
 		title = request.POST.get('SeminarConductedName')
 		seminar_head = request.POST.get('SeminarConductedOrganization')
@@ -145,17 +146,18 @@ def submit_data(request):
 		seminarConducted.save()
 
 		## research paper
-		month = request.POST.get('ResearchPaperDate')
-		year = request.POST.get('ResearchPaperDate')
+		month = request.POST.get('ResearchPaperMonth')
+		year = request.POST.get('ResearchPaperYear')
 		title = request.POST.get('ResearchPaperTitle')
 		summary = request.POST.get('ResearchPaperSummary')
 		researchPaper = ResearchPaper(user=request.user, month=month, year=year, title=title, summary=summary)
 		researchPaper.save()
 
 		## user profile
+		user=request.user
 		background = request.POST.get('PersonalBackground')
 		objective = request.POST.get('Objective')
-		userProfile = UserProfile(user=request.user, first_name=user.first_name, middle_initial='G', last_name=user.last_name, email=user.email, objective=objective, background=background)
+		userProfile = UserProfile(user=user, first_name=user.first_name, middle_initial='G', last_name=user.last_name, email=user.email, objective=objective, background=background)
 		userProfile.save()
 
 	return resume(request)

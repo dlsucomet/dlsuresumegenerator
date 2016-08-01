@@ -49,14 +49,14 @@ class Education(models.Model):
 class EducationAward(models.Model):
 	school = models.ForeignKey(Education, on_delete=models.CASCADE, null=True)
 	award_description = models.CharField(max_length=45, blank=True, null=True)
-	award_date = models.CharField(max_length=4)
+	award_date = models.CharField(max_length=4, blank=True, null=True)
 
 	def __str__(self):
 		return self.award_description
 
 class ResearchPaper(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
-	month = models.DateField(input_formats='%m')
+	month = models.CharField(max_length=3)
 	year = models.CharField(max_length=4)
 	title = models.CharField(max_length=70)
 	summary = models.TextField()
