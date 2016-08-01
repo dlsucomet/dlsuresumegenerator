@@ -119,7 +119,7 @@
                     <div class='col-sm-2'>
                         <div class="form-group">
                             <div class='input-group date datetimepicker9'>
-                                <input type='text' class="form-control" placeholder="Date Started:" name="FromEd">
+                                <input type='text' class="form-control" placeholder="Year Started:" name="FromYearEd">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
@@ -130,7 +130,7 @@
                         <div class='col-sm-2'>
                             <div class="form-group">
                                 <div class='input-group date datetimepicker9'>
-                                    <input type='text' class="form-control" placeholder="Date Ended:" name="ToEd">
+                                    <input type='text' class="form-control" placeholder="Year Ended:" name="ToYearEd">
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
                                     </span>
@@ -155,8 +155,14 @@
                             <div class="row">
                                 <div class='col-sm-2'>
                                     <div class="form-group">
+                                        <div class='input-group date datetimepicker'>
+                                            <input type='text' class="form-control" placeholder="Month Attained:" name="EducationAttainedMonth">
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
                                         <div class='input-group date datetimepicker9'>
-                                            <input type='text' class="form-control" placeholder="Date Attained:" name="EducationAttainedDate">
+                                            <input type='text' class="form-control" placeholder="Year Attained:" name="EducationAttainedYear">
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-calendar"></span>
                                             </span>
@@ -182,7 +188,7 @@
                                 <div class='col-sm-2'>
                                     <div class="form-group">
                                         <div class='input-group date datetimepicker9'>
-                                            <input type='text' class="form-control" placeholder="Date Attained:" name="AwardAttainedDate">
+                                            <input type='text' class="form-control" placeholder="Year Attained:" name="AwardAttainedDate">
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-calendar"></span>
                                             </span>
@@ -212,8 +218,14 @@
                     <div class="col-md-4"></div>
                     <div class='col-sm-2'>
                         <div class="form-group">
-                            <div class='input-group date datetimepicker9'>
-                                <input type='text' class="form-control" placeholder="From Date:" name="FromWork">
+                            <div class='input-group date datetimepicker'>
+                                <input type='text' class="form-control" placeholder="Month Start:" name="FromWorkMonth">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                            </div>
+                            <div class='input-group date datetimepicker'>
+                                <input type='text' class="form-control" placeholder="Month End:" name="ToWorkEnd">
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
                                     </span>
@@ -224,7 +236,7 @@
                         <div class='col-sm-2'>
                             <div class="form-group">
                                 <div class='input-group date datetimepicker9'>
-                                    <input type='text' class="form-control" placeholder="To Date:" name="ToWork">
+                                    <input type='text' class="form-control" placeholder="Year Finish:" name="ToWorkYear">
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
                                     </span>
@@ -438,8 +450,13 @@
             $(document).ready(function(){
                 $('.datetimepicker9').datetimepicker( {
                          viewMode: 'years',
-                        format: 'MM/YYYY'
+                        format: 'yyyy'
                     });
+
+                $('.datetimepicker').datetimepicker( {
+                        viewMode: 'months'
+                        format: 'M'
+                });
 
 
                 $('a').click(function(){

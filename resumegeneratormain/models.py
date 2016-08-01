@@ -28,8 +28,8 @@ class ExtraCurricular(models.Model):
 	organization = models.CharField(max_length=45)
 	position = models.CharField(max_length=45)
 	work_done = models.TextField()
-	year_start = models.DateField('%Y')
-	year_finish = models.DateField('%Y')
+	year_start = models.CharField(max_length=4)
+	year_finish = models.CharField(max_length=4)
 
 	def __str__(self):
 		return self.organization
@@ -38,10 +38,10 @@ class Education(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 	school = models.CharField(max_length=45)
 	education_attained = models.CharField(max_length=45)
-	year_start = models.DateField('%Y')
-	year_finish= models.DateField('%Y')
-	month_attained = models.DateField('%m')
-	year_attained = models.DateField('%Y')
+	year_start = models.CharField(max_length=4)
+	year_finish= models.CharField(max_length=4)
+	month_attained = models.CharField(max_length=3)
+	year_attained = models.CharField(max_length=4)
 
 	def __str__(self):
 		return self.school
@@ -49,15 +49,15 @@ class Education(models.Model):
 class EducationAward(models.Model):
 	school = models.ForeignKey(Education, on_delete=models.CASCADE, null=True)
 	award_description = models.CharField(max_length=45, blank=True, null=True)
-	award_date = models.DateField('%Y', blank=True, null=True)
+	award_date = models.CharField(max_length=4)
 
 	def __str__(self):
 		return self.award_description
 
 class ResearchPaper(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
-	month = models.DateField('%m')
-	year = models.DateField('%Y')
+	month = models.DateField(input_formats='%m')
+	year = models.CharField(max_length=4)
 	title = models.CharField(max_length=70)
 	summary = models.TextField()
 
@@ -66,8 +66,8 @@ class ResearchPaper(models.Model):
 
 class SeminarAttended(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
-	month = models.DateField('%m')
-	year = models.DateField('%Y')
+	month = models.CharField(max_length=3)
+	year = models.CharField(max_length=4)
 	title = models.CharField(max_length=45)
 	seminar_head = models.CharField(max_length=45)
 	venue = models.CharField(max_length=45)
@@ -77,8 +77,8 @@ class SeminarAttended(models.Model):
 
 class SeminarConducted(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
-	month = models.DateField('%m')
-	year = models.DateField('%Y')
+	month = models.CharField(max_length=3)
+	year = models.CharField(max_length=4)
 	position = models.CharField(max_length=45)
 	title = models.CharField(max_length=45)
 	seminar_head = models.CharField(max_length=45)
@@ -108,10 +108,10 @@ class UserProfile(models.Model):
 
 class WorkExperience(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
-	month_start = models.DateField('%m')
+	month_start = models.CharField(max_length=3)
 	#year_start = models.CharField(max_length=4)
-	month_finish= models.DateField('%m')
-	year_finish= models.DateField('%Y')
+	month_finish= models.CharField(max_length=3)
+	year_finish= models.CharField(max_length=4)
 	position = models.CharField(max_length=45)
 	company = models.CharField(max_length=45)
 	workdone = models.TextField()
