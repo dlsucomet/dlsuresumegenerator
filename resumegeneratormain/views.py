@@ -162,4 +162,4 @@ def submit_data(request):
 		userProfile = UserProfile(user=user, first_name=user.first_name, middle_initial='G', last_name=user.last_name, email=user.email, objective=objective, background=background)
 		userProfile.save()
 
-	return resume(request)
+	return resumePdf(request)
