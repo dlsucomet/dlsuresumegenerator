@@ -25,11 +25,13 @@ def register_account(request):
 	if request.method =="POST":
 		username = request.POST['username']
 		first_name = request.POST['first_name']
+		middle_initial = request.POST['middle_init']
 		last_name = request.POST['last_name']
 		email = request.POST['email']
 		password = request.POST['password']
 		user = User.objects.create_user(username = username, email = email, password = password)
 		user.first_name = first_name
+		user.middle_initial = middle_initial
 		user.last_name = last_name
 		user.save()
 	return redirect('index')

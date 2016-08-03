@@ -7,6 +7,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="{% static "resumegeneratormain/css/bootstrap.min.css" %}" rel="stylesheet">
         <link href="{% static "resumegeneratormain/css/style.css" %}" rel="stylesheet">
+         
+        <script src="{% static "resumegeneratormain/js/jquery.min.js" %}"></script>
+        <script src="{% static "resumegeneratormain/js/bootstrap.min.js" %}"></script>
+        <script src="{% static "resumegeneratormain/js/classie.js" %}"></script>
+
         <script src="//use.edgefonts.net/montserrat.js"></script>
         <script src="//use.edgefonts.net/anonymous-pro:n4,i4,n7,i7.js"></script>
 
@@ -39,6 +44,12 @@
               <br>
               <div class="col-md-4"></div>
               <div class="input-group col-md-4">
+                  <span class="input-group-addon" id="basic-addon1">Middle Initial: </span>
+                  <input type="text" class="form-control" id = "user" aria-describedby="basic-addon1" name="middle_init">
+              </div>
+              <br>
+              <div class="col-md-4"></div>
+              <div class="input-group col-md-4">
                   <span class="input-group-addon" id="basic-addon1">Last Name: </span>
                   <input type="text" class="form-control" id = "user" aria-describedby="basic-addon1" name="last_name">
               </div>
@@ -53,25 +64,24 @@
               <div class="row">
                 <div class="col-md-4"></div>
                 <div class="input-group col-md-4">
-                    <span class="input-group-addon" id="basic-addon1">Password: </span>
+                    <span class="input-group-addon" id="basic-addon1">Password </span>
                     <input type="password" class="form-control" id = "pass" aria-describedby="basic-addon1" name="password">
                 </div>
                 <br>
-                <div class="col-md-3"></div>
-                <div class="col-md-2">
-                    <a href = "{% url "index" %}" id = "login" class="btn btn-1 btn-1a"><span class="glyphicon glyphicon-arrow-left"aria-hidden="true"></span>Cancel</a>
+                <br>
+                <div class="col-md-4"></div>
+                <div class="col-md-1">
+                    <a href = "{% url "index" %}" id = "login" class="btn btn-1 btn-1a">
+                    <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>Cancel</a>
                 </div>
-                <div class="col-md-3">
-                  <input id = "login" class="btn btn-1 btn-1a" type="submit" value="Register Account">
+                <div class="">
+                  <input id = "login" type="submit" value="Register Account">
                 </div>
               </div>
             </div>
         </div>
+        </form>
 
-
-        <script src="{% static "resumegeneratormain/js/jquery.min.js" %}"></script>
-        <script src="{% static "resumegeneratormain/js/bootstrap.min.js" %}"></script>
-        <script src="{% static "resumegeneratormain/js/classie.js" %}"></script>
-
+      
     </body>
 </html>

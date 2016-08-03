@@ -3,6 +3,12 @@ body
     background-color: #252525;
 }    
 
+.fixed
+{
+    position: fixed;
+    top: 20px;
+}
+
 .center
 {
  text-align: center;
@@ -67,6 +73,10 @@ body
     width: 100%;
 }
 
+.btn-abs
+{
+    position: absolute;
+}
 
 .btn-1 {
 
@@ -95,6 +105,20 @@ body
     color: #55b953;
 }
 
+
+
+
+input[type=submit] {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: #55b953;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 25px;
+    width: 20%;
+}
 
 
 .welcome

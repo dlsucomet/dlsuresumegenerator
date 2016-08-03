@@ -8,7 +8,7 @@
         <link href="{% static "resumegeneratormain/css/bootstrap-datetimepicker.css" %}" rel="stylesheet">
         <link href="{% static "resumegeneratormain/css/scrolling-nav.css" %}" rel="stylesheet">
         <link rel="stylesheet" href="{% static "resumegeneratormain/css/animate.css" %}">
-        <link href="{% static "resumegeneratormain/css/style.css" %}" rel="stylesheet">
+        <link href="{% static "resumegeneratormain/css/style.css" %}" rel="styleshe
 
         <script src="{% static "resumegeneratormain/js/jquery.js" %}"></script>
         <script src="{% static "resumegeneratormain/js/moment.js" %}"></script>
@@ -24,6 +24,12 @@
 
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
         <div class = "icon up">
+
+            <div class = "container">
+                <div class = "col-md-6"></div>
+                <div class = "col-md-2"></div>
+                <input type = "submit" value="Log Out" class = "fixed btn btn-1 btn-1a">
+            </div>
             <br>
             <br>
             <br>
@@ -51,7 +57,7 @@
             <br>
         </div>
 
-        <section id="basicinfo" class = "form-section">
+       <section id="basicinfo" class = "form-section">
             <form method = "POST" action = "/submit_data/">
             {% csrf_token %}
               <br><br>
@@ -474,8 +480,6 @@
                       viewMode: 'years',
                       format: 'yyyy'
               });
-
-
               $('a').click(function(){
                   event.preventDefault();
                   $('html, body').animate({
@@ -484,7 +488,6 @@
                   return false;
               });
             });
-
         </script>
 
     </body>
