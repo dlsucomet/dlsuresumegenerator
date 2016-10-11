@@ -28,8 +28,8 @@ class ExtraCurricular(models.Model):
 	organization = models.CharField(max_length=45)
 	position = models.CharField(max_length=45)
 	work_done = models.TextField()
-	year_start = models.CharField(max_length=4)
-	year_finish = models.CharField(max_length=4)
+	year_start = models.DateField(max_length=4)
+	year_finish = models.DateField(max_length=4)
 
 	def __str__(self):
 		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)
@@ -38,10 +38,10 @@ class Education(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 	school = models.CharField(max_length=45)
 	education_attained = models.CharField(max_length=45)
-	year_start = models.CharField(max_length=4)
-	year_finish= models.CharField(max_length=4)
-	month_attained = models.CharField(max_length=3)
-	year_attained = models.CharField(max_length=4)
+	year_start = models.DateField(max_length=4)
+	year_finish= models.DateField(max_length=4)
+	month_attained = models.DateField(max_length=3)
+	year_attained = models.DateField(max_length=4)
 
 	def __str__(self):
 		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)
@@ -50,7 +50,7 @@ class EducationAward(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 	school = models.ForeignKey(Education, on_delete=models.CASCADE, null=True)
 	award_description = models.CharField(max_length=45, blank=True, null=True)
-	award_date = models.CharField(max_length=4, blank=True, null=True)
+	award_date = models.DateField(max_length=4, blank=True, null=True)
 
 	def __str__(self):
 		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)
