@@ -5,8 +5,6 @@
 -- Dumped from database version 9.5.4
 -- Dumped by pg_dump version 9.5.4
 
--- Started on 2016-10-21 23:52:25 PHT
-
 SET statement_timeout = 0;
 SET lock_timeout = 0;
 SET client_encoding = 'UTF8';
@@ -16,7 +14,6 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- TOC entry 1 (class 3079 OID 12623)
 -- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
 --
 
@@ -24,8 +21,6 @@ CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
--- TOC entry 2669 (class 0 OID 0)
--- Dependencies: 1
 -- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
 --
 
@@ -39,7 +34,6 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- TOC entry 188 (class 1259 OID 16707)
 -- Name: auth_group; Type: TABLE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -52,7 +46,6 @@ CREATE TABLE auth_group (
 ALTER TABLE auth_group OWNER TO resumegeneratordba;
 
 --
--- TOC entry 187 (class 1259 OID 16705)
 -- Name: auth_group_id_seq; Type: SEQUENCE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -67,8 +60,6 @@ CREATE SEQUENCE auth_group_id_seq
 ALTER TABLE auth_group_id_seq OWNER TO resumegeneratordba;
 
 --
--- TOC entry 2670 (class 0 OID 0)
--- Dependencies: 187
 -- Name: auth_group_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: resumegeneratordba
 --
 
@@ -76,7 +67,6 @@ ALTER SEQUENCE auth_group_id_seq OWNED BY auth_group.id;
 
 
 --
--- TOC entry 190 (class 1259 OID 16717)
 -- Name: auth_group_permissions; Type: TABLE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -90,7 +80,6 @@ CREATE TABLE auth_group_permissions (
 ALTER TABLE auth_group_permissions OWNER TO resumegeneratordba;
 
 --
--- TOC entry 189 (class 1259 OID 16715)
 -- Name: auth_group_permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -105,8 +94,6 @@ CREATE SEQUENCE auth_group_permissions_id_seq
 ALTER TABLE auth_group_permissions_id_seq OWNER TO resumegeneratordba;
 
 --
--- TOC entry 2671 (class 0 OID 0)
--- Dependencies: 189
 -- Name: auth_group_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: resumegeneratordba
 --
 
@@ -114,7 +101,6 @@ ALTER SEQUENCE auth_group_permissions_id_seq OWNED BY auth_group_permissions.id;
 
 
 --
--- TOC entry 186 (class 1259 OID 16699)
 -- Name: auth_permission; Type: TABLE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -129,7 +115,6 @@ CREATE TABLE auth_permission (
 ALTER TABLE auth_permission OWNER TO resumegeneratordba;
 
 --
--- TOC entry 185 (class 1259 OID 16697)
 -- Name: auth_permission_id_seq; Type: SEQUENCE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -144,8 +129,6 @@ CREATE SEQUENCE auth_permission_id_seq
 ALTER TABLE auth_permission_id_seq OWNER TO resumegeneratordba;
 
 --
--- TOC entry 2672 (class 0 OID 0)
--- Dependencies: 185
 -- Name: auth_permission_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: resumegeneratordba
 --
 
@@ -153,7 +136,6 @@ ALTER SEQUENCE auth_permission_id_seq OWNED BY auth_permission.id;
 
 
 --
--- TOC entry 192 (class 1259 OID 16725)
 -- Name: auth_user; Type: TABLE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -175,7 +157,6 @@ CREATE TABLE auth_user (
 ALTER TABLE auth_user OWNER TO resumegeneratordba;
 
 --
--- TOC entry 194 (class 1259 OID 16735)
 -- Name: auth_user_groups; Type: TABLE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -189,7 +170,6 @@ CREATE TABLE auth_user_groups (
 ALTER TABLE auth_user_groups OWNER TO resumegeneratordba;
 
 --
--- TOC entry 193 (class 1259 OID 16733)
 -- Name: auth_user_groups_id_seq; Type: SEQUENCE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -204,8 +184,6 @@ CREATE SEQUENCE auth_user_groups_id_seq
 ALTER TABLE auth_user_groups_id_seq OWNER TO resumegeneratordba;
 
 --
--- TOC entry 2673 (class 0 OID 0)
--- Dependencies: 193
 -- Name: auth_user_groups_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: resumegeneratordba
 --
 
@@ -213,7 +191,6 @@ ALTER SEQUENCE auth_user_groups_id_seq OWNED BY auth_user_groups.id;
 
 
 --
--- TOC entry 191 (class 1259 OID 16723)
 -- Name: auth_user_id_seq; Type: SEQUENCE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -228,8 +205,6 @@ CREATE SEQUENCE auth_user_id_seq
 ALTER TABLE auth_user_id_seq OWNER TO resumegeneratordba;
 
 --
--- TOC entry 2674 (class 0 OID 0)
--- Dependencies: 191
 -- Name: auth_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: resumegeneratordba
 --
 
@@ -237,7 +212,6 @@ ALTER SEQUENCE auth_user_id_seq OWNED BY auth_user.id;
 
 
 --
--- TOC entry 196 (class 1259 OID 16743)
 -- Name: auth_user_user_permissions; Type: TABLE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -251,7 +225,6 @@ CREATE TABLE auth_user_user_permissions (
 ALTER TABLE auth_user_user_permissions OWNER TO resumegeneratordba;
 
 --
--- TOC entry 195 (class 1259 OID 16741)
 -- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -266,8 +239,6 @@ CREATE SEQUENCE auth_user_user_permissions_id_seq
 ALTER TABLE auth_user_user_permissions_id_seq OWNER TO resumegeneratordba;
 
 --
--- TOC entry 2675 (class 0 OID 0)
--- Dependencies: 195
 -- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: resumegeneratordba
 --
 
@@ -275,7 +246,6 @@ ALTER SEQUENCE auth_user_user_permissions_id_seq OWNED BY auth_user_user_permiss
 
 
 --
--- TOC entry 198 (class 1259 OID 16803)
 -- Name: django_admin_log; Type: TABLE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -295,7 +265,6 @@ CREATE TABLE django_admin_log (
 ALTER TABLE django_admin_log OWNER TO resumegeneratordba;
 
 --
--- TOC entry 197 (class 1259 OID 16801)
 -- Name: django_admin_log_id_seq; Type: SEQUENCE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -310,8 +279,6 @@ CREATE SEQUENCE django_admin_log_id_seq
 ALTER TABLE django_admin_log_id_seq OWNER TO resumegeneratordba;
 
 --
--- TOC entry 2676 (class 0 OID 0)
--- Dependencies: 197
 -- Name: django_admin_log_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: resumegeneratordba
 --
 
@@ -319,7 +286,6 @@ ALTER SEQUENCE django_admin_log_id_seq OWNED BY django_admin_log.id;
 
 
 --
--- TOC entry 184 (class 1259 OID 16689)
 -- Name: django_content_type; Type: TABLE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -333,7 +299,6 @@ CREATE TABLE django_content_type (
 ALTER TABLE django_content_type OWNER TO resumegeneratordba;
 
 --
--- TOC entry 183 (class 1259 OID 16687)
 -- Name: django_content_type_id_seq; Type: SEQUENCE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -348,8 +313,6 @@ CREATE SEQUENCE django_content_type_id_seq
 ALTER TABLE django_content_type_id_seq OWNER TO resumegeneratordba;
 
 --
--- TOC entry 2677 (class 0 OID 0)
--- Dependencies: 183
 -- Name: django_content_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: resumegeneratordba
 --
 
@@ -357,7 +320,6 @@ ALTER SEQUENCE django_content_type_id_seq OWNED BY django_content_type.id;
 
 
 --
--- TOC entry 182 (class 1259 OID 16678)
 -- Name: django_migrations; Type: TABLE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -372,7 +334,6 @@ CREATE TABLE django_migrations (
 ALTER TABLE django_migrations OWNER TO resumegeneratordba;
 
 --
--- TOC entry 181 (class 1259 OID 16676)
 -- Name: django_migrations_id_seq; Type: SEQUENCE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -387,8 +348,6 @@ CREATE SEQUENCE django_migrations_id_seq
 ALTER TABLE django_migrations_id_seq OWNER TO resumegeneratordba;
 
 --
--- TOC entry 2678 (class 0 OID 0)
--- Dependencies: 181
 -- Name: django_migrations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: resumegeneratordba
 --
 
@@ -396,7 +355,6 @@ ALTER SEQUENCE django_migrations_id_seq OWNED BY django_migrations.id;
 
 
 --
--- TOC entry 223 (class 1259 OID 17091)
 -- Name: django_session; Type: TABLE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -410,7 +368,6 @@ CREATE TABLE django_session (
 ALTER TABLE django_session OWNER TO resumegeneratordba;
 
 --
--- TOC entry 200 (class 1259 OID 16828)
 -- Name: resumegeneratormain_achievement; Type: TABLE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -424,7 +381,6 @@ CREATE TABLE resumegeneratormain_achievement (
 ALTER TABLE resumegeneratormain_achievement OWNER TO resumegeneratordba;
 
 --
--- TOC entry 199 (class 1259 OID 16826)
 -- Name: resumegeneratormain_achievement_id_seq; Type: SEQUENCE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -439,8 +395,6 @@ CREATE SEQUENCE resumegeneratormain_achievement_id_seq
 ALTER TABLE resumegeneratormain_achievement_id_seq OWNER TO resumegeneratordba;
 
 --
--- TOC entry 2679 (class 0 OID 0)
--- Dependencies: 199
 -- Name: resumegeneratormain_achievement_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: resumegeneratordba
 --
 
@@ -448,7 +402,6 @@ ALTER SEQUENCE resumegeneratormain_achievement_id_seq OWNED BY resumegeneratorma
 
 
 --
--- TOC entry 220 (class 1259 OID 17023)
 -- Name: resumegeneratormain_address; Type: TABLE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -463,7 +416,6 @@ CREATE TABLE resumegeneratormain_address (
 ALTER TABLE resumegeneratormain_address OWNER TO resumegeneratordba;
 
 --
--- TOC entry 219 (class 1259 OID 17021)
 -- Name: resumegeneratormain_address_id_seq; Type: SEQUENCE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -478,8 +430,6 @@ CREATE SEQUENCE resumegeneratormain_address_id_seq
 ALTER TABLE resumegeneratormain_address_id_seq OWNER TO resumegeneratordba;
 
 --
--- TOC entry 2680 (class 0 OID 0)
--- Dependencies: 219
 -- Name: resumegeneratormain_address_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: resumegeneratordba
 --
 
@@ -487,7 +437,6 @@ ALTER SEQUENCE resumegeneratormain_address_id_seq OWNED BY resumegeneratormain_a
 
 
 --
--- TOC entry 202 (class 1259 OID 16858)
 -- Name: resumegeneratormain_cellphonenumber; Type: TABLE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -501,7 +450,6 @@ CREATE TABLE resumegeneratormain_cellphonenumber (
 ALTER TABLE resumegeneratormain_cellphonenumber OWNER TO resumegeneratordba;
 
 --
--- TOC entry 201 (class 1259 OID 16856)
 -- Name: resumegeneratormain_cellphonenumber_id_seq; Type: SEQUENCE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -516,8 +464,6 @@ CREATE SEQUENCE resumegeneratormain_cellphonenumber_id_seq
 ALTER TABLE resumegeneratormain_cellphonenumber_id_seq OWNER TO resumegeneratordba;
 
 --
--- TOC entry 2681 (class 0 OID 0)
--- Dependencies: 201
 -- Name: resumegeneratormain_cellphonenumber_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: resumegeneratordba
 --
 
@@ -525,7 +471,6 @@ ALTER SEQUENCE resumegeneratormain_cellphonenumber_id_seq OWNED BY resumegenerat
 
 
 --
--- TOC entry 204 (class 1259 OID 16866)
 -- Name: resumegeneratormain_education; Type: TABLE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -544,7 +489,6 @@ CREATE TABLE resumegeneratormain_education (
 ALTER TABLE resumegeneratormain_education OWNER TO resumegeneratordba;
 
 --
--- TOC entry 203 (class 1259 OID 16864)
 -- Name: resumegeneratormain_education_id_seq; Type: SEQUENCE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -559,8 +503,6 @@ CREATE SEQUENCE resumegeneratormain_education_id_seq
 ALTER TABLE resumegeneratormain_education_id_seq OWNER TO resumegeneratordba;
 
 --
--- TOC entry 2682 (class 0 OID 0)
--- Dependencies: 203
 -- Name: resumegeneratormain_education_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: resumegeneratordba
 --
 
@@ -568,7 +510,6 @@ ALTER SEQUENCE resumegeneratormain_education_id_seq OWNED BY resumegeneratormain
 
 
 --
--- TOC entry 222 (class 1259 OID 17040)
 -- Name: resumegeneratormain_educationaward; Type: TABLE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -583,7 +524,6 @@ CREATE TABLE resumegeneratormain_educationaward (
 ALTER TABLE resumegeneratormain_educationaward OWNER TO resumegeneratordba;
 
 --
--- TOC entry 221 (class 1259 OID 17038)
 -- Name: resumegeneratormain_educationaward_id_seq; Type: SEQUENCE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -598,8 +538,6 @@ CREATE SEQUENCE resumegeneratormain_educationaward_id_seq
 ALTER TABLE resumegeneratormain_educationaward_id_seq OWNER TO resumegeneratordba;
 
 --
--- TOC entry 2683 (class 0 OID 0)
--- Dependencies: 221
 -- Name: resumegeneratormain_educationaward_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: resumegeneratordba
 --
 
@@ -607,7 +545,6 @@ ALTER SEQUENCE resumegeneratormain_educationaward_id_seq OWNED BY resumegenerato
 
 
 --
--- TOC entry 206 (class 1259 OID 16874)
 -- Name: resumegeneratormain_extracurricular; Type: TABLE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -625,7 +562,6 @@ CREATE TABLE resumegeneratormain_extracurricular (
 ALTER TABLE resumegeneratormain_extracurricular OWNER TO resumegeneratordba;
 
 --
--- TOC entry 205 (class 1259 OID 16872)
 -- Name: resumegeneratormain_extracurricular_id_seq; Type: SEQUENCE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -640,8 +576,6 @@ CREATE SEQUENCE resumegeneratormain_extracurricular_id_seq
 ALTER TABLE resumegeneratormain_extracurricular_id_seq OWNER TO resumegeneratordba;
 
 --
--- TOC entry 2684 (class 0 OID 0)
--- Dependencies: 205
 -- Name: resumegeneratormain_extracurricular_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: resumegeneratordba
 --
 
@@ -649,7 +583,6 @@ ALTER SEQUENCE resumegeneratormain_extracurricular_id_seq OWNED BY resumegenerat
 
 
 --
--- TOC entry 208 (class 1259 OID 16885)
 -- Name: resumegeneratormain_researchpaper; Type: TABLE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -666,7 +599,6 @@ CREATE TABLE resumegeneratormain_researchpaper (
 ALTER TABLE resumegeneratormain_researchpaper OWNER TO resumegeneratordba;
 
 --
--- TOC entry 207 (class 1259 OID 16883)
 -- Name: resumegeneratormain_researchpaper_id_seq; Type: SEQUENCE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -681,8 +613,6 @@ CREATE SEQUENCE resumegeneratormain_researchpaper_id_seq
 ALTER TABLE resumegeneratormain_researchpaper_id_seq OWNER TO resumegeneratordba;
 
 --
--- TOC entry 2685 (class 0 OID 0)
--- Dependencies: 207
 -- Name: resumegeneratormain_researchpaper_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: resumegeneratordba
 --
 
@@ -690,7 +620,6 @@ ALTER SEQUENCE resumegeneratormain_researchpaper_id_seq OWNED BY resumegenerator
 
 
 --
--- TOC entry 210 (class 1259 OID 16896)
 -- Name: resumegeneratormain_seminarattended; Type: TABLE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -708,7 +637,6 @@ CREATE TABLE resumegeneratormain_seminarattended (
 ALTER TABLE resumegeneratormain_seminarattended OWNER TO resumegeneratordba;
 
 --
--- TOC entry 209 (class 1259 OID 16894)
 -- Name: resumegeneratormain_seminarattended_id_seq; Type: SEQUENCE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -723,8 +651,6 @@ CREATE SEQUENCE resumegeneratormain_seminarattended_id_seq
 ALTER TABLE resumegeneratormain_seminarattended_id_seq OWNER TO resumegeneratordba;
 
 --
--- TOC entry 2686 (class 0 OID 0)
--- Dependencies: 209
 -- Name: resumegeneratormain_seminarattended_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: resumegeneratordba
 --
 
@@ -732,7 +658,6 @@ ALTER SEQUENCE resumegeneratormain_seminarattended_id_seq OWNED BY resumegenerat
 
 
 --
--- TOC entry 212 (class 1259 OID 16904)
 -- Name: resumegeneratormain_seminarconducted; Type: TABLE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -751,7 +676,6 @@ CREATE TABLE resumegeneratormain_seminarconducted (
 ALTER TABLE resumegeneratormain_seminarconducted OWNER TO resumegeneratordba;
 
 --
--- TOC entry 211 (class 1259 OID 16902)
 -- Name: resumegeneratormain_seminarconducted_id_seq; Type: SEQUENCE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -766,8 +690,6 @@ CREATE SEQUENCE resumegeneratormain_seminarconducted_id_seq
 ALTER TABLE resumegeneratormain_seminarconducted_id_seq OWNER TO resumegeneratordba;
 
 --
--- TOC entry 2687 (class 0 OID 0)
--- Dependencies: 211
 -- Name: resumegeneratormain_seminarconducted_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: resumegeneratordba
 --
 
@@ -775,7 +697,6 @@ ALTER SEQUENCE resumegeneratormain_seminarconducted_id_seq OWNED BY resumegenera
 
 
 --
--- TOC entry 214 (class 1259 OID 16912)
 -- Name: resumegeneratormain_telephonenumber; Type: TABLE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -789,7 +710,6 @@ CREATE TABLE resumegeneratormain_telephonenumber (
 ALTER TABLE resumegeneratormain_telephonenumber OWNER TO resumegeneratordba;
 
 --
--- TOC entry 213 (class 1259 OID 16910)
 -- Name: resumegeneratormain_telephonenumber_id_seq; Type: SEQUENCE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -804,8 +724,6 @@ CREATE SEQUENCE resumegeneratormain_telephonenumber_id_seq
 ALTER TABLE resumegeneratormain_telephonenumber_id_seq OWNER TO resumegeneratordba;
 
 --
--- TOC entry 2688 (class 0 OID 0)
--- Dependencies: 213
 -- Name: resumegeneratormain_telephonenumber_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: resumegeneratordba
 --
 
@@ -813,7 +731,6 @@ ALTER SEQUENCE resumegeneratormain_telephonenumber_id_seq OWNED BY resumegenerat
 
 
 --
--- TOC entry 216 (class 1259 OID 16920)
 -- Name: resumegeneratormain_userprofile; Type: TABLE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -832,7 +749,6 @@ CREATE TABLE resumegeneratormain_userprofile (
 ALTER TABLE resumegeneratormain_userprofile OWNER TO resumegeneratordba;
 
 --
--- TOC entry 215 (class 1259 OID 16918)
 -- Name: resumegeneratormain_userprofile_id_seq; Type: SEQUENCE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -847,8 +763,6 @@ CREATE SEQUENCE resumegeneratormain_userprofile_id_seq
 ALTER TABLE resumegeneratormain_userprofile_id_seq OWNER TO resumegeneratordba;
 
 --
--- TOC entry 2689 (class 0 OID 0)
--- Dependencies: 215
 -- Name: resumegeneratormain_userprofile_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: resumegeneratordba
 --
 
@@ -856,7 +770,6 @@ ALTER SEQUENCE resumegeneratormain_userprofile_id_seq OWNED BY resumegeneratorma
 
 
 --
--- TOC entry 218 (class 1259 OID 16931)
 -- Name: resumegeneratormain_workexperience; Type: TABLE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -875,7 +788,6 @@ CREATE TABLE resumegeneratormain_workexperience (
 ALTER TABLE resumegeneratormain_workexperience OWNER TO resumegeneratordba;
 
 --
--- TOC entry 217 (class 1259 OID 16929)
 -- Name: resumegeneratormain_workexperience_id_seq; Type: SEQUENCE; Schema: public; Owner: resumegeneratordba
 --
 
@@ -890,8 +802,6 @@ CREATE SEQUENCE resumegeneratormain_workexperience_id_seq
 ALTER TABLE resumegeneratormain_workexperience_id_seq OWNER TO resumegeneratordba;
 
 --
--- TOC entry 2690 (class 0 OID 0)
--- Dependencies: 217
 -- Name: resumegeneratormain_workexperience_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: resumegeneratordba
 --
 
@@ -899,7 +809,6 @@ ALTER SEQUENCE resumegeneratormain_workexperience_id_seq OWNED BY resumegenerato
 
 
 --
--- TOC entry 2382 (class 2604 OID 16710)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -907,7 +816,6 @@ ALTER TABLE ONLY auth_group ALTER COLUMN id SET DEFAULT nextval('auth_group_id_s
 
 
 --
--- TOC entry 2383 (class 2604 OID 16720)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -915,7 +823,6 @@ ALTER TABLE ONLY auth_group_permissions ALTER COLUMN id SET DEFAULT nextval('aut
 
 
 --
--- TOC entry 2381 (class 2604 OID 16702)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -923,7 +830,6 @@ ALTER TABLE ONLY auth_permission ALTER COLUMN id SET DEFAULT nextval('auth_permi
 
 
 --
--- TOC entry 2384 (class 2604 OID 16728)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -931,7 +837,6 @@ ALTER TABLE ONLY auth_user ALTER COLUMN id SET DEFAULT nextval('auth_user_id_seq
 
 
 --
--- TOC entry 2385 (class 2604 OID 16738)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -939,7 +844,6 @@ ALTER TABLE ONLY auth_user_groups ALTER COLUMN id SET DEFAULT nextval('auth_user
 
 
 --
--- TOC entry 2386 (class 2604 OID 16746)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -947,7 +851,6 @@ ALTER TABLE ONLY auth_user_user_permissions ALTER COLUMN id SET DEFAULT nextval(
 
 
 --
--- TOC entry 2387 (class 2604 OID 16806)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -955,7 +858,6 @@ ALTER TABLE ONLY django_admin_log ALTER COLUMN id SET DEFAULT nextval('django_ad
 
 
 --
--- TOC entry 2380 (class 2604 OID 16692)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -963,7 +865,6 @@ ALTER TABLE ONLY django_content_type ALTER COLUMN id SET DEFAULT nextval('django
 
 
 --
--- TOC entry 2379 (class 2604 OID 16681)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -971,7 +872,6 @@ ALTER TABLE ONLY django_migrations ALTER COLUMN id SET DEFAULT nextval('django_m
 
 
 --
--- TOC entry 2389 (class 2604 OID 16831)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -979,7 +879,6 @@ ALTER TABLE ONLY resumegeneratormain_achievement ALTER COLUMN id SET DEFAULT nex
 
 
 --
--- TOC entry 2399 (class 2604 OID 17026)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -987,7 +886,6 @@ ALTER TABLE ONLY resumegeneratormain_address ALTER COLUMN id SET DEFAULT nextval
 
 
 --
--- TOC entry 2390 (class 2604 OID 16861)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -995,7 +893,6 @@ ALTER TABLE ONLY resumegeneratormain_cellphonenumber ALTER COLUMN id SET DEFAULT
 
 
 --
--- TOC entry 2391 (class 2604 OID 16869)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1003,7 +900,6 @@ ALTER TABLE ONLY resumegeneratormain_education ALTER COLUMN id SET DEFAULT nextv
 
 
 --
--- TOC entry 2400 (class 2604 OID 17043)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1011,7 +907,6 @@ ALTER TABLE ONLY resumegeneratormain_educationaward ALTER COLUMN id SET DEFAULT 
 
 
 --
--- TOC entry 2392 (class 2604 OID 16877)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1019,7 +914,6 @@ ALTER TABLE ONLY resumegeneratormain_extracurricular ALTER COLUMN id SET DEFAULT
 
 
 --
--- TOC entry 2393 (class 2604 OID 16888)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1027,7 +921,6 @@ ALTER TABLE ONLY resumegeneratormain_researchpaper ALTER COLUMN id SET DEFAULT n
 
 
 --
--- TOC entry 2394 (class 2604 OID 16899)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1035,7 +928,6 @@ ALTER TABLE ONLY resumegeneratormain_seminarattended ALTER COLUMN id SET DEFAULT
 
 
 --
--- TOC entry 2395 (class 2604 OID 16907)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1043,7 +935,6 @@ ALTER TABLE ONLY resumegeneratormain_seminarconducted ALTER COLUMN id SET DEFAUL
 
 
 --
--- TOC entry 2396 (class 2604 OID 16915)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1051,7 +942,6 @@ ALTER TABLE ONLY resumegeneratormain_telephonenumber ALTER COLUMN id SET DEFAULT
 
 
 --
--- TOC entry 2397 (class 2604 OID 16923)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1059,7 +949,6 @@ ALTER TABLE ONLY resumegeneratormain_userprofile ALTER COLUMN id SET DEFAULT nex
 
 
 --
--- TOC entry 2398 (class 2604 OID 16934)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1067,8 +956,6 @@ ALTER TABLE ONLY resumegeneratormain_workexperience ALTER COLUMN id SET DEFAULT 
 
 
 --
--- TOC entry 2626 (class 0 OID 16707)
--- Dependencies: 188
 -- Data for Name: auth_group; Type: TABLE DATA; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1077,8 +964,6 @@ COPY auth_group (id, name) FROM stdin;
 
 
 --
--- TOC entry 2691 (class 0 OID 0)
--- Dependencies: 187
 -- Name: auth_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1086,8 +971,6 @@ SELECT pg_catalog.setval('auth_group_id_seq', 1, false);
 
 
 --
--- TOC entry 2628 (class 0 OID 16717)
--- Dependencies: 190
 -- Data for Name: auth_group_permissions; Type: TABLE DATA; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1096,8 +979,6 @@ COPY auth_group_permissions (id, group_id, permission_id) FROM stdin;
 
 
 --
--- TOC entry 2692 (class 0 OID 0)
--- Dependencies: 189
 -- Name: auth_group_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1105,8 +986,6 @@ SELECT pg_catalog.setval('auth_group_permissions_id_seq', 1, false);
 
 
 --
--- TOC entry 2624 (class 0 OID 16699)
--- Dependencies: 186
 -- Data for Name: auth_permission; Type: TABLE DATA; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1169,8 +1048,6 @@ COPY auth_permission (id, name, content_type_id, codename) FROM stdin;
 
 
 --
--- TOC entry 2693 (class 0 OID 0)
--- Dependencies: 185
 -- Name: auth_permission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1178,8 +1055,6 @@ SELECT pg_catalog.setval('auth_permission_id_seq', 54, true);
 
 
 --
--- TOC entry 2630 (class 0 OID 16725)
--- Dependencies: 192
 -- Data for Name: auth_user; Type: TABLE DATA; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1189,8 +1064,6 @@ COPY auth_user (id, password, last_login, is_superuser, username, first_name, la
 
 
 --
--- TOC entry 2632 (class 0 OID 16735)
--- Dependencies: 194
 -- Data for Name: auth_user_groups; Type: TABLE DATA; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1199,8 +1072,6 @@ COPY auth_user_groups (id, user_id, group_id) FROM stdin;
 
 
 --
--- TOC entry 2694 (class 0 OID 0)
--- Dependencies: 193
 -- Name: auth_user_groups_id_seq; Type: SEQUENCE SET; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1208,8 +1079,6 @@ SELECT pg_catalog.setval('auth_user_groups_id_seq', 1, false);
 
 
 --
--- TOC entry 2695 (class 0 OID 0)
--- Dependencies: 191
 -- Name: auth_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1217,8 +1086,6 @@ SELECT pg_catalog.setval('auth_user_id_seq', 1, true);
 
 
 --
--- TOC entry 2634 (class 0 OID 16743)
--- Dependencies: 196
 -- Data for Name: auth_user_user_permissions; Type: TABLE DATA; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1227,8 +1094,6 @@ COPY auth_user_user_permissions (id, user_id, permission_id) FROM stdin;
 
 
 --
--- TOC entry 2696 (class 0 OID 0)
--- Dependencies: 195
 -- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1236,8 +1101,6 @@ SELECT pg_catalog.setval('auth_user_user_permissions_id_seq', 1, false);
 
 
 --
--- TOC entry 2636 (class 0 OID 16803)
--- Dependencies: 198
 -- Data for Name: django_admin_log; Type: TABLE DATA; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1246,8 +1109,6 @@ COPY django_admin_log (id, action_time, object_id, object_repr, action_flag, cha
 
 
 --
--- TOC entry 2697 (class 0 OID 0)
--- Dependencies: 197
 -- Name: django_admin_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1255,8 +1116,6 @@ SELECT pg_catalog.setval('django_admin_log_id_seq', 1, false);
 
 
 --
--- TOC entry 2622 (class 0 OID 16689)
--- Dependencies: 184
 -- Data for Name: django_content_type; Type: TABLE DATA; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1283,8 +1142,6 @@ COPY django_content_type (id, app_label, model) FROM stdin;
 
 
 --
--- TOC entry 2698 (class 0 OID 0)
--- Dependencies: 183
 -- Name: django_content_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1292,8 +1149,6 @@ SELECT pg_catalog.setval('django_content_type_id_seq', 18, true);
 
 
 --
--- TOC entry 2620 (class 0 OID 16678)
--- Dependencies: 182
 -- Data for Name: django_migrations; Type: TABLE DATA; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1326,8 +1181,6 @@ COPY django_migrations (id, app, name, applied) FROM stdin;
 
 
 --
--- TOC entry 2699 (class 0 OID 0)
--- Dependencies: 181
 -- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1335,8 +1188,6 @@ SELECT pg_catalog.setval('django_migrations_id_seq', 24, true);
 
 
 --
--- TOC entry 2661 (class 0 OID 17091)
--- Dependencies: 223
 -- Data for Name: django_session; Type: TABLE DATA; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1346,8 +1197,6 @@ COPY django_session (session_key, session_data, expire_date) FROM stdin;
 
 
 --
--- TOC entry 2638 (class 0 OID 16828)
--- Dependencies: 200
 -- Data for Name: resumegeneratormain_achievement; Type: TABLE DATA; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1356,8 +1205,6 @@ COPY resumegeneratormain_achievement (id, name, user_id) FROM stdin;
 
 
 --
--- TOC entry 2700 (class 0 OID 0)
--- Dependencies: 199
 -- Name: resumegeneratormain_achievement_id_seq; Type: SEQUENCE SET; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1365,8 +1212,6 @@ SELECT pg_catalog.setval('resumegeneratormain_achievement_id_seq', 1, false);
 
 
 --
--- TOC entry 2658 (class 0 OID 17023)
--- Dependencies: 220
 -- Data for Name: resumegeneratormain_address; Type: TABLE DATA; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1375,8 +1220,6 @@ COPY resumegeneratormain_address (id, address_line_one, address_line_two, user_i
 
 
 --
--- TOC entry 2701 (class 0 OID 0)
--- Dependencies: 219
 -- Name: resumegeneratormain_address_id_seq; Type: SEQUENCE SET; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1384,8 +1227,6 @@ SELECT pg_catalog.setval('resumegeneratormain_address_id_seq', 1, false);
 
 
 --
--- TOC entry 2640 (class 0 OID 16858)
--- Dependencies: 202
 -- Data for Name: resumegeneratormain_cellphonenumber; Type: TABLE DATA; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1394,8 +1235,6 @@ COPY resumegeneratormain_cellphonenumber (id, number, user_id) FROM stdin;
 
 
 --
--- TOC entry 2702 (class 0 OID 0)
--- Dependencies: 201
 -- Name: resumegeneratormain_cellphonenumber_id_seq; Type: SEQUENCE SET; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1403,8 +1242,6 @@ SELECT pg_catalog.setval('resumegeneratormain_cellphonenumber_id_seq', 1, false)
 
 
 --
--- TOC entry 2642 (class 0 OID 16866)
--- Dependencies: 204
 -- Data for Name: resumegeneratormain_education; Type: TABLE DATA; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1413,8 +1250,6 @@ COPY resumegeneratormain_education (id, school, education_attained, year_start, 
 
 
 --
--- TOC entry 2703 (class 0 OID 0)
--- Dependencies: 203
 -- Name: resumegeneratormain_education_id_seq; Type: SEQUENCE SET; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1422,8 +1257,6 @@ SELECT pg_catalog.setval('resumegeneratormain_education_id_seq', 1, false);
 
 
 --
--- TOC entry 2660 (class 0 OID 17040)
--- Dependencies: 222
 -- Data for Name: resumegeneratormain_educationaward; Type: TABLE DATA; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1432,8 +1265,6 @@ COPY resumegeneratormain_educationaward (id, award_description, award_date, scho
 
 
 --
--- TOC entry 2704 (class 0 OID 0)
--- Dependencies: 221
 -- Name: resumegeneratormain_educationaward_id_seq; Type: SEQUENCE SET; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1441,8 +1272,6 @@ SELECT pg_catalog.setval('resumegeneratormain_educationaward_id_seq', 1, false);
 
 
 --
--- TOC entry 2644 (class 0 OID 16874)
--- Dependencies: 206
 -- Data for Name: resumegeneratormain_extracurricular; Type: TABLE DATA; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1451,8 +1280,6 @@ COPY resumegeneratormain_extracurricular (id, organization, "position", work_don
 
 
 --
--- TOC entry 2705 (class 0 OID 0)
--- Dependencies: 205
 -- Name: resumegeneratormain_extracurricular_id_seq; Type: SEQUENCE SET; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1460,8 +1287,6 @@ SELECT pg_catalog.setval('resumegeneratormain_extracurricular_id_seq', 1, false)
 
 
 --
--- TOC entry 2646 (class 0 OID 16885)
--- Dependencies: 208
 -- Data for Name: resumegeneratormain_researchpaper; Type: TABLE DATA; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1470,8 +1295,6 @@ COPY resumegeneratormain_researchpaper (id, month, year, title, summary, user_id
 
 
 --
--- TOC entry 2706 (class 0 OID 0)
--- Dependencies: 207
 -- Name: resumegeneratormain_researchpaper_id_seq; Type: SEQUENCE SET; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1479,8 +1302,6 @@ SELECT pg_catalog.setval('resumegeneratormain_researchpaper_id_seq', 1, false);
 
 
 --
--- TOC entry 2648 (class 0 OID 16896)
--- Dependencies: 210
 -- Data for Name: resumegeneratormain_seminarattended; Type: TABLE DATA; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1489,8 +1310,6 @@ COPY resumegeneratormain_seminarattended (id, month, year, title, seminar_head, 
 
 
 --
--- TOC entry 2707 (class 0 OID 0)
--- Dependencies: 209
 -- Name: resumegeneratormain_seminarattended_id_seq; Type: SEQUENCE SET; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1498,8 +1317,6 @@ SELECT pg_catalog.setval('resumegeneratormain_seminarattended_id_seq', 1, false)
 
 
 --
--- TOC entry 2650 (class 0 OID 16904)
--- Dependencies: 212
 -- Data for Name: resumegeneratormain_seminarconducted; Type: TABLE DATA; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1508,8 +1325,6 @@ COPY resumegeneratormain_seminarconducted (id, month, year, "position", title, s
 
 
 --
--- TOC entry 2708 (class 0 OID 0)
--- Dependencies: 211
 -- Name: resumegeneratormain_seminarconducted_id_seq; Type: SEQUENCE SET; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1517,8 +1332,6 @@ SELECT pg_catalog.setval('resumegeneratormain_seminarconducted_id_seq', 1, false
 
 
 --
--- TOC entry 2652 (class 0 OID 16912)
--- Dependencies: 214
 -- Data for Name: resumegeneratormain_telephonenumber; Type: TABLE DATA; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1527,8 +1340,6 @@ COPY resumegeneratormain_telephonenumber (id, number, user_id) FROM stdin;
 
 
 --
--- TOC entry 2709 (class 0 OID 0)
--- Dependencies: 213
 -- Name: resumegeneratormain_telephonenumber_id_seq; Type: SEQUENCE SET; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1536,8 +1347,6 @@ SELECT pg_catalog.setval('resumegeneratormain_telephonenumber_id_seq', 1, false)
 
 
 --
--- TOC entry 2654 (class 0 OID 16920)
--- Dependencies: 216
 -- Data for Name: resumegeneratormain_userprofile; Type: TABLE DATA; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1546,8 +1355,6 @@ COPY resumegeneratormain_userprofile (id, first_name, middle_initial, last_name,
 
 
 --
--- TOC entry 2710 (class 0 OID 0)
--- Dependencies: 215
 -- Name: resumegeneratormain_userprofile_id_seq; Type: SEQUENCE SET; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1555,8 +1362,6 @@ SELECT pg_catalog.setval('resumegeneratormain_userprofile_id_seq', 1, false);
 
 
 --
--- TOC entry 2656 (class 0 OID 16931)
--- Dependencies: 218
 -- Data for Name: resumegeneratormain_workexperience; Type: TABLE DATA; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1565,8 +1370,6 @@ COPY resumegeneratormain_workexperience (id, month_start, month_finish, year_fin
 
 
 --
--- TOC entry 2711 (class 0 OID 0)
--- Dependencies: 217
 -- Name: resumegeneratormain_workexperience_id_seq; Type: SEQUENCE SET; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1574,7 +1377,6 @@ SELECT pg_catalog.setval('resumegeneratormain_workexperience_id_seq', 1, false);
 
 
 --
--- TOC entry 2414 (class 2606 OID 16714)
 -- Name: auth_group_name_key; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1583,7 +1385,6 @@ ALTER TABLE ONLY auth_group
 
 
 --
--- TOC entry 2420 (class 2606 OID 16769)
 -- Name: auth_group_permissions_group_id_0cd325b0_uniq; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1592,7 +1393,6 @@ ALTER TABLE ONLY auth_group_permissions
 
 
 --
--- TOC entry 2422 (class 2606 OID 16722)
 -- Name: auth_group_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1601,7 +1401,6 @@ ALTER TABLE ONLY auth_group_permissions
 
 
 --
--- TOC entry 2416 (class 2606 OID 16712)
 -- Name: auth_group_pkey; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1610,7 +1409,6 @@ ALTER TABLE ONLY auth_group
 
 
 --
--- TOC entry 2409 (class 2606 OID 16755)
 -- Name: auth_permission_content_type_id_01ab375a_uniq; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1619,7 +1417,6 @@ ALTER TABLE ONLY auth_permission
 
 
 --
--- TOC entry 2411 (class 2606 OID 16704)
 -- Name: auth_permission_pkey; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1628,7 +1425,6 @@ ALTER TABLE ONLY auth_permission
 
 
 --
--- TOC entry 2431 (class 2606 OID 16740)
 -- Name: auth_user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1637,7 +1433,6 @@ ALTER TABLE ONLY auth_user_groups
 
 
 --
--- TOC entry 2433 (class 2606 OID 16784)
 -- Name: auth_user_groups_user_id_94350c0c_uniq; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1646,7 +1441,6 @@ ALTER TABLE ONLY auth_user_groups
 
 
 --
--- TOC entry 2424 (class 2606 OID 16730)
 -- Name: auth_user_pkey; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1655,7 +1449,6 @@ ALTER TABLE ONLY auth_user
 
 
 --
--- TOC entry 2437 (class 2606 OID 16748)
 -- Name: auth_user_user_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1664,7 +1457,6 @@ ALTER TABLE ONLY auth_user_user_permissions
 
 
 --
--- TOC entry 2439 (class 2606 OID 16798)
 -- Name: auth_user_user_permissions_user_id_14a6b632_uniq; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1673,7 +1465,6 @@ ALTER TABLE ONLY auth_user_user_permissions
 
 
 --
--- TOC entry 2427 (class 2606 OID 16732)
 -- Name: auth_user_username_key; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1682,7 +1473,6 @@ ALTER TABLE ONLY auth_user
 
 
 --
--- TOC entry 2443 (class 2606 OID 16812)
 -- Name: django_admin_log_pkey; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1691,7 +1481,6 @@ ALTER TABLE ONLY django_admin_log
 
 
 --
--- TOC entry 2404 (class 2606 OID 16696)
 -- Name: django_content_type_app_label_76bd3d3b_uniq; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1700,7 +1489,6 @@ ALTER TABLE ONLY django_content_type
 
 
 --
--- TOC entry 2406 (class 2606 OID 16694)
 -- Name: django_content_type_pkey; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1709,7 +1497,6 @@ ALTER TABLE ONLY django_content_type
 
 
 --
--- TOC entry 2402 (class 2606 OID 16686)
 -- Name: django_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1718,7 +1505,6 @@ ALTER TABLE ONLY django_migrations
 
 
 --
--- TOC entry 2482 (class 2606 OID 17098)
 -- Name: django_session_pkey; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1727,7 +1513,6 @@ ALTER TABLE ONLY django_session
 
 
 --
--- TOC entry 2446 (class 2606 OID 16833)
 -- Name: resumegeneratormain_achievement_pkey; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1736,7 +1521,6 @@ ALTER TABLE ONLY resumegeneratormain_achievement
 
 
 --
--- TOC entry 2476 (class 2606 OID 17031)
 -- Name: resumegeneratormain_address_pkey; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1745,7 +1529,6 @@ ALTER TABLE ONLY resumegeneratormain_address
 
 
 --
--- TOC entry 2449 (class 2606 OID 16863)
 -- Name: resumegeneratormain_cellphonenumber_pkey; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1754,7 +1537,6 @@ ALTER TABLE ONLY resumegeneratormain_cellphonenumber
 
 
 --
--- TOC entry 2452 (class 2606 OID 16871)
 -- Name: resumegeneratormain_education_pkey; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1763,7 +1545,6 @@ ALTER TABLE ONLY resumegeneratormain_education
 
 
 --
--- TOC entry 2479 (class 2606 OID 17045)
 -- Name: resumegeneratormain_educationaward_pkey; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1772,7 +1553,6 @@ ALTER TABLE ONLY resumegeneratormain_educationaward
 
 
 --
--- TOC entry 2455 (class 2606 OID 16882)
 -- Name: resumegeneratormain_extracurricular_pkey; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1781,7 +1561,6 @@ ALTER TABLE ONLY resumegeneratormain_extracurricular
 
 
 --
--- TOC entry 2458 (class 2606 OID 16893)
 -- Name: resumegeneratormain_researchpaper_pkey; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1790,7 +1569,6 @@ ALTER TABLE ONLY resumegeneratormain_researchpaper
 
 
 --
--- TOC entry 2461 (class 2606 OID 16901)
 -- Name: resumegeneratormain_seminarattended_pkey; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1799,7 +1577,6 @@ ALTER TABLE ONLY resumegeneratormain_seminarattended
 
 
 --
--- TOC entry 2464 (class 2606 OID 16909)
 -- Name: resumegeneratormain_seminarconducted_pkey; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1808,7 +1585,6 @@ ALTER TABLE ONLY resumegeneratormain_seminarconducted
 
 
 --
--- TOC entry 2467 (class 2606 OID 16917)
 -- Name: resumegeneratormain_telephonenumber_pkey; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1817,7 +1593,6 @@ ALTER TABLE ONLY resumegeneratormain_telephonenumber
 
 
 --
--- TOC entry 2470 (class 2606 OID 16928)
 -- Name: resumegeneratormain_userprofile_pkey; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1826,7 +1601,6 @@ ALTER TABLE ONLY resumegeneratormain_userprofile
 
 
 --
--- TOC entry 2473 (class 2606 OID 16939)
 -- Name: resumegeneratormain_workexperience_pkey; Type: CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1835,7 +1609,6 @@ ALTER TABLE ONLY resumegeneratormain_workexperience
 
 
 --
--- TOC entry 2412 (class 1259 OID 16757)
 -- Name: auth_group_name_a6ea08ec_like; Type: INDEX; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1843,7 +1616,6 @@ CREATE INDEX auth_group_name_a6ea08ec_like ON auth_group USING btree (name varch
 
 
 --
--- TOC entry 2417 (class 1259 OID 16770)
 -- Name: auth_group_permissions_0e939a4f; Type: INDEX; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1851,7 +1623,6 @@ CREATE INDEX auth_group_permissions_0e939a4f ON auth_group_permissions USING btr
 
 
 --
--- TOC entry 2418 (class 1259 OID 16771)
 -- Name: auth_group_permissions_8373b171; Type: INDEX; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1859,7 +1630,6 @@ CREATE INDEX auth_group_permissions_8373b171 ON auth_group_permissions USING btr
 
 
 --
--- TOC entry 2407 (class 1259 OID 16756)
 -- Name: auth_permission_417f1b1c; Type: INDEX; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1867,7 +1637,6 @@ CREATE INDEX auth_permission_417f1b1c ON auth_permission USING btree (content_ty
 
 
 --
--- TOC entry 2428 (class 1259 OID 16786)
 -- Name: auth_user_groups_0e939a4f; Type: INDEX; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1875,7 +1644,6 @@ CREATE INDEX auth_user_groups_0e939a4f ON auth_user_groups USING btree (group_id
 
 
 --
--- TOC entry 2429 (class 1259 OID 16785)
 -- Name: auth_user_groups_e8701ad4; Type: INDEX; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1883,7 +1651,6 @@ CREATE INDEX auth_user_groups_e8701ad4 ON auth_user_groups USING btree (user_id)
 
 
 --
--- TOC entry 2434 (class 1259 OID 16800)
 -- Name: auth_user_user_permissions_8373b171; Type: INDEX; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1891,7 +1658,6 @@ CREATE INDEX auth_user_user_permissions_8373b171 ON auth_user_user_permissions U
 
 
 --
--- TOC entry 2435 (class 1259 OID 16799)
 -- Name: auth_user_user_permissions_e8701ad4; Type: INDEX; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1899,7 +1665,6 @@ CREATE INDEX auth_user_user_permissions_e8701ad4 ON auth_user_user_permissions U
 
 
 --
--- TOC entry 2425 (class 1259 OID 16772)
 -- Name: auth_user_username_6821ab7c_like; Type: INDEX; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1907,7 +1672,6 @@ CREATE INDEX auth_user_username_6821ab7c_like ON auth_user USING btree (username
 
 
 --
--- TOC entry 2440 (class 1259 OID 16823)
 -- Name: django_admin_log_417f1b1c; Type: INDEX; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1915,7 +1679,6 @@ CREATE INDEX django_admin_log_417f1b1c ON django_admin_log USING btree (content_
 
 
 --
--- TOC entry 2441 (class 1259 OID 16824)
 -- Name: django_admin_log_e8701ad4; Type: INDEX; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1923,7 +1686,6 @@ CREATE INDEX django_admin_log_e8701ad4 ON django_admin_log USING btree (user_id)
 
 
 --
--- TOC entry 2480 (class 1259 OID 17099)
 -- Name: django_session_de54fa62; Type: INDEX; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1931,7 +1693,6 @@ CREATE INDEX django_session_de54fa62 ON django_session USING btree (expire_date)
 
 
 --
--- TOC entry 2483 (class 1259 OID 17100)
 -- Name: django_session_session_key_c0390e0f_like; Type: INDEX; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1939,7 +1700,6 @@ CREATE INDEX django_session_session_key_c0390e0f_like ON django_session USING bt
 
 
 --
--- TOC entry 2444 (class 1259 OID 16945)
 -- Name: resumegeneratormain_achievement_e8701ad4; Type: INDEX; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1947,7 +1707,6 @@ CREATE INDEX resumegeneratormain_achievement_e8701ad4 ON resumegeneratormain_ach
 
 
 --
--- TOC entry 2474 (class 1259 OID 17037)
 -- Name: resumegeneratormain_address_e8701ad4; Type: INDEX; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1955,7 +1714,6 @@ CREATE INDEX resumegeneratormain_address_e8701ad4 ON resumegeneratormain_address
 
 
 --
--- TOC entry 2447 (class 1259 OID 16963)
 -- Name: resumegeneratormain_cellphonenumber_e8701ad4; Type: INDEX; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1963,7 +1721,6 @@ CREATE INDEX resumegeneratormain_cellphonenumber_e8701ad4 ON resumegeneratormain
 
 
 --
--- TOC entry 2450 (class 1259 OID 16969)
 -- Name: resumegeneratormain_education_e8701ad4; Type: INDEX; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1971,7 +1728,6 @@ CREATE INDEX resumegeneratormain_education_e8701ad4 ON resumegeneratormain_educa
 
 
 --
--- TOC entry 2477 (class 1259 OID 17064)
 -- Name: resumegeneratormain_educationaward_5fc7164b; Type: INDEX; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1979,7 +1735,6 @@ CREATE INDEX resumegeneratormain_educationaward_5fc7164b ON resumegeneratormain_
 
 
 --
--- TOC entry 2453 (class 1259 OID 16975)
 -- Name: resumegeneratormain_extracurricular_e8701ad4; Type: INDEX; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1987,7 +1742,6 @@ CREATE INDEX resumegeneratormain_extracurricular_e8701ad4 ON resumegeneratormain
 
 
 --
--- TOC entry 2456 (class 1259 OID 16981)
 -- Name: resumegeneratormain_researchpaper_e8701ad4; Type: INDEX; Schema: public; Owner: resumegeneratordba
 --
 
@@ -1995,7 +1749,6 @@ CREATE INDEX resumegeneratormain_researchpaper_e8701ad4 ON resumegeneratormain_r
 
 
 --
--- TOC entry 2459 (class 1259 OID 16987)
 -- Name: resumegeneratormain_seminarattended_e8701ad4; Type: INDEX; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2003,7 +1756,6 @@ CREATE INDEX resumegeneratormain_seminarattended_e8701ad4 ON resumegeneratormain
 
 
 --
--- TOC entry 2462 (class 1259 OID 16993)
 -- Name: resumegeneratormain_seminarconducted_e8701ad4; Type: INDEX; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2011,7 +1763,6 @@ CREATE INDEX resumegeneratormain_seminarconducted_e8701ad4 ON resumegeneratormai
 
 
 --
--- TOC entry 2465 (class 1259 OID 16999)
 -- Name: resumegeneratormain_telephonenumber_e8701ad4; Type: INDEX; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2019,7 +1770,6 @@ CREATE INDEX resumegeneratormain_telephonenumber_e8701ad4 ON resumegeneratormain
 
 
 --
--- TOC entry 2468 (class 1259 OID 17005)
 -- Name: resumegeneratormain_userprofile_e8701ad4; Type: INDEX; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2027,7 +1777,6 @@ CREATE INDEX resumegeneratormain_userprofile_e8701ad4 ON resumegeneratormain_use
 
 
 --
--- TOC entry 2471 (class 1259 OID 17011)
 -- Name: resumegeneratormain_workexperience_e8701ad4; Type: INDEX; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2035,7 +1784,6 @@ CREATE INDEX resumegeneratormain_workexperience_e8701ad4 ON resumegeneratormain_
 
 
 --
--- TOC entry 2486 (class 2606 OID 16763)
 -- Name: auth_group_permiss_permission_id_84c5c92e_fk_auth_permission_id; Type: FK CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2044,7 +1792,6 @@ ALTER TABLE ONLY auth_group_permissions
 
 
 --
--- TOC entry 2485 (class 2606 OID 16758)
 -- Name: auth_group_permissions_group_id_b120cbf9_fk_auth_group_id; Type: FK CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2053,7 +1800,6 @@ ALTER TABLE ONLY auth_group_permissions
 
 
 --
--- TOC entry 2484 (class 2606 OID 16749)
 -- Name: auth_permiss_content_type_id_2f476e4b_fk_django_content_type_id; Type: FK CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2062,7 +1808,6 @@ ALTER TABLE ONLY auth_permission
 
 
 --
--- TOC entry 2488 (class 2606 OID 16778)
 -- Name: auth_user_groups_group_id_97559544_fk_auth_group_id; Type: FK CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2071,7 +1816,6 @@ ALTER TABLE ONLY auth_user_groups
 
 
 --
--- TOC entry 2487 (class 2606 OID 16773)
 -- Name: auth_user_groups_user_id_6a12ed8b_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2080,7 +1824,6 @@ ALTER TABLE ONLY auth_user_groups
 
 
 --
--- TOC entry 2490 (class 2606 OID 16792)
 -- Name: auth_user_user_per_permission_id_1fbb5f2c_fk_auth_permission_id; Type: FK CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2089,7 +1832,6 @@ ALTER TABLE ONLY auth_user_user_permissions
 
 
 --
--- TOC entry 2489 (class 2606 OID 16787)
 -- Name: auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2098,7 +1840,6 @@ ALTER TABLE ONLY auth_user_user_permissions
 
 
 --
--- TOC entry 2491 (class 2606 OID 16813)
 -- Name: django_admin_content_type_id_c4bce8eb_fk_django_content_type_id; Type: FK CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2107,7 +1848,6 @@ ALTER TABLE ONLY django_admin_log
 
 
 --
--- TOC entry 2492 (class 2606 OID 16818)
 -- Name: django_admin_log_user_id_c564eba6_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2116,7 +1856,6 @@ ALTER TABLE ONLY django_admin_log
 
 
 --
--- TOC entry 2504 (class 2606 OID 17065)
 -- Name: resumege_school_id_6af2c88e_fk_resumegeneratormain_education_id; Type: FK CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2125,7 +1864,6 @@ ALTER TABLE ONLY resumegeneratormain_educationaward
 
 
 --
--- TOC entry 2493 (class 2606 OID 16940)
 -- Name: resumegeneratormain_achievemen_user_id_39ffe8aa_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2134,7 +1872,6 @@ ALTER TABLE ONLY resumegeneratormain_achievement
 
 
 --
--- TOC entry 2503 (class 2606 OID 17032)
 -- Name: resumegeneratormain_address_user_id_97b258db_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2143,7 +1880,6 @@ ALTER TABLE ONLY resumegeneratormain_address
 
 
 --
--- TOC entry 2494 (class 2606 OID 16958)
 -- Name: resumegeneratormain_cellphonen_user_id_1e0f2e18_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2152,7 +1888,6 @@ ALTER TABLE ONLY resumegeneratormain_cellphonenumber
 
 
 --
--- TOC entry 2495 (class 2606 OID 16964)
 -- Name: resumegeneratormain_education_user_id_cde16761_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2161,7 +1896,6 @@ ALTER TABLE ONLY resumegeneratormain_education
 
 
 --
--- TOC entry 2496 (class 2606 OID 16970)
 -- Name: resumegeneratormain_extracurri_user_id_85808e36_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2170,7 +1904,6 @@ ALTER TABLE ONLY resumegeneratormain_extracurricular
 
 
 --
--- TOC entry 2497 (class 2606 OID 16976)
 -- Name: resumegeneratormain_researchpa_user_id_0fcf953a_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2179,7 +1912,6 @@ ALTER TABLE ONLY resumegeneratormain_researchpaper
 
 
 --
--- TOC entry 2498 (class 2606 OID 16982)
 -- Name: resumegeneratormain_seminaratt_user_id_8e5054d5_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2188,7 +1920,6 @@ ALTER TABLE ONLY resumegeneratormain_seminarattended
 
 
 --
--- TOC entry 2499 (class 2606 OID 16988)
 -- Name: resumegeneratormain_seminarcon_user_id_d0e3809d_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2197,7 +1928,6 @@ ALTER TABLE ONLY resumegeneratormain_seminarconducted
 
 
 --
--- TOC entry 2500 (class 2606 OID 16994)
 -- Name: resumegeneratormain_telephonen_user_id_18e58c15_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2206,7 +1936,6 @@ ALTER TABLE ONLY resumegeneratormain_telephonenumber
 
 
 --
--- TOC entry 2501 (class 2606 OID 17000)
 -- Name: resumegeneratormain_userprofil_user_id_6011c459_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2215,7 +1944,6 @@ ALTER TABLE ONLY resumegeneratormain_userprofile
 
 
 --
--- TOC entry 2502 (class 2606 OID 17006)
 -- Name: resumegeneratormain_workexperi_user_id_cc89e857_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: resumegeneratordba
 --
 
@@ -2224,8 +1952,6 @@ ALTER TABLE ONLY resumegeneratormain_workexperience
 
 
 --
--- TOC entry 2668 (class 0 OID 0)
--- Dependencies: 6
 -- Name: public; Type: ACL; Schema: -; Owner: postgres
 --
 
@@ -2234,8 +1960,6 @@ REVOKE ALL ON SCHEMA public FROM postgres;
 GRANT ALL ON SCHEMA public TO postgres;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
-
--- Completed on 2016-10-21 23:52:26 PHT
 
 --
 -- PostgreSQL database dump complete
