@@ -5,7 +5,7 @@
 -- Dumped from database version 9.5.4
 -- Dumped by pg_dump version 9.5.4
 
--- Started on 2016-10-21 23:05:58 PHT
+-- Started on 2016-10-21 23:52:25 PHT
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -2235,7 +2235,7 @@ GRANT ALL ON SCHEMA public TO postgres;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
--- Completed on 2016-10-21 23:05:59 PHT
+-- Completed on 2016-10-21 23:52:26 PHT
 
 --
 -- PostgreSQL database dump complete
