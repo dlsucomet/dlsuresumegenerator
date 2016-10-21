@@ -3,10 +3,10 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from weasyprint import HTML, CSS
-
+from django.contrib import messages
 from django.template import loader
 
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseNotFound
 
 from resumegeneratormain.models import *
 
@@ -42,9 +42,13 @@ def login_view(request):
 		password = request.POST['password']
 		user = authenticate(username = username, password = password)
 		if user is not None:
-			login(request,user)
-			return redirect('form')
-
+			if user.is_active:
+				login(request,user)
+				return redirect('form')
+			else:
+				return HttpResponseNotFound('<h1>User is inactive. Please inform the administrator.')
+		else: 
+			return HttpResponseNotFound('<h1>User does not exist')
 
 	else:
 		return render(request, "index")
