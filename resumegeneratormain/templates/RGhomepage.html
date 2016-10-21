@@ -18,11 +18,16 @@
         <script src="{% static "resumegeneratormain/js/bootstrap.min.js" %}"></script>
         <script src="{% static "resumegeneratormain/js/classie.js" %}"></script>
         <script src="{% static "resumegeneratormain/js/form.js" %}"></script>
+        
 
 
     </head>
 
+
+
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+                
+        
         <div class = "icon up">
 
             <div class = "container">
@@ -78,11 +83,15 @@
                 -->
                     <h3>Address</h3>
                     <div class="col-md-4"></div>
+                    
+
                     <div class="col-md-4 input-group">
                         <span id="myForm">
                             <input class="form-control" type="text" placeholder="12 Gold Street, Silver Subdivision, Bronze City" name="address_line_one">
-                            <input class="form-control" type="text" placeholder="12 Gold Street, Silver Subdivision, Bronze City" name="address_line_two">
                         </span>
+                        <div>
+
+                        </div>
                         <div class="input-group-btn plustimes">
                             <img src="{% static "resumegeneratormain/images/add.png" %}" width="28" height="28">
                         </div>
@@ -467,8 +476,23 @@
                <center><input type = "submit" class = "btn btn-1 btn-1a forcecenter"></center>
 
                 <br><h1></h1><br>
-
+                 <div class="container">
+                    <div class="row">
+                        <input type="hidden" name="count" value="1">
+                        <div class="control-group" id="fields">
+                            <label class="control-label" for="field1">Nice Multiple Form Fields</label>
+                            <div class="controls" id="profs"> 
+                                <form class="input-append">
+                                    <div id="field"><input autocomplete="off" class="input" id="field1" name="prof1" type="text" placeholder="Type something" data-items="8"/><button id="b1" class="btn add-more" type="button">+</button></div>
+                                </form>
+                            <br>
+                            <small>Press + to add another form field :)</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </form>
+
         </section>
         <script>
             $(document).ready(function(){
@@ -490,6 +514,31 @@
             }, 'slow');
             return false;
         });
+
+                $(function()
+            {
+                $(document).on('click', '.btn-add', function(e)
+                {
+                    e.preventDefault();
+
+                    var controlForm = $('.controls form:first'),
+                        currentEntry = $(this).parents('.entry:first'),
+                        newEntry = $(currentEntry.clone()).appendTo(controlForm);
+
+                    newEntry.find('input').val('');
+                    controlForm.find('.entry:not(:last) .btn-add')
+                        .removeClass('btn-add').addClass('btn-remove')
+                        .removeClass('btn-success').addClass('btn-danger')
+                        .html('<span class="glyphicon glyphicon-minus"></span>');
+                }).on('click', '.btn-remove', function(e)
+                {
+                    $(this).parents('.entry:first').remove();
+
+                    e.preventDefault();
+                    return false;
+                });
+            });
         </script>
+
     </body>
 </html>
