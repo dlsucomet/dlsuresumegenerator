@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+import reversion
+
 
 class Achievement(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -7,6 +9,7 @@ class Achievement(models.Model):
 
 	def __str__(self):
 		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)
+
 
 class Address(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -16,12 +19,14 @@ class Address(models.Model):
 	def __str__(self):
 		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)
 
+
 class CellphoneNumber(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 	number = models.CharField(max_length=20)
 
 	def __str__(self):
 		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)
+
 
 class ExtraCurricular(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -33,6 +38,7 @@ class ExtraCurricular(models.Model):
 
 	def __str__(self):
 		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)
+
 
 class Education(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -46,6 +52,7 @@ class Education(models.Model):
 	def __str__(self):
 		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)
 
+
 class EducationAward(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 	school = models.ForeignKey(Education, on_delete=models.CASCADE, null=True)
@@ -54,6 +61,7 @@ class EducationAward(models.Model):
 
 	def __str__(self):
 		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)
+
 
 class ResearchPaper(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -65,6 +73,7 @@ class ResearchPaper(models.Model):
 	def __str__(self):
 		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)
 
+
 class SeminarAttended(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 	month = models.CharField(max_length=3)
@@ -75,6 +84,7 @@ class SeminarAttended(models.Model):
 
 	def __str__(self):
 		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)
+
 
 class SeminarConducted(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -88,12 +98,14 @@ class SeminarConducted(models.Model):
 	def __str__(self):
 		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)
 
+
 class TelephoneNumber(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 	number = models.CharField(max_length=20)
 
 	def __str__(self):
 		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)
+
 
 class UserProfile(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -106,6 +118,7 @@ class UserProfile(models.Model):
 
 	def __str__(self):
 		return 'User: {} {}'.format(self.user.last_name, self.user.first_name)
+
 
 class WorkExperience(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)

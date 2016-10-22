@@ -47,7 +47,7 @@ def login_view(request):
 				return redirect('form')
 			else:
 				return HttpResponseNotFound('<h1>User is inactive. Please inform the administrator.')
-		else: 
+		else:
 			return HttpResponseNotFound('<h1>User does not exist')
 
 	else:
@@ -163,5 +163,6 @@ def submit_data(request):
 		objective = request.POST.get('Objective')
 		userProfile = UserProfile(user=user, first_name=user.first_name, last_name=user.last_name, email=user.email, objective=objective, background=background)
 		userProfile.save()
+
 
 	return resumePdf(request)
