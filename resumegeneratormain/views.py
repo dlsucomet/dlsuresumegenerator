@@ -6,9 +6,11 @@ from weasyprint import HTML, CSS
 from django.contrib import messages
 from django.template import loader
 
+
 from django.http import HttpResponse, HttpResponseNotFound
 
 from resumegeneratormain.models import *
+from reversion import views
 
 
 def index(request):
@@ -70,6 +72,7 @@ def resumePdf(request):
 	return HttpResponse(pdf, content_type='application/pdf')
 
 ## TODO: Edit to be in line with models.py
+@reversion.views.create_revision(manage_manually=False, using=None)
 def submit_data(request):
 	if request.method == "POST":
 
