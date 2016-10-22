@@ -1,16 +1,13 @@
 <html>
 <head>
+  {% load staticfiles %}
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{% static "resumegeneratormain/css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "resumegeneratormain/css/style.css" %}" rel="stylesheet">
 
-    <style>
-
-
-    </style>
 
     <script src="//use.edgefonts.net/montserrat.js"></script>
     
@@ -53,10 +50,10 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="RGhomepage.html">Login</a></li>
-        <li><a href="SignUp.html">Sign Up</a></li>
-        <li class="active"><a href="Profile.html">Profile<span class="sr-only">(current)</span></a></li>
-        <li><a href="RGhomepage.html">Create Resume</a></li>
+        <li class="active"><a href="{% url "index" %}">Login <span class="sr-only">(current)</span></a></li>
+        <li><a href="{% url "register" %}">Sign Up</a></li>
+        <li><a href="{% url "register" %}">Profile</a></li>
+        <li><a href="{% url "form" %}">Create A Resume</a></li>
         </div>
     </nav>
 
@@ -233,8 +230,8 @@
     </div>
 
 
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="{% static "resumegeneratormain/js/jquery.min.js" %}"></script>
+<script src="{% static "resumegeneratormain/js/bootstrap.min.js" %}"></script>
 
 </body>
 </html>

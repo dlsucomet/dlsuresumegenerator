@@ -22,6 +22,9 @@ def form(request):
 def register(request):
 	return render(request, "SignUp.html")
 
+def profile(request):
+	return render(request, "Profile.html")
+
 ## TODO: CATCH THE EXCEPTION WHEN AN ACCOUNT WITH THE SAME CREDENTIALS IS MADE
 def register_account(request):
 	if request.method =="POST":
