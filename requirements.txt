@@ -2,3 +2,4 @@ django
 weasyprint
 psycopg2
 django-reversion
+gunicorn
