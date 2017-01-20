@@ -6,3 +6,4 @@ gunicorn
 cffi
 cairocffi
 django-environ
+whitenoise
