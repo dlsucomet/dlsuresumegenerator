@@ -1,0 +1,294 @@
+body 
+{
+    background-color: #252525;
+}    
+
+.fixed
+{
+    position: fixed;
+    top: 20px;
+}
+
+.center
+{
+ text-align: center;
+}
+
+.logIn
+{   
+    font-family: montserrat, sans-serif; 
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: auto;
+    width: 100%;
+}
+
+
+.icon h1
+{
+    font-family: montserrat, sans-serif;
+    text-align: center; 
+    color: #55b953;
+}
+
+.logInLabels
+{
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+#but{
+    padding-right: 5%;
+}
+
+.logIn input
+{
+    width: 30px;
+}
+
+.btn {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: #55b953;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    outline: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.forcecenter{
+    width: 20%;
+    margin: 0 auto; 
+}
+
+
+.textinput{
+
+    width: 100%;
+}
+
+.btn-abs
+{
+    position: absolute;
+}
+
+.btn-1 {
+
+    color: #fff;
+}
+
+.btn-1a:hover,
+.btn-1a:active {
+    color:  #55b953;
+    background: #fff;
+}
+
+.logIn a
+{
+  color: white;
+  cursor: pointer;
+}
+.logIn a:hover
+{
+    color: #55b953;
+}
+
+.signUp a
+{
+    font-weight: 400;
+    color: #55b953;
+}
+
+
+
+
+input[type=submit] {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: #55b953;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 25px;
+    width: 20%;
+}
+
+
+.welcome
+{
+  font-family: "Proxima Nova";
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: auto;
+  width: 100%;
+}
+
+.icon
+{
+    text-align: center;
+    margin-top: 90px;
+}
+
+h2
+{
+    font-family: montserrat, sans-serif;
+    text-align: center; 
+    color: white;
+}
+
+h1
+{
+    font-family: montserrat, sans-serif;
+    text-align: center; 
+    color: #55b953;
+}
+
+
+.welcome
+{
+  font-family: montserrat, sans-serif;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: auto;
+  width: 100%;
+}
+
+.icon
+{
+    text-align: center;
+    margin-top: 90px;
+}
+
+
+h2
+{
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    text-align: center; 
+    color: white;
+}
+
+h3
+{
+    font-family: montserrat, sans-serif;
+    font-weight: 250;
+    text-align: center; 
+    color: white;
+}
+
+h1
+{ 
+    font-family: montserrat, sans-serif;
+    text-align: center; 
+    color: #55b953;
+}
+
+.small{
+  line-height: 20;
+}
+
+
+.startbtn
+{
+	width: 600px;
+	margin: 0 auto;
+}
+
+.floated {
+   float:left;
+}
+
+
+.small{
+  line-height: 20;
+}
+
+textarea{ 
+  width: 425px; 
+  min-width:200px; 
+  max-width:425px; 
+
+  height:250px; 
+  min-height:100px;  
+  max-height:500px;
+}
+
+.round
+{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.plustimes:hover, .plustimes:after {
+     -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+     -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+     -webkit-transition-duration: 0.2s;
+     -moz-transition-duration: 0.2s;
+     -o-transition-duration: 0.2s;
+      transition-duration: 0.2s;
+ }
+
+ .user-row {
+    margin-bottom: 14px;
+}
+
+.user-row:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown-user {
+    margin: 13px 0;
+    padding: 5px;
+    height: 100%;
+}
+
+.dropdown-user:hover {
+    cursor: pointer;
+}
+
+.table-user-information > tbody > tr {
+    border-top: 1px solid rgb(221, 221, 221);
+}
+
+.table-user-information > tbody > tr:first-child {
+    border-top: 0;
+}
+
+
+.table-user-information > tbody > tr > td {
+    border-top: 0;
+}
+.toppad
+{margin-top:20px;
+}
+
+.resugenTableHead{
+  color: #147c0e;
+  background-color: #f7fff7;
+  border-color: #f7fff7;
+}
+
+.resugenTablePos{
+    position: relative;
+    top: 50px;
+}
+
+.resugenAdditionalPos{
+    position: relative;
+    left: -455px;
+}
+
+.panel-info > .resugenTableHead {
+  color: #687c69;
+  background-color: #e0ffe1;
+}

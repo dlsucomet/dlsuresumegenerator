@@ -24,6 +24,8 @@ env = environ.Env(
     DATABASE_URL = (str, 'sqlite:///%s' %os.path.join(BASE_DIR, 'sqlite3'))
 )
 
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist
 # SECURITY WARNING: keep the secret key used in production secret!
