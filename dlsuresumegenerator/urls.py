@@ -20,11 +20,12 @@ import resumegeneratormain.views as views
 
 
 urlpatterns = [
+	url(r'^google_sign_in/$', views.google_sign_in, name='google_sign_in'),
 	url(r'^$', views.index, name='index'),
 	url(r'^login/$', views.login_view, name='login'),
     url(r'^form/$', views.form, name='form'),
-	url(r'^register/$', views.register, name='register'),
-	url(r'^register_account/$', views.register_account, name='register_account'),
+	#url(r'^register/$', views.register, name='register'),
+	#url(r'^register_account/$', views.register_account, name='register_account'),
     url(r'^resume/$', views.resume, name='resume'),
 	url(r'^pdf/$', views.resumePdf, name='pdfconverted'),
 	url(r'^submit_data/$', views.submit_data, name='submit'),
