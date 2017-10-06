@@ -22,8 +22,8 @@ def index(request):
 def form(request):
 	return render(request, "RGhomepage.html")
 
-#def register(request):
-#	return render(request, "SignUp.html")
+def register(request):
+	return render(request, "SignUp.html")
 
 def profile(request):
 	return render(request, "Profile.html")
