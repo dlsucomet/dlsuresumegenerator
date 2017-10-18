@@ -12,71 +12,14 @@
 
 </head>
 
-    <nav class="navbar navbar-inverse navbar-default navbar-fixed-top">
-          <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      </button>
-      <a class="navbar-brand" href="RGhomepagewithdynamic.html">DLSU Resume Generator</a>
-    </div>
-
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="{% url "index" %}">Login <span class="sr-only">(current)</span></a></li>
-        <li><a href="{% url "register" %}">Sign Up</a></li>
-        <li><a href="{% url "profile" %}">Profile</a></li>
-        <li><a href="{% url "form" %}">Create A Resume</a></li>
-        </div>
-    </nav>
-
 <body>
 
-    <div class = "icon">
-        <!-- <img src = "{% static "resumegeneratormain/images/icon.png" %}"  width = "77px" height= "107px"> -->
-        <br>
-        <h1>DLSU Resume Generator</h1>
-        <br>
-    </div>
-
-
-    <div class = "logIn">
-        <div class="row">
-            <div class="col-md-4"></div>
-							<form method = "POST" action = "/login/">
-								{% csrf_token %}
-		            <div class="input-group col-md-4">
-		                <span class="input-group-addon" id="basic-addon1"> Username:</span>
-		                <input type="text" class="form-control textinput" id = "user" aria-describedby="basic-addon1" name="username">
-		            </div>
-            		<div class="col-md-4"></div>
-            		<br>
-		            <div class="row">
-		                <div class="col-md-4"></div>
-		                <div class="input-group col-md-4">
-		                    <span class="input-group-addon" id="basic-addon1">Password: </span>
-		                    <input type="password" class="form-control textinput" id = "pass" aria-describedby="basic-addon1" name="password">
-		                </div>
-		                <br>
-		                <div class="col-md-4"></div>
-		                <div class="col-md-7" id="but">
-		                    <input id = "login" class="btn btn-1 btn-1a" type="submit" value="Submit">
-		                </div>
-		                <div class="col-md-4"></div>
-		                <br>
-		                <br>
-		                <br>
-		                <br>
-		                <br>
-		                <br>
-		                <br>
-		                <br>
-		                <br>
-		                <br>
-		                <div class = "signUp">
-		                    <h5>Not yet registered? <a href="{% url "register" %}"><u>Sign Up</u></a></h5>
-		                </div>
-		            </div>
-        </div>
+    <div class = "test-main">
+		<div class="row">
+			<div class = "test">
+			<h5>Not yet registered? <a href="{% url "index" %}"><u>Generate</u></a></h5>
+			</div>
+		</div>
     </div>
 
 <script src="{% static "resumegeneratormain/js/jquery.min.js" %}"></script>

@@ -10,13 +10,14 @@ from django.http import HttpResponse, HttpResponseNotFound
 
 from resumegeneratormain.models import *
 from reversion import views
+from latexgenerate.generatetest import generatePDF
 
 
 def google_sign_in(request):
 	return render(request, "google_sign_in.html")
 
 def index(request):
-	return render(request, "index.html")
+	return render(request, "test.html")
 
 def form(request):
 	return render(request, "RGhomepage.html")
@@ -26,6 +27,12 @@ def register(request):
 
 def profile(request):
 	return render(request, "Profile.html")
+
+def generate(request):
+	generatePDF()
+	image_data = open("latexgenerate/full.pdf", "rb").read
+	return HttpResponse(image_data, content_type='application/pdf')
+
 
 
 ## TODO: CATCH THE EXCEPTION WHEN AN ACCOUNT WITH THE SAME CREDENTIALS IS MADE

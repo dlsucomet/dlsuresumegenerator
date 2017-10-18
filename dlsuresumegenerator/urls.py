@@ -25,7 +25,7 @@ urlpatterns = [
 	url(r'^login/$', views.login_view, name='login'),
     url(r'^form/$', views.form, name='form'),
 	url(r'^register/$', views.register, name='register'),
-	url(r'^submit_data/$', views.submit_data, name='submit'),
+	url(r'^generate/$', views.generate, name='generate'),
     url(r'^admin/', admin.site.urls, name='admin'),
     url(r'^profile/', views.profile, name='profile'),
 

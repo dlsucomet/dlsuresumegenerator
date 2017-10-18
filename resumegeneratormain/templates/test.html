@@ -1,0 +1,28 @@
+<html>
+  <head>
+    {% load staticfiles %}
+      <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="{% static "resumegeneratormain/css/bootstrap.min.css" %}" rel="stylesheet">
+      <link href="{% static "resumegeneratormain/css/style.css" %}" rel="stylesheet">
+      <script src="//use.edgefonts.net/montserrat.js"></script>
+  </head>
+  <body>
+      <div class = "test-main">
+          <div class="row">
+            <div class="row">
+                <div class = "test">
+                    <h5>Not yet registered? <a href="{% url "generate" %}"><u>Generate PDF</u></a></h5>
+                </div>
+            </div>
+          </div>
+      </div>
+  
+  <script src="{% static "resumegeneratormain/js/jquery.min.js" %}"></script>
+  <script src="{% static "resumegeneratormain/js/bootstrap.min.js" %}"></script>
+  
+  </body>
+  </html>
+  
