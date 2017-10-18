@@ -1,9 +1,7 @@
 django
-weasyprint
 psycopg2
 django-reversion
 gunicorn
-cffi
-cairocffi
 django-environ
 whitenoise
+pylatex
