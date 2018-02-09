@@ -25,8 +25,14 @@ def form(request):
 def register(request):
 	return render(request, "SignUp.html")
 
+#def profile(request):
+#	return render(request, "Profile.html")
+
 def profile(request):
-	return render(request, "Profile.html")
+    	return render(request, 'profile.html')
+
+def header(request):
+    	return render(request, 'header.html')
 
 
 ## TODO: CATCH THE EXCEPTION WHEN AN ACCOUNT WITH THE SAME CREDENTIALS IS MADE
