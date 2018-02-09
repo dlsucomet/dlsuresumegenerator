@@ -1,0 +1,75 @@
+<!--
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/custom.css"> 
+        <link rel="stylesheet" type="text/css" href="css/skeleton.css"> 
+        
+        <script>
+            function myFunction() 
+            {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    </head>
+        
+    <body>
+       
+        <div class="container">
+            <div class="row topnav" id="myTopnav">
+                <a class="two columns header-margin" style="text-align: left;">DASHBOARD</a>
+                <a class="two columns text-center header-margin">CATEGORIES</a>
+                <div class="four columns center">
+                    <img src="images/black%20ego.png" class="header-img-margin">
+                </div>
+                <a class="two columns text-center header-margin">MY RESUMES</a>
+                <a class="two columns text-center header-margin" style="text-align: right;">PROFILE</a>
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+            </div>
+        </div>
+    </body>
+    
+</html>
+-->
+
+
+
+<html>
+    <head>
+        {% load staticfiles %}
+        <link href = "{% static "resumegeneratormain/css/skeleton.css" %}" rel="stylesheet">
+        <link href = "{% static "resumegeneratormain/css/custom.css" %}" rel="stylesheet">
+        
+        <script>
+            function myFunction() 
+            {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    </head>
+        
+    <body>
+       
+        <div class="container snip1135">
+            <div class="row">
+                <li class="current"><a href="#" data-hover="DASHBOARD">DASHBOARD</a></li>
+                <li><a href="#" data-hover="CATEGORIES">CATEGORIES</a></li>
+                <li class="center">
+                    <img src="{% static "resumegeneratormain/images/black%20ego.png" %}" class="header-img-margin">
+                </li>
+                <li class="center"><a href="#" data-hover="MY RESUMES">MY RESUMES</a></li>
+                <li class="center"><a href="#" data-hover="PROFILE">PROFILE</a></li>
+            </div>
+        </div>
+    </body>
+    
+</html>

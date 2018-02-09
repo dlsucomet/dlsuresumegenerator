@@ -1,86 +1,68 @@
+
 <html>
-<head>
-	{% load staticfiles %}
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{% static "resumegeneratormain/css/bootstrap.min.css" %}" rel="stylesheet">
-    <link href="{% static "resumegeneratormain/css/style.css" %}" rel="stylesheet">
+    <head>
+            {% load staticfiles %}
+        <link href = "{% static "resumegeneratormain/css/skeleton.css" %}" rel="stylesheet">
+        <link href = "{% static "resumegeneratormain/css/skeleton.css" %}" rel="stylesheet">
+        <link href = "{% static "resumegeneratormain/css/custom.css" %}" rel="stylesheet">
+        <link href = "{% static "resumegeneratormain/css/animate.css" %}" rel="stylesheet">
 
-    <script src="//use.edgefonts.net/montserrat.js"></script>
+        <style>
+            body { 
+                background-color: #79A280;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="six columns animated slideInLeft">
+                    <img src="{% static "resumegeneratormain/images/whiteego.png" %}" style="height: 130px; width: auto; margin-top: 180px; margin-bottom: 30px;">
+                    <hr>
+                    <p class="white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="six columns animated slideInDown">
+                    <div class="flex-container whitebox">
+                        <div class="margin-whitebox">
+                            <h6 class="bold marginh6">Email</h6>
+                            <div id="input_container">
+                                <img src="{% static "resumegeneratormain/images/at.png" %}" id="input_img">
+                                <input id="at-icon" class="text-line" style="width: inherit;"type="text" placeholder="john_appleseed@apple.com"/>
+                            </div>
+                            <h6 class="bold marginh6" style="margin-top: 5px;">Password</h6>
+                            <div id="input_container">
+                                <img src="{% static "resumegeneratormain/images/lock.png" %}" id="input_img">
+                                <input id="at-icon" class="text-line" style="width: inherit;"type="password" placeholder="•••••••••"/>
+                            </div>
 
-</head>
-
-    <nav class="navbar navbar-inverse navbar-default navbar-fixed-top">
-          <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      </button>
-      <a class="navbar-brand" href="RGhomepagewithdynamic.html">DLSU Resume Generator</a>
-    </div>
-
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="{% url "index" %}">Login <span class="sr-only">(current)</span></a></li>
-        <li><a href="{% url "register" %}">Sign Up</a></li>
-        <li><a href="{% url "profile" %}">Profile</a></li>
-        <li><a href="{% url "form" %}">Create A Resume</a></li>
+                            <div class="custom-container wide" style="margin-top: 2rem;">
+                                    <div class="six columns">
+                                        <span style="float: left;">
+                                            <input type="checkbox" name="checkbox" id="checkbox_id" value="value">
+                                            <label for="checkbox_id" class="small">Remember Me</label>
+                                        </span>
+                                    </div>
+                                    <div class="six columns">
+                                        <button style="float: right;">Sign In</button>
+                                    </div>
+                            </div>
+                            <fieldset class="title">
+                                <legend>or</legend>
+                            </fieldset>
+                            <div class="custom-container">
+                                <input type="image" src="{% static "resumegeneratormain/images/google-signin.png" %}" alt="Submit" width="50%" height="auto" class="img-border">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="flex-container greenbox">
+                        <div style="margin-top:8px;">
+                            <h6 class="white center medium">Don't have an account? <a class="white bold">Sign up here.</a></h6>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
         </div>
-    </nav>
-
-<body>
-
-    <div class = "icon">
-        <!-- <img src = "{% static "resumegeneratormain/images/icon.png" %}"  width = "77px" height= "107px"> -->
-        <br>
-        <h1>DLSU Resume Generator</h1>
-        <br>
-    </div>
-
-
-    <div class = "logIn">
-        <div class="row">
-            <div class="col-md-4"></div>
-							<form method = "POST" action = "/login/">
-								{% csrf_token %}
-		            <div class="input-group col-md-4">
-		                <span class="input-group-addon" id="basic-addon1"> Username:</span>
-		                <input type="text" class="form-control textinput" id = "user" aria-describedby="basic-addon1" name="username">
-		            </div>
-            		<div class="col-md-4"></div>
-            		<br>
-		            <div class="row">
-		                <div class="col-md-4"></div>
-		                <div class="input-group col-md-4">
-		                    <span class="input-group-addon" id="basic-addon1">Password: </span>
-		                    <input type="password" class="form-control textinput" id = "pass" aria-describedby="basic-addon1" name="password">
-		                </div>
-		                <br>
-		                <div class="col-md-4"></div>
-		                <div class="col-md-7" id="but">
-		                    <input id = "login" class="btn btn-1 btn-1a" type="submit" value="Submit">
-		                </div>
-		                <div class="col-md-4"></div>
-		                <br>
-		                <br>
-		                <br>
-		                <br>
-		                <br>
-		                <br>
-		                <br>
-		                <br>
-		                <br>
-		                <br>
-		                <div class = "signUp">
-		                    <h5>Not yet registered? <a href="{% url "register" %}"><u>Sign Up</u></a></h5>
-		                </div>
-		            </div>
-        </div>
-    </div>
-
-<script src="{% static "resumegeneratormain/js/jquery.min.js" %}"></script>
-<script src="{% static "resumegeneratormain/js/bootstrap.min.js" %}"></script>
-
-</body>
+    </body>
 </html>
