@@ -1,22 +1,35 @@
+{% extends "header.html" %}
+
 <html>
     <head>
         {% load static %}
+        {% block other_static_files %}
         <link href = "{% static "resumegeneratormain/css/custom.css" %}" rel="stylesheet">
         <link href = "{% static "resumegeneratormain/css/skeleton.css" %}" rel="stylesheet">
         <script src="{% static "resumegeneratormain/js/jquery-3.2.1.js" %}"></script>
+        {% endblock %}
     
-        
-        <script>
+        <!--{% block header_topnav %}
+
+        {% endblock %}-->
+
+       <!-- <script>
             $( document ).ready(function() {
                 $( "#header" ).load( "header.html" );
             });
-        </script>
+        </script>-->
+
         
     </head>
         
     <body>
-        <div id="header"></div>
-        
+        <!--<div id="header">
+        </div>-->
+        <!--<div class = "basic">
+            {% include "static/resumegeneratormain/templates/header.html" }
+        </div>-->
+
+        {% block content %}
         <div class="container" style="margin-top: 1em;">
             <div class="row">
                 <div class="crop three columns">
@@ -460,7 +473,7 @@
             </div>
             
         </div>
-        
+        {% endblock %}
         
     </body>
     

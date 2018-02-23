@@ -35,15 +35,14 @@
     
 </html>
 -->
-
-
-
 <html>
     <head>
         {% load staticfiles %}
         <link href = "{% static "resumegeneratormain/css/skeleton.css" %}" rel="stylesheet">
         <link href = "{% static "resumegeneratormain/css/custom.css" %}" rel="stylesheet">
-        
+        {% block other_static_files %}
+        {% endblock %}
+    
         <script>
             function myFunction() 
             {
@@ -55,21 +54,24 @@
                 }
             }
         </script>
+        
     </head>
         
     <body>
-       
         <div class="container snip1135">
             <div class="row">
                 <li class="current"><a href="#" data-hover="DASHBOARD">DASHBOARD</a></li>
                 <li><a href="#" data-hover="CATEGORIES">CATEGORIES</a></li>
                 <li class="center">
-                    <img src="{% static "resumegeneratormain/images/black%20ego.png" %}" class="header-img-margin">
+                    <img src="{% static "resumegeneratormain/images/blackego.png" %}" class="header-img-margin">
                 </li>
                 <li class="center"><a href="#" data-hover="MY RESUMES">MY RESUMES</a></li>
                 <li class="center"><a href="#" data-hover="PROFILE">PROFILE</a></li>
             </div>
         </div>
+        {% block content %}
+        {% endblock %}
+
     </body>
     
 </html>
