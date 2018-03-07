@@ -28,5 +28,6 @@ urlpatterns = [
 	url(r'^generate/$', views.generate, name='generate'),
     url(r'^admin/', admin.site.urls, name='admin'),
     url(r'^profile/', views.profile, name='profile'),
+    url(r'^header/', views.header, name='header'),
 
 ]
